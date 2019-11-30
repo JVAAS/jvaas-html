@@ -226,11 +226,15 @@ object Generator {
 
 	private fun processBasic(elements: Array<String>, tagType: String) {
 
+		val path = getPath()
 		val processed = mutableSetOf<String>()
 
 		println("Processing BodyTag")
-		File("src/main/kotlin/io/persephone/dsl/element/$tagType.kt").printWriter().use { out ->
-			out.println("package io.persephone.dsl.element\n\n")
+		File("$path/src/main/kotlin/io/persephone/dsl/$tagType.kt").printWriter().use { out ->
+			out.println("package io.persephone.dsl")
+			out.println("")
+			out.println("import io.persephone.dsl.element.*")
+			out.println("")
 			out.println("""abstract class $tagType(tagName: String) : TagWithText(tagName) {""")
 			elements.forEach { line ->
 				val parts = line.split(":")
@@ -246,7 +250,7 @@ object Generator {
 
 	private fun process(list: Array<String>, tagType: String) {
 
-		val path = this::class.java.protectionDomain.codeSource.location.path.replace("/build/classes/kotlin/main/", "")
+		val path = getPath()
 
 		list.forEach { line ->
 
@@ -261,10 +265,12 @@ object Generator {
 
 			println("Processing $element")
 
-
 			File("$path/src/main/kotlin/io/persephone/dsl/element/${element.toUpperCase()}.kt").printWriter().use { out ->
 				out.println("""package io.persephone.dsl.element""")
 				out.println("")
+				out.println("import io.persephone.dsl.HeadTag")
+				out.println("import io.persephone.dsl.BodyTag")
+					out.println("")
 				if (attributes.isNotEmpty()) {
 					out.println("""class ${element.toUpperCase()} : $tagType("$element") {""")
 					out.println("")
@@ -289,6 +295,10 @@ object Generator {
 
 		}
 
+	}
+
+	private fun getPath(): String {
+		return this::class.java.protectionDomain.codeSource.location.path.replace("/build/classes/kotlin/main/", "")
 	}
 
 	private fun String.toCamelCase(): String {

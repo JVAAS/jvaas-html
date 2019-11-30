@@ -1,5 +1,8 @@
 package io.persephone.dsl.element
 
+import io.persephone.dsl.HeadTag
+import io.persephone.dsl.BodyTag
+
 class COLGROUP : BodyTag("colgroup") {
 
 	var clazz: String

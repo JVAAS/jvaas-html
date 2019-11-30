@@ -1,5 +1,8 @@
 package io.persephone.dsl.element
 
+import io.persephone.dsl.HeadTag
+import io.persephone.dsl.BodyTag
+
 class A : BodyTag("a") {
 
 	var clazz: String

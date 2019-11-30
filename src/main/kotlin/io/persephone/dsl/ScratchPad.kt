@@ -1,9 +1,11 @@
 package io.persephone.helper
 
-//import io.persephone.element.html
+//import io.persephone.dsl.html
+
+//import io.persephone.dsl.head
+//import io.persephone.dsl.html
 
 object ScratchPad {
-
 
 	@JvmStatic
 	fun main(args: Array<String>) {
@@ -26,6 +28,7 @@ object ScratchPad {
 //		println(output1)
 
 	}
+
 
 
 
