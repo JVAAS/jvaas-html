@@ -2,6 +2,8 @@ package io.persephone.dsl
 
 import io.persephone.dsl.element.*
 
+class BODY: Tag("body"), Element {}
+
 abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun address(init: ADDRESS.() -> Unit) = initTag(ADDRESS(), init)
 	fun article(init: ARTICLE.() -> Unit) = initTag(ARTICLE(), init)
