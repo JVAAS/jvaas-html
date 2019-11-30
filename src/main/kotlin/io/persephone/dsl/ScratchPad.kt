@@ -15,6 +15,11 @@ object ScratchPad {
 			HTML().head {
 				title {
 					+"this is the title"
+
+				}
+
+				meta() {
+
 				}
 
 			}
