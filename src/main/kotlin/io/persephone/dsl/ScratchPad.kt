@@ -4,11 +4,6 @@ import io.persephone.dsl.HTML.body
 import io.persephone.dsl.HTML.head
 import io.persephone.dsl.HTML.html
 
-//import io.persephone.dsl.html
-
-//import io.persephone.dsl.head
-//import io.persephone.dsl.html
-
 object ScratchPad {
 
 	@JvmStatic
@@ -16,17 +11,20 @@ object ScratchPad {
 
 		val output1 = html {
 			head {
-				//title { +"this is the title" }
+				title { +"this is the title" }
 			}
 			body {
+				div() {
+					ul {
+						li {
+							+"TEST1"
+						}
+						li {
+							+"TEST2"
+						}
 
-//				div(clazz = "TEST") {
-//					ul {
-//						li() {
-//							+"TEST"
-//						}
-//					}
-//				}
+					}
+				}
 			}
 		}
 //

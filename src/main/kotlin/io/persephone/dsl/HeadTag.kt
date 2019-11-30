@@ -2,7 +2,7 @@ package io.persephone.dsl
 
 import io.persephone.dsl.element.*
 
-class HEAD: Tag("head"), Element {}
+class HEAD: HeadTag("head"), Element {}
 
 abstract class HeadTag(tagName: String) : TagWithText(tagName) {
 	fun base(init: BASE.() -> Unit) = initTag(BASE(), init)
