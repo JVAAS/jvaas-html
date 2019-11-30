@@ -10,6 +10,7 @@ object Generator {
 		// elements from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 		val headElements = arrayOf(
+			"head",
 			"base:href,target",
 			"link:rel,type,href",
 			"meta:charset,name,content",
@@ -201,6 +202,7 @@ object Generator {
 		)
 
 		val bodyElements = arrayOf<String>(
+			"body",
 			*contentSectionElements,
 			*textContentElements,
 			*inlineTextSemanticElements,

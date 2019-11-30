@@ -1,19 +1,20 @@
 package io.persephone.helper
 
-import io.persephone.dsl.HTML.body
-import io.persephone.dsl.HTML.head
-import io.persephone.dsl.HTML.html
+import io.persephone.dsl.element.BODY
+import io.persephone.dsl.element.HEAD
 
 object ScratchPad {
 
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-		val output1 = html {
-			head {
+		val output1 =
+			HEAD().head {
 				title { +"this is the title" }
 			}
-			body {
+
+		val output2 =
+			BODY().body {
 				div() {
 					ul {
 						li {
@@ -26,9 +27,9 @@ object ScratchPad {
 					}
 				}
 			}
-		}
-//
-//		println(output1)
+
+		println(output1)
+		println(output2)
 
 	}
 
