@@ -21,6 +21,14 @@ class INPUT : BodyTag("input") {
 			}
 		}
 
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
+		set(value) {
+			value?.let {
+				attributes["classes"] = it
+			}
+		}
+
 	var disabled: String?
 		get() = attributes.getOrDefault("disabled", "")
 		set(value) {
@@ -69,6 +77,14 @@ class INPUT : BodyTag("input") {
 			}
 		}
 
+	var styles: String?
+		get() = attributes.getOrDefault("styles", "")
+		set(value) {
+			value?.let {
+				attributes["styles"] = it
+			}
+		}
+
 	var tabindex: String?
 		get() = attributes.getOrDefault("tabindex", "")
 		set(value) {
@@ -90,22 +106,6 @@ class INPUT : BodyTag("input") {
 		set(value) {
 			value?.let {
 				attributes["value"] = it
-			}
-		}
-
-	var classes: String?
-		get() = attributes.getOrDefault("classes", "")
-		set(value) {
-			value?.let {
-				attributes["classes"] = it
-			}
-		}
-
-	var styles: String?
-		get() = attributes.getOrDefault("styles", "")
-		set(value) {
-			value?.let {
-				attributes["styles"] = it
 			}
 		}
 

@@ -13,11 +13,11 @@ class META : EmptyTag("meta") {
 			}
 		}
 
-	var name: String?
-		get() = attributes.getOrDefault("name", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["name"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -29,11 +29,11 @@ class META : EmptyTag("meta") {
 			}
 		}
 
-	var classes: String?
-		get() = attributes.getOrDefault("classes", "")
+	var name: String?
+		get() = attributes.getOrDefault("name", "")
 		set(value) {
 			value?.let {
-				attributes["classes"] = it
+				attributes["name"] = it
 			}
 		}
 

@@ -46,7 +46,13 @@ abstract class Tag(val tagName: String, var selfClosing: Boolean = false) : Elem
 	private fun renderAttributes(): String {
 		val builder = StringBuilder()
 		for ((attr, value) in attributes) {
-			builder.append(" $attr=\"$value\"")
+			if (attr == "classes") {
+				builder.append(" class=\"$value\"")
+			} else if (attr == "styles") {
+				builder.append(" style=\"$value\"")
+			} else {
+				builder.append(" $attr=\"$value\"")
+			}
 		}
 		return builder.toString()
 	}

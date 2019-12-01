@@ -9,8 +9,8 @@ object ScratchPad {
 
 
 		val output = HTML().body {
-			div {
-				div() {
+			div(styles = "color: red") {
+				div(classes = "charcoal text:white") {
 					+"TEST1"
 					div {
 						+"TEST2"
@@ -24,7 +24,6 @@ object ScratchPad {
 					}
 				}
 			}
-
 		}
 		println(output)
 
