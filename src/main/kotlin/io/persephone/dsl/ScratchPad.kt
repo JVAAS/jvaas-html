@@ -4,6 +4,7 @@ import io.persephone.dsl.element.HTML
 
 object ScratchPad {
 
+
 	@JvmStatic
 	fun main(args: Array<String>) {
 
@@ -15,11 +16,16 @@ object ScratchPad {
 					div {
 						+"TEST2"
 
-						img(src = "blah.png", alt="blah", loading = "lazy", decoding = "async")
+						img(src = "blah.png", alt = "blah", loading = "lazy", decoding = "async")
 						br {}
 						br()
 						span {
 							input(type = "text")
+						}
+						custom(classes = "test") {
+							span {
+								img(src = "blah2.png")
+							}
 						}
 					}
 				}
@@ -27,39 +33,26 @@ object ScratchPad {
 		}
 		println(output)
 
-
-//		fun div(classes: String? = null, init: DIV.() -> Unit) = initTag(DIV(), init).apply {
-//			this.classes = classes
-//		}
-
-//		val output1 =
-//			HTML().head {
-//				title {
-//					+"this is the title"
-//
-//				}
-//			}
-//
-//		val output2 =
-//			HTML().html {
-//				div() {
-//					ul {
-//						li {
-//							+"TEST1"
-//						}
-//						li {
-//							+"TEST2"
-//						}
-//
-//					}
-//				}
-//			}
-
-//		println(output1)
-//		println(output2)
-
 	}
 
 
 }
+
+class CUSTOM : BodyTag(tagName = "custom") {
+	var classes: String? = null
+	var styles: String? = null
+}
+
+fun BodyTag.custom(
+	classes: String? = null,
+	styles: String? = null,
+	init: (CUSTOM.() -> Unit)? = null
+): CUSTOM {
+	initTag(CUSTOM(), init).apply {
+		this.classes = classes
+		this.styles = styles
+	}
+	return CUSTOM()
+}
+
 
