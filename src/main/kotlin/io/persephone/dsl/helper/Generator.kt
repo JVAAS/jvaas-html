@@ -64,7 +64,7 @@ object Generator {
 			ED(tag = "b", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "bdi", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "bdo", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "br", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			ED(tag = "br", selfClosing = true, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "cite", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "code", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "data", selfClosing = false, extends = "BodyTag", attributes = listOf()),
@@ -259,7 +259,7 @@ object Generator {
 							out.println("\t\t$attribute: String? = null,")
 						}
 
-						out.println("\t\tinit: ${el.tag.toUpperCase()}.() -> Unit")
+						out.println("\t\tinit: (${el.tag.toUpperCase()}.() -> Unit)? = null")
 						out.println("\t) = initTag(${el.tag.toUpperCase()}(), init).apply {")
 						out.println("\t\tthis.selfClosing = ${el.selfClosing == true}")
 						el.attributes.forEach {  attribute ->

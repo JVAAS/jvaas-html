@@ -23,8 +23,10 @@ abstract class Tag(val tagName: String, var selfClosing: Boolean = false) : Elem
 		return tag
 	}
 
-	fun <T : Element> initTag(tag: T, init: T.() -> Unit): T {
-		tag.init()
+	fun <T : Element> initTag(tag: T, init: (T.() -> Unit)? = null): T {
+		init?.let {
+			tag.init()
+		}
 		children.add(tag)
 		return tag
 	}

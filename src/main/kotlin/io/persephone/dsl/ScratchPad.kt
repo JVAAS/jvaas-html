@@ -15,8 +15,12 @@ object ScratchPad {
 					div {
 						+"TEST2"
 
-						img(src = "blah.png", loading = "lazy", decoding = "async")  {}
-
+						img(src = "blah.png", loading = "lazy", decoding = "async")
+						br {}
+						br()
+						span {
+							input(type = "text")
+						}
 					}
 				}
 			}
