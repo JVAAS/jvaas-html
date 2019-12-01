@@ -226,16 +226,13 @@ object Generator {
 		// make all head elements extends HeadTag so that they can nest other head tags
 		processBasic(elements = headElements, tagType = "EmptyTag", empty = true)
 
+		process(list = arrayOf("html"), tagType = "HtmlTag")
 		process(list = headElements, tagType = "EmptyTag")
 		process(list = bodyElements, tagType = "BodyTag")
 
-		process(list = arrayOf("html"), tagType = "HtmlTag")
-		process(list = arrayOf("head"), tagType = "HeadTag")
-		process(list = arrayOf("body"), tagType = "BodyTag")
-
 	}
 
-	private fun processBasic(elements: Array<String>, tagType: String, empty: Boolean = true) {
+	private fun processBasic(elements: Array<String>, tagType: String, empty: Boolean = false) {
 
 		val path = getPath()
 		val processed = mutableSetOf<String>()
