@@ -7,118 +7,147 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun address( 
 		init: ADDRESS.() -> Unit
 	) = initTag(ADDRESS(), init).apply {
+		this.selfClosing = false
 	}
 	fun article( 
 		init: ARTICLE.() -> Unit
 	) = initTag(ARTICLE(), init).apply {
+		this.selfClosing = false
 	}
 	fun aside( 
 		init: ASIDE.() -> Unit
 	) = initTag(ASIDE(), init).apply {
+		this.selfClosing = false
 	}
 	fun footer( 
 		init: FOOTER.() -> Unit
 	) = initTag(FOOTER(), init).apply {
+		this.selfClosing = false
 	}
 	fun header( 
 		init: HEADER.() -> Unit
 	) = initTag(HEADER(), init).apply {
+		this.selfClosing = false
 	}
 	fun h1( 
 		init: H1.() -> Unit
 	) = initTag(H1(), init).apply {
+		this.selfClosing = false
 	}
 	fun h2( 
 		init: H2.() -> Unit
 	) = initTag(H2(), init).apply {
+		this.selfClosing = false
 	}
 	fun h3( 
 		init: H3.() -> Unit
 	) = initTag(H3(), init).apply {
+		this.selfClosing = false
 	}
 	fun h4( 
 		init: H4.() -> Unit
 	) = initTag(H4(), init).apply {
+		this.selfClosing = false
 	}
 	fun h5( 
 		init: H5.() -> Unit
 	) = initTag(H5(), init).apply {
+		this.selfClosing = false
 	}
 	fun h6( 
 		init: H6.() -> Unit
 	) = initTag(H6(), init).apply {
+		this.selfClosing = false
 	}
 	fun hgroup( 
 		init: HGROUP.() -> Unit
 	) = initTag(HGROUP(), init).apply {
+		this.selfClosing = false
 	}
 	fun main( 
 		init: MAIN.() -> Unit
 	) = initTag(MAIN(), init).apply {
+		this.selfClosing = false
 	}
 	fun nav( 
 		init: NAV.() -> Unit
 	) = initTag(NAV(), init).apply {
+		this.selfClosing = false
 	}
 	fun section( 
 		init: SECTION.() -> Unit
 	) = initTag(SECTION(), init).apply {
+		this.selfClosing = false
 	}
 	fun blockquote( 
 		init: BLOCKQUOTE.() -> Unit
 	) = initTag(BLOCKQUOTE(), init).apply {
+		this.selfClosing = false
 	}
 	fun dd( 
 		init: DD.() -> Unit
 	) = initTag(DD(), init).apply {
+		this.selfClosing = false
 	}
 	fun dir( 
 		init: DIR.() -> Unit
 	) = initTag(DIR(), init).apply {
+		this.selfClosing = false
 	}
 	fun div( 
 		init: DIV.() -> Unit
 	) = initTag(DIV(), init).apply {
+		this.selfClosing = false
 	}
 	fun dl( 
 		init: DL.() -> Unit
 	) = initTag(DL(), init).apply {
+		this.selfClosing = false
 	}
 	fun dt( 
 		init: DT.() -> Unit
 	) = initTag(DT(), init).apply {
+		this.selfClosing = false
 	}
 	fun figcaption( 
 		init: FIGCAPTION.() -> Unit
 	) = initTag(FIGCAPTION(), init).apply {
+		this.selfClosing = false
 	}
 	fun figure( 
 		init: FIGURE.() -> Unit
 	) = initTag(FIGURE(), init).apply {
+		this.selfClosing = false
 	}
 	fun hr( 
 		init: HR.() -> Unit
 	) = initTag(HR(), init).apply {
+		this.selfClosing = false
 	}
 	fun li( 
 		init: LI.() -> Unit
 	) = initTag(LI(), init).apply {
+		this.selfClosing = false
 	}
 	fun ol( 
 		init: OL.() -> Unit
 	) = initTag(OL(), init).apply {
+		this.selfClosing = false
 	}
 	fun p( 
 		init: P.() -> Unit
 	) = initTag(P(), init).apply {
+		this.selfClosing = false
 	}
 	fun pre( 
 		init: PRE.() -> Unit
 	) = initTag(PRE(), init).apply {
+		this.selfClosing = false
 	}
 	fun ul( 
 		init: UL.() -> Unit
 	) = initTag(UL(), init).apply {
+		this.selfClosing = false
 	}
 	fun a( 
 		download: String? = null,
@@ -132,6 +161,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		type: String? = null,
 		init: A.() -> Unit
 	) = initTag(A(), init).apply {
+		this.selfClosing = false
 		this.download = download
 		this.href = href
 		this.hreflang = hreflang
@@ -145,134 +175,167 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun abbr( 
 		init: ABBR.() -> Unit
 	) = initTag(ABBR(), init).apply {
+		this.selfClosing = false
 	}
 	fun b( 
 		init: B.() -> Unit
 	) = initTag(B(), init).apply {
+		this.selfClosing = false
 	}
 	fun bdi( 
 		init: BDI.() -> Unit
 	) = initTag(BDI(), init).apply {
+		this.selfClosing = false
 	}
 	fun bdo( 
 		init: BDO.() -> Unit
 	) = initTag(BDO(), init).apply {
+		this.selfClosing = false
 	}
 	fun br( 
 		init: BR.() -> Unit
 	) = initTag(BR(), init).apply {
+		this.selfClosing = false
 	}
 	fun cite( 
 		init: CITE.() -> Unit
 	) = initTag(CITE(), init).apply {
+		this.selfClosing = false
 	}
 	fun code( 
 		init: CODE.() -> Unit
 	) = initTag(CODE(), init).apply {
+		this.selfClosing = false
 	}
 	fun data( 
 		init: DATA.() -> Unit
 	) = initTag(DATA(), init).apply {
+		this.selfClosing = false
 	}
 	fun dfn( 
 		init: DFN.() -> Unit
 	) = initTag(DFN(), init).apply {
+		this.selfClosing = false
 	}
 	fun em( 
 		init: EM.() -> Unit
 	) = initTag(EM(), init).apply {
+		this.selfClosing = false
 	}
 	fun i( 
 		init: I.() -> Unit
 	) = initTag(I(), init).apply {
+		this.selfClosing = false
 	}
 	fun kbd( 
 		init: KBD.() -> Unit
 	) = initTag(KBD(), init).apply {
+		this.selfClosing = false
 	}
 	fun mark( 
 		init: MARK.() -> Unit
 	) = initTag(MARK(), init).apply {
+		this.selfClosing = false
 	}
 	fun q( 
 		init: Q.() -> Unit
 	) = initTag(Q(), init).apply {
+		this.selfClosing = false
 	}
 	fun rb( 
 		init: RB.() -> Unit
 	) = initTag(RB(), init).apply {
+		this.selfClosing = false
 	}
 	fun rp( 
 		init: RP.() -> Unit
 	) = initTag(RP(), init).apply {
+		this.selfClosing = false
 	}
 	fun rt( 
 		init: RT.() -> Unit
 	) = initTag(RT(), init).apply {
+		this.selfClosing = false
 	}
 	fun rtc( 
 		init: RTC.() -> Unit
 	) = initTag(RTC(), init).apply {
+		this.selfClosing = false
 	}
 	fun ruby( 
 		init: RUBY.() -> Unit
 	) = initTag(RUBY(), init).apply {
+		this.selfClosing = false
 	}
 	fun s( 
 		init: S.() -> Unit
 	) = initTag(S(), init).apply {
+		this.selfClosing = false
 	}
 	fun samp( 
 		init: SAMP.() -> Unit
 	) = initTag(SAMP(), init).apply {
+		this.selfClosing = false
 	}
 	fun small( 
 		init: SMALL.() -> Unit
 	) = initTag(SMALL(), init).apply {
+		this.selfClosing = false
 	}
 	fun span( 
 		init: SPAN.() -> Unit
 	) = initTag(SPAN(), init).apply {
+		this.selfClosing = false
 	}
 	fun strong( 
 		init: STRONG.() -> Unit
 	) = initTag(STRONG(), init).apply {
+		this.selfClosing = false
 	}
 	fun sub( 
 		init: SUB.() -> Unit
 	) = initTag(SUB(), init).apply {
+		this.selfClosing = false
 	}
 	fun sup( 
 		init: SUP.() -> Unit
 	) = initTag(SUP(), init).apply {
+		this.selfClosing = false
 	}
 	fun time( 
 		init: TIME.() -> Unit
 	) = initTag(TIME(), init).apply {
+		this.selfClosing = false
 	}
 	fun tt( 
 		init: TT.() -> Unit
 	) = initTag(TT(), init).apply {
+		this.selfClosing = false
 	}
 	fun u( 
 		init: U.() -> Unit
 	) = initTag(U(), init).apply {
+		this.selfClosing = false
 	}
 	fun varx( 
 		init: VARX.() -> Unit
 	) = initTag(VARX(), init).apply {
+		this.selfClosing = false
 	}
 	fun wbr( 
 		init: WBR.() -> Unit
 	) = initTag(WBR(), init).apply {
+		this.selfClosing = false
 	}
 	fun area( 
 		init: AREA.() -> Unit
 	) = initTag(AREA(), init).apply {
+		this.selfClosing = false
 	}
 	fun audio( 
 		init: AUDIO.() -> Unit
 	) = initTag(AUDIO(), init).apply {
+		this.selfClosing = false
 	}
 	fun img( 
 		crossorigin: String? = null,
@@ -289,6 +352,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		usemap: String? = null,
 		init: IMG.() -> Unit
 	) = initTag(IMG(), init).apply {
+		this.selfClosing = true
 		this.crossorigin = crossorigin
 		this.decoding = decoding
 		this.height = height
@@ -305,106 +369,132 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun map( 
 		init: MAP.() -> Unit
 	) = initTag(MAP(), init).apply {
+		this.selfClosing = false
 	}
 	fun track( 
 		init: TRACK.() -> Unit
 	) = initTag(TRACK(), init).apply {
+		this.selfClosing = false
 	}
 	fun video( 
 		init: VIDEO.() -> Unit
 	) = initTag(VIDEO(), init).apply {
+		this.selfClosing = false
 	}
 	fun applet( 
 		init: APPLET.() -> Unit
 	) = initTag(APPLET(), init).apply {
+		this.selfClosing = false
 	}
 	fun embed( 
 		init: EMBED.() -> Unit
 	) = initTag(EMBED(), init).apply {
+		this.selfClosing = false
 	}
 	fun iframe( 
 		init: IFRAME.() -> Unit
 	) = initTag(IFRAME(), init).apply {
+		this.selfClosing = false
 	}
 	fun noembed( 
 		init: NOEMBED.() -> Unit
 	) = initTag(NOEMBED(), init).apply {
+		this.selfClosing = false
 	}
 	fun objectx( 
 		init: OBJECTX.() -> Unit
 	) = initTag(OBJECTX(), init).apply {
+		this.selfClosing = false
 	}
 	fun param( 
 		init: PARAM.() -> Unit
 	) = initTag(PARAM(), init).apply {
+		this.selfClosing = false
 	}
 	fun picture( 
 		init: PICTURE.() -> Unit
 	) = initTag(PICTURE(), init).apply {
+		this.selfClosing = false
 	}
 	fun source( 
 		init: SOURCE.() -> Unit
 	) = initTag(SOURCE(), init).apply {
+		this.selfClosing = false
 	}
 	fun canvas( 
 		init: CANVAS.() -> Unit
 	) = initTag(CANVAS(), init).apply {
+		this.selfClosing = false
 	}
 	fun noscript( 
 		init: NOSCRIPT.() -> Unit
 	) = initTag(NOSCRIPT(), init).apply {
+		this.selfClosing = false
 	}
 	fun script( 
 		init: SCRIPT.() -> Unit
 	) = initTag(SCRIPT(), init).apply {
+		this.selfClosing = false
 	}
 	fun del( 
 		init: DEL.() -> Unit
 	) = initTag(DEL(), init).apply {
+		this.selfClosing = false
 	}
 	fun ins( 
 		init: INS.() -> Unit
 	) = initTag(INS(), init).apply {
+		this.selfClosing = false
 	}
 	fun caption( 
 		init: CAPTION.() -> Unit
 	) = initTag(CAPTION(), init).apply {
+		this.selfClosing = false
 	}
 	fun col( 
 		init: COL.() -> Unit
 	) = initTag(COL(), init).apply {
+		this.selfClosing = false
 	}
 	fun colgroup( 
 		init: COLGROUP.() -> Unit
 	) = initTag(COLGROUP(), init).apply {
+		this.selfClosing = false
 	}
 	fun table( 
 		init: TABLE.() -> Unit
 	) = initTag(TABLE(), init).apply {
+		this.selfClosing = false
 	}
 	fun tbody( 
 		init: TBODY.() -> Unit
 	) = initTag(TBODY(), init).apply {
+		this.selfClosing = false
 	}
 	fun td( 
 		init: TD.() -> Unit
 	) = initTag(TD(), init).apply {
+		this.selfClosing = false
 	}
 	fun tfoot( 
 		init: TFOOT.() -> Unit
 	) = initTag(TFOOT(), init).apply {
+		this.selfClosing = false
 	}
 	fun th( 
 		init: TH.() -> Unit
 	) = initTag(TH(), init).apply {
+		this.selfClosing = false
 	}
 	fun thead( 
 		init: THEAD.() -> Unit
 	) = initTag(THEAD(), init).apply {
+		this.selfClosing = false
 	}
 	fun tr( 
 		init: TR.() -> Unit
 	) = initTag(TR(), init).apply {
+		this.selfClosing = false
 	}
 	fun button( 
 		autofocus: String? = null,
@@ -421,6 +511,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		value: String? = null,
 		init: BUTTON.() -> Unit
 	) = initTag(BUTTON(), init).apply {
+		this.selfClosing = true
 		this.autofocus = autofocus
 		this.autocomplete = autocomplete
 		this.disabled = disabled
@@ -437,14 +528,17 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun datalist( 
 		init: DATALIST.() -> Unit
 	) = initTag(DATALIST(), init).apply {
+		this.selfClosing = false
 	}
 	fun fieldset( 
 		init: FIELDSET.() -> Unit
 	) = initTag(FIELDSET(), init).apply {
+		this.selfClosing = false
 	}
 	fun form( 
 		init: FORM.() -> Unit
 	) = initTag(FORM(), init).apply {
+		this.selfClosing = false
 	}
 	fun input( 
 		autocomplete: String? = null,
@@ -460,6 +554,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		value: String? = null,
 		init: INPUT.() -> Unit
 	) = initTag(INPUT(), init).apply {
+		this.selfClosing = true
 		this.autocomplete = autocomplete
 		this.autofocus = autofocus
 		this.disabled = disabled
@@ -475,57 +570,71 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 	fun label( 
 		init: LABEL.() -> Unit
 	) = initTag(LABEL(), init).apply {
+		this.selfClosing = false
 	}
 	fun legend( 
 		init: LEGEND.() -> Unit
 	) = initTag(LEGEND(), init).apply {
+		this.selfClosing = false
 	}
 	fun meter( 
 		init: METER.() -> Unit
 	) = initTag(METER(), init).apply {
+		this.selfClosing = false
 	}
 	fun optgroup( 
 		init: OPTGROUP.() -> Unit
 	) = initTag(OPTGROUP(), init).apply {
+		this.selfClosing = false
 	}
 	fun option( 
 		init: OPTION.() -> Unit
 	) = initTag(OPTION(), init).apply {
+		this.selfClosing = false
 	}
 	fun output( 
 		init: OUTPUT.() -> Unit
 	) = initTag(OUTPUT(), init).apply {
+		this.selfClosing = false
 	}
 	fun progress( 
 		init: PROGRESS.() -> Unit
 	) = initTag(PROGRESS(), init).apply {
+		this.selfClosing = false
 	}
 	fun select( 
 		init: SELECT.() -> Unit
 	) = initTag(SELECT(), init).apply {
+		this.selfClosing = false
 	}
 	fun textarea( 
 		init: TEXTAREA.() -> Unit
 	) = initTag(TEXTAREA(), init).apply {
+		this.selfClosing = false
 	}
 	fun details( 
 		init: DETAILS.() -> Unit
 	) = initTag(DETAILS(), init).apply {
+		this.selfClosing = false
 	}
 	fun dialog( 
 		init: DIALOG.() -> Unit
 	) = initTag(DIALOG(), init).apply {
+		this.selfClosing = false
 	}
 	fun menu( 
 		init: MENU.() -> Unit
 	) = initTag(MENU(), init).apply {
+		this.selfClosing = false
 	}
 	fun menuitem( 
 		init: MENUITEM.() -> Unit
 	) = initTag(MENUITEM(), init).apply {
+		this.selfClosing = false
 	}
 	fun summary( 
 		init: SUMMARY.() -> Unit
 	) = initTag(SUMMARY(), init).apply {
+		this.selfClosing = false
 	}
 }

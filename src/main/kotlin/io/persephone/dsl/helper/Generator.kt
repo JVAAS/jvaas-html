@@ -96,7 +96,7 @@ object Generator {
 		val imageMultimediaElements = arrayOf(
 			ED(tag = "area", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "audio", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "img", selfClosing = false, extends = "BodyTag", attributes = listOf("crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
+			ED(tag = "img", selfClosing = true, extends = "BodyTag", attributes = listOf("crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
 			ED(tag = "map", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "track", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "video", selfClosing = false, extends = "BodyTag", attributes = listOf())
@@ -261,6 +261,7 @@ object Generator {
 
 						out.println("\t\tinit: ${el.tag.toUpperCase()}.() -> Unit")
 						out.println("\t) = initTag(${el.tag.toUpperCase()}(), init).apply {")
+						out.println("\t\tthis.selfClosing = ${el.selfClosing == true}")
 						el.attributes.forEach {  attribute ->
 							out.println("\t\tthis.$attribute = $attribute")
 						}

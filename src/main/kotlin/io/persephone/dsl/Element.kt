@@ -14,9 +14,14 @@ class TextElement(val text: String) : Element {
 annotation class HtmlTagMarker
 
 @HtmlTagMarker
-abstract class Tag(val tagName: String) : Element {
+abstract class Tag(val tagName: String, var selfClosing: Boolean = false) : Element {
 	val children = arrayListOf<Element>()
 	val attributes = hashMapOf<String, String>()
+
+	fun <T : Element> initTag(tag: T): T {
+		children.add(tag)
+		return tag
+	}
 
 	fun <T : Element> initTag(tag: T, init: T.() -> Unit): T {
 		tag.init()
@@ -25,11 +30,15 @@ abstract class Tag(val tagName: String) : Element {
 	}
 
 	override fun render(builder: StringBuilder, indent: String) {
-		builder.append("$indent<$tagName${renderAttributes()}>\n")
-		for (c in children) {
-			c.render(builder, "$indent\t")
+		if (selfClosing) {
+			builder.append("$indent<$tagName${renderAttributes()} />\n")
+		} else {
+			builder.append("$indent<$tagName${renderAttributes()}>\n")
+			for (c in children) {
+				c.render(builder, "$indent\t")
+			}
+			builder.append("$indent</$tagName>\n")
 		}
-		builder.append("$indent</$tagName>\n")
 	}
 
 	private fun renderAttributes(): String {
@@ -47,7 +56,7 @@ abstract class Tag(val tagName: String) : Element {
 	}
 }
 
-abstract class TagWithText(name: String) : Tag(name) {
+abstract class TagWithText(name: String) : Tag(name, selfClosing = false) {
 	operator fun String.unaryPlus() {
 		children.add(TextElement(this))
 	}

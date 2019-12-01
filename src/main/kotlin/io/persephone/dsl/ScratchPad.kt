@@ -15,9 +15,7 @@ object ScratchPad {
 					div {
 						+"TEST2"
 
-						img() {
-
-						}
+						img(src = "blah.png", loading = "lazy", decoding = "async")  {}
 
 					}
 				}
