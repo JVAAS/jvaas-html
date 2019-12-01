@@ -96,7 +96,7 @@ object Generator {
 		val imageMultimediaElements = arrayOf(
 			ED(tag = "area", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "audio", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "img", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			ED(tag = "img", selfClosing = false, extends = "BodyTag", attributes = listOf("crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
 			ED(tag = "map", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "track", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "video", selfClosing = false, extends = "BodyTag", attributes = listOf())
@@ -253,7 +253,18 @@ object Generator {
 			if (!empty) {
 				elements.forEach { el ->
 					if (processed.add(el.tag)) {
-						out.println("\tfun ${el.tag}(init: ${el.tag.toUpperCase()}.() -> Unit) = initTag(${el.tag.toUpperCase()}(), init)")
+						out.println("\tfun ${el.tag}( ")
+
+						el.attributes.forEach {  attribute ->
+							out.println("\t\t$attribute: String? = null,")
+						}
+
+						out.println("\t\tinit: ${el.tag.toUpperCase()}.() -> Unit")
+						out.println("\t) = initTag(${el.tag.toUpperCase()}(), init).apply {")
+						el.attributes.forEach {  attribute ->
+							out.println("\t\tthis.$attribute = $attribute")
+						}
+						out.println("\t}")
 					}
 				}
 			}
@@ -272,10 +283,7 @@ object Generator {
 			File("$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt").printWriter().use { out ->
 				out.println("""package io.persephone.dsl.element""")
 				out.println("")
-				out.println("import io.persephone.dsl.HtmlTag")
-				out.println("import io.persephone.dsl.HeadTag")
-				out.println("import io.persephone.dsl.BodyTag")
-				out.println("import io.persephone.dsl.EmptyTag")
+				out.println("import io.persephone.dsl.*")
 				out.println("")
 
 				val attributes = el.attributes.toMutableList()

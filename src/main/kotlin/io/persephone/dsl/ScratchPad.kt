@@ -15,7 +15,7 @@ object ScratchPad {
 					div {
 						+"TEST2"
 
-						img {
+						img() {
 
 						}
 
