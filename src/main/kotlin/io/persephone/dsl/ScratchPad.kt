@@ -17,12 +17,11 @@ object ScratchPad {
 						+"TEST2"
 
 						img(src = "blah.png", alt = "blah", loading = "lazy", decoding = "async")
-						br {}
 						br()
 						span {
 							input(type = "text")
 						}
-						custom(classes = "test") {
+						custom(classes = "test", blah = "testing") {
 							span {
 								img(src = "blah2.png")
 							}
@@ -38,21 +37,29 @@ object ScratchPad {
 
 }
 
-class CUSTOM : BodyTag(tagName = "custom") {
-	var classes: String? = null
-	var styles: String? = null
-}
+class CUSTOM : BodyTag(tagName = "div")
 
 fun BodyTag.custom(
 	classes: String? = null,
-	styles: String? = null,
+	blah: String? = null,
 	init: (CUSTOM.() -> Unit)? = null
 ): CUSTOM {
-	initTag(CUSTOM(), init).apply {
-		this.classes = classes
-		this.styles = styles
+	return initTag(CUSTOM(), init).apply {
+		classes?.let {
+			this.attributes["classes"] = it
+		}
+		blah?.let {
+			this.attributes["blah"] = it
+		}
+	}.let {
+		it.div {
+			+"TEST1"
+		}
+		it.div {
+			+"TEST2"
+		}
+		it
 	}
-	return CUSTOM()
 }
 
 
