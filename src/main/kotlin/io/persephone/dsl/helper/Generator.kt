@@ -96,7 +96,7 @@ object Generator {
 		val imageMultimediaElements = arrayOf(
 			ED(tag = "area", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "audio", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "img", selfClosing = true, extends = "BodyTag", attributes = listOf("crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
+			ED(tag = "img", selfClosing = true, extends = "BodyTag", attributes = listOf("alt", "crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
 			ED(tag = "map", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "track", selfClosing = false, extends = "BodyTag", attributes = listOf()),
 			ED(tag = "video", selfClosing = false, extends = "BodyTag", attributes = listOf())

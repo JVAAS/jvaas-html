@@ -1,6 +1,6 @@
 package io.persephone.dsl
 
-import io.persephone.dsl.element.*
+import io.persephone.dsl.element.HTML
 
 object ScratchPad {
 
@@ -15,7 +15,7 @@ object ScratchPad {
 					div {
 						+"TEST2"
 
-						img(src = "blah.png", loading = "lazy", decoding = "async")
+						img(src = "blah.png", alt="blah", loading = "lazy", decoding = "async")
 						br {}
 						br()
 						span {
@@ -59,8 +59,6 @@ object ScratchPad {
 //		println(output2)
 
 	}
-
-
 
 
 }

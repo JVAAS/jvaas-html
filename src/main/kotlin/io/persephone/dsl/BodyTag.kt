@@ -590,6 +590,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		this.styles = styles
 	}
 	fun img( 
+		alt: String? = null,
 		classes: String? = null,
 		crossorigin: String? = null,
 		decoding: String? = null,
@@ -607,6 +608,7 @@ abstract class BodyTag(tagName: String) : TagWithText(tagName) {
 		init: (IMG.() -> Unit)? = null
 	) = initTag(IMG(), init).apply {
 		this.selfClosing = true
+		this.alt = alt
 		this.classes = classes
 		this.crossorigin = crossorigin
 		this.decoding = decoding
