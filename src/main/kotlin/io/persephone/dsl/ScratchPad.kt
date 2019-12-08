@@ -36,14 +36,9 @@ object ScratchPad {
 			}
 		).toString()
 
-
-		HTML().body {  }
-
 		println(output2)
 
 	}
-
-
 }
 
 class CUSTOM : BodyTag(tagName = "div")

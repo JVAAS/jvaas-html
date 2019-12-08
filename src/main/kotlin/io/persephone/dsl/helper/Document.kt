@@ -9,19 +9,11 @@ class Document(
 	val body: BODY.() -> Unit
 ) : HtmlTag("html") {
 
-	fun head() = initTag(HEAD(), head).apply {
-
-	}
-
-	fun body() = initTag(BODY(), body).apply {
-
-	}
-
 	// language=HTML5
 	override fun toString(): String = """<!DOCTYPE html>
 <html>
-${head()}
-${body()}
+${head}
+${body}
 </html>
 """
 
