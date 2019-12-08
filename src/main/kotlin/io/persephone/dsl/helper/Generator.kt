@@ -9,203 +9,203 @@ object Generator {
 
 		// elements from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 		val htmlElements = arrayOf(
-			ED(tag = "html", selfClosing = false, extends = "HtmlTag"),
-			ED(tag = "head", selfClosing = false, extends = "EmptyTag"),
-			ED(tag = "body", selfClosing = false, extends = "BodyTag")
+			Element(tag = "html", selfClosing = false, extends = "HtmlTag"),
+			Element(tag = "head", selfClosing = false, extends = "EmptyTag"),
+			Element(tag = "body", selfClosing = false, extends = "BodyTag")
 		)
 
 		val headElements = arrayOf(
-			ED(tag = "base", selfClosing = true, extends = "HeadTag", attributes = listOf("href", "target")),
-			ED(tag = "link", selfClosing = true, extends = "HeadTag", attributes = listOf("rel", "type", "href")),
-			ED(tag = "meta", selfClosing = true, extends = "HeadTag", attributes = listOf("charset", "name", "content")),
-			ED(tag = "style", selfClosing = false, extends = "HeadTag", attributes = listOf("type", "media", "nonce", "title")),
-			ED(tag = "title", selfClosing = false, extends = "HeadTag", attributes = listOf())
+			Element(tag = "base", selfClosing = true, extends = "HeadTag", attributes = listOf("href", "target")),
+			Element(tag = "link", selfClosing = true, extends = "HeadTag", attributes = listOf("rel", "type", "href")),
+			Element(tag = "meta", selfClosing = true, extends = "HeadTag", attributes = listOf("charset", "name", "content")),
+			Element(tag = "style", selfClosing = false, extends = "HeadTag", attributes = listOf("type", "media", "nonce", "title")),
+			Element(tag = "title", selfClosing = false, extends = "HeadTag", attributes = listOf())
 		)
 
 		val contentSectionElements = arrayOf(
-			ED(tag = "address", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "article", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "aside", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "footer", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "header", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h1", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h2", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h3", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h4", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h5", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "h6", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "hgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "main", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "nav", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "section", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "address", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "article", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "aside", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "footer", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "header", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h1", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h2", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h3", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h4", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h5", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "h6", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "hgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "main", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "nav", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "section", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val textContentElements = arrayOf(
-			ED(tag = "blockquote", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dd", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dir", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "div", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dl", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "figcaption", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "figure", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "hr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "li", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "main", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "ol", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "p", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "pre", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "ul", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "blockquote", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dd", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dir", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "div", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dl", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "figcaption", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "figure", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "hr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "li", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "main", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "ol", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "p", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "pre", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "ul", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val inlineTextSemanticElements = arrayOf(
-			ED(tag = "a", selfClosing = false, extends = "BodyTag", attributes = listOf("download", "href", "hreflang", "media", "ping", "referrerpolicy", "rel", "target", "type")),
-			ED(tag = "abbr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "b", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "bdi", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "bdo", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "br", selfClosing = true, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "cite", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "code", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "data", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dfn", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "em", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "i", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "kbd", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "mark", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "q", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "rb", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "rp", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "rt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "rtc", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "ruby", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "s", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "samp", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "small", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "span", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "strong", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "sub", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "sup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "time", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "tt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "u", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "varx", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "wbr", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "a", selfClosing = false, extends = "BodyTag", attributes = listOf("download", "href", "hreflang", "media", "ping", "referrerpolicy", "rel", "target", "type")),
+			Element(tag = "abbr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "b", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "bdi", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "bdo", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "br", selfClosing = true, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "cite", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "code", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "data", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dfn", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "em", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "i", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "kbd", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "mark", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "q", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "rb", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "rp", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "rt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "rtc", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "ruby", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "s", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "samp", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "small", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "span", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "strong", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "sub", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "sup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "time", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "tt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "u", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "varx", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "wbr", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val imageMultimediaElements = arrayOf(
-			ED(tag = "area", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "audio", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "img", selfClosing = true, extends = "BodyTag", attributes = listOf("alt", "crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
-			ED(tag = "map", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "track", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "video", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "area", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "audio", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "img", selfClosing = true, extends = "BodyTag", attributes = listOf("alt", "crossorigin", "decoding", "height", "importance", "ismap", "loading", "referrerpolicy", "sizes", "src", "srcset", "width", "usemap")),
+			Element(tag = "map", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "track", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "video", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val embeddedContent = arrayOf(
-			ED(tag = "applet", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "embed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "iframe", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "noembed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "objectx", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "param", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "picture", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "source", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "applet", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "embed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "iframe", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "noembed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "objectx", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "param", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "picture", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "source", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val scriptingElements = arrayOf(
-			ED(tag = "canvas", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "noscript", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "script", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "canvas", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "noscript", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "script", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val demarcatingEditElements = arrayOf(
-			ED(tag = "del", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "ins", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "del", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "ins", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val tableContentElements = arrayOf(
-			ED(tag = "caption", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "col", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "colgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "table", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "tbody", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "td", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "tfoot", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "th", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "thead", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "tr", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "caption", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "col", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "colgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "table", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "tbody", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "td", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "tfoot", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "th", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "thead", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "tr", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val formElements = arrayOf(
-			ED(tag = "button", selfClosing = true, extends = "BodyTag", attributes = listOf("autofocus", "autocomplete", "disabled", "form", "formaction", "formenctype", "formmethod", "formnovalidate", "formtarget", "name", "type", "value")),
-			ED(tag = "datalist", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "fieldset", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "form", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "input", selfClosing = true, extends = "BodyTag", attributes = listOf("autocomplete", "autofocus", "disabled", "form", "list", "name", "readonly", "required", "tabindex", "type", "value")),
-			ED(tag = "label", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "legend", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "meter", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "optgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "option", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "output", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "progress", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "select", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "textarea", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "button", selfClosing = true, extends = "BodyTag", attributes = listOf("autofocus", "autocomplete", "disabled", "form", "formaction", "formenctype", "formmethod", "formnovalidate", "formtarget", "name", "type", "value")),
+			Element(tag = "datalist", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "fieldset", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "form", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "input", selfClosing = true, extends = "BodyTag", attributes = listOf("autocomplete", "autofocus", "disabled", "form", "list", "name", "readonly", "required", "tabindex", "type", "value")),
+			Element(tag = "label", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "legend", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "meter", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "optgroup", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "option", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "output", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "progress", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "select", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "textarea", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val interactiveElements = arrayOf(
-			ED(tag = "details", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dialog", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "menu", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "menuitem", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "summary", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "details", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dialog", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "menu", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "menuitem", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "summary", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		val webComponentElements = arrayOf(
-			ED(tag = "content", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "element", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "shadow", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "slot", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "template", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "content", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "element", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "shadow", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "slot", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "template", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
 		// this array should be used  to mark generated classes as deprecated
 		val deprecatedElements = arrayOf(
-			ED(tag = "acronym", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "applet", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "basefont", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "bgsound", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "big", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "blink", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "center", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "command", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "content", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "dir", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "element", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "font", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "frame", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "frameset", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "image", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "isindex", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "keygen", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "listing", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "marquee", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "menuitem", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "multicol", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "nextid", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "nobr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "noembed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "noframes", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "plaintext", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "shadow", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "spacer", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "strike", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "tt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
-			ED(tag = "xmp", selfClosing = false, extends = "BodyTag", attributes = listOf())
+			Element(tag = "acronym", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "applet", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "basefont", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "bgsound", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "big", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "blink", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "center", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "command", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "content", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "dir", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "element", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "font", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "frame", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "frameset", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "image", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "isindex", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "keygen", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "listing", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "marquee", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "menuitem", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "multicol", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "nextid", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "nobr", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "noembed", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "noframes", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "plaintext", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "shadow", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "spacer", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "strike", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "tt", selfClosing = false, extends = "BodyTag", attributes = listOf()),
+			Element(tag = "xmp", selfClosing = false, extends = "BodyTag", attributes = listOf())
 		)
 
-		val bodyElements = arrayOf<ED>(
+		val bodyElements = arrayOf<Element>(
 			*contentSectionElements,
 			*textContentElements,
 			*inlineTextSemanticElements,
@@ -231,7 +231,7 @@ object Generator {
 
 	}
 
-	private fun generateParentElements(elements: Array<ED>, tagType: String, empty: Boolean = false, additionalAttributes: List<String>) {
+	private fun generateParentElements(elements: Array<Element>, tagType: String, empty: Boolean = false, additionalAttributes: List<String>) {
 
 		val path = getPath()
 		val processed = mutableSetOf<String>()
@@ -271,7 +271,7 @@ object Generator {
 		}
 	}
 
-	private fun generateChildElements(list: Array<ED>, tagType: String, additionalAttributes: List<String>) {
+	private fun generateChildElements(list: Array<Element>, tagType: String, additionalAttributes: List<String>) {
 
 		val path = getPath()
 
