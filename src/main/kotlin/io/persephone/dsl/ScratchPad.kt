@@ -1,6 +1,7 @@
 package io.persephone.dsl
 
 import io.persephone.dsl.element.HTML
+import io.persephone.dsl.helper.Document
 
 object ScratchPad {
 
@@ -8,29 +9,37 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
+		val output2 = Document(
+			head = {
+				// meta(name = "test", type = "test")
+			},
+			body = {
+				div(styles = "color: red") {
+					div(classes = "charcoal text:white") {
+						+"TEST1"
+						div {
+							+"TEST2"
 
-		val output = HTML().body {
-			div(styles = "color: red") {
-				div(classes = "charcoal text:white") {
-					+"TEST1"
-					div {
-						+"TEST2"
-
-						img(src = "blah.png", alt = "blah", loading = "lazy", decoding = "async")
-						br()
-						span {
-							input(type = "text")
-						}
-						custom(classes = "test", blah = "testing") {
+							img(src = "blah.png", alt = "blah", loading = "lazy", decoding = "async")
+							br()
 							span {
-								img(src = "blah2.png")
+								input(type = "text")
+							}
+							custom(classes = "test", blah = "testing") {
+								span {
+									img(src = "blah2.png")
+								}
 							}
 						}
 					}
 				}
 			}
-		}
-		println(output)
+		).toString()
+
+
+		HTML().body {  }
+
+		println(output2)
 
 	}
 
@@ -53,10 +62,10 @@ fun BodyTag.custom(
 		}
 	}.let {
 		it.div {
-			+"TEST1"
+			+"TEST3"
 		}
 		it.div {
-			+"TEST2"
+			+"TEST4"
 		}
 		it
 	}
