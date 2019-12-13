@@ -12,19 +12,48 @@ class Grouping(
 	attributes = attributes
 ) {
 
+	val children: List<Element>
+		get() = this.leChildren.toList()
+
+
+	val leChildren = mutableListOf<Element>()
+
 	fun grouping(
 		tag: String,
 		attributes: List<String> = listOf(),
-		children: Grouping? = null,
+		children: List<Element>? = null,
 		init: (Grouping.() -> Unit)? = null
 	) {
 
+		println("grouping(tag=$tag)")
+
+		this.leChildren.add(Element(
+			tag = tag,
+			attributes = attributes
+		))
 	}
 
 	fun element(
 		tag: String,
 		attributes: List<String> = listOf()
 	) {
+
+		println("element(tag=$tag)")
+
+		this.leChildren.add(Element(
+			tag = tag,
+			attributes = attributes
+		))
+	}
+
+	fun generate(): Grouping {
+
+		println(tag)
+		children.forEach {
+			println("    ${it.tag}")
+		}
+
+		return this
 
 	}
 

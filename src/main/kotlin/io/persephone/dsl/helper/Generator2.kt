@@ -1,9 +1,12 @@
 package io.persephone.dsl.helper
 
 
-object Generator2 {
+class HtmlDslGenerator {
 
 	init {
+
+		println("init")
+
 		Grouping(tag = "") document@{
 			grouping(tag = "html") html@{
 
@@ -17,8 +20,8 @@ object Generator2 {
 
 				grouping(tag = "body") body@{
 
-					grouping(tag = "div", children = this@body)
-					grouping(tag = "span", children = this@body)
+					grouping(tag = "div", children = this@body.children)
+					grouping(tag = "span", children = this@body.children)
 
 					grouping(tag = "table") table@{
 
@@ -29,39 +32,40 @@ object Generator2 {
 						}
 
 						grouping(tag = "tr") tr@{
-							grouping(tag = "td", children = this@body)
+							grouping(tag = "td", children = this@body.children)
 						}
 
 						grouping(tag = "thead") thead@{
 							grouping(tag = "tr") tr@{
-								grouping(tag = "th", children = this@body)
+								grouping(tag = "th", children = this@body.children)
 							}
 						}
 						grouping(tag = "tbody") tbody@{
 							grouping(tag = "tr") tr@{
-								grouping(tag = "td", children = this@body)
+								grouping(tag = "td", children = this@body.children)
 							}
 						}
 						grouping(tag = "tfoot") tfoot@{
 							grouping(tag = "tr") tr@{
-								grouping("td", children = this@body)
+								grouping("td", children = this@body.children)
 							}
 						}
 
 					}
-
-
 				}
-
 			}
-
 		}
-
-
-
-
 	}
 
+	companion object {
+
+		@JvmStatic
+		fun main(args: Array<String>) {
+
+			HtmlDslGenerator()
+
+		}
+	}
 
 }
 
