@@ -23,31 +23,38 @@ class Grouping(
 		attributes: List<String> = listOf(),
 		children: MutableList<Element>? = null,
 		init: (Grouping.() -> Unit)? = null
-	) {
+	): Grouping {
+
 		val newGroup = Grouping(
 			tag = tag,
 			attributes = attributes,
 			init = null
 		)
+
 		if (children != null) {
 			newGroup.children = children
 		}
-		this.children.add(newGroup)
 
+		this.children.add(newGroup)
 		init?.invoke(newGroup)
+
+		return newGroup
 	}
 
 	fun element(
 		tag: String,
 		attributes: List<String> = listOf()
-	) {
+	): Element {
 
 		println("element(tag=$tag)")
 
-		this.children.add(Element(
+		val newElement = Element(
 			tag = tag,
 			attributes = attributes
-		))
+		)
+
+		this.children.add(newElement)
+		return newElement
 	}
 
 	fun generate(): Grouping {
