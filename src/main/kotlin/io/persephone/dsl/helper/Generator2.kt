@@ -3,11 +3,11 @@ package io.persephone.dsl.helper
 
 class HtmlDslGenerator {
 
+	val root: Grouping
+
 	init {
 
-		println("init")
-
-		Grouping(tag = "") document@{
+		 root = Grouping(tag = "document") document@{
 			grouping(tag = "html") html@{
 
 				grouping(tag = "head") head@{
@@ -50,7 +50,6 @@ class HtmlDslGenerator {
 								grouping("td", children = this@body.children)
 							}
 						}
-
 					}
 				}
 			}
@@ -62,9 +61,23 @@ class HtmlDslGenerator {
 		@JvmStatic
 		fun main(args: Array<String>) {
 
-			HtmlDslGenerator()
+			val root = HtmlDslGenerator()
+
+			println(root)
 
 		}
+	}
+
+	private fun getPath(): String {
+		return this::class.java.protectionDomain.codeSource.location.path.replace("/build/classes/kotlin/main/", "")
+	}
+
+	private fun String.toCamelCase(): String {
+		val array = this.toByteArray()
+		if (array.isNotEmpty()) {
+			array[0] = array.first().toChar().toUpperCase().toByte()
+		}
+		return String(array)
 	}
 
 }

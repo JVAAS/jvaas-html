@@ -4,7 +4,7 @@ class Grouping(
 
 	tag: String,
 	attributes: List<String> = listOf(),
-	init: Grouping.() -> Unit
+	init: (Grouping.() -> Unit)? = null
 
 ): Element(
 	tag = tag,
@@ -12,25 +12,29 @@ class Grouping(
 	attributes = attributes
 ) {
 
-	val children: List<Element>
-		get() = this.leChildren.toList()
+	var children: MutableList<Element> = mutableListOf()
 
-
-	val leChildren = mutableListOf<Element>()
+	init {
+		init?.invoke(this)
+	}
 
 	fun grouping(
 		tag: String,
 		attributes: List<String> = listOf(),
-		children: List<Element>? = null,
+		children: MutableList<Element>? = null,
 		init: (Grouping.() -> Unit)? = null
 	) {
-
-		println("grouping(tag=$tag)")
-
-		this.leChildren.add(Element(
+		val newGroup = Grouping(
 			tag = tag,
-			attributes = attributes
-		))
+			attributes = attributes,
+			init = null
+		)
+		if (children != null) {
+			newGroup.children = children
+		}
+		this.children.add(newGroup)
+
+		init?.invoke(newGroup)
 	}
 
 	fun element(
@@ -40,7 +44,7 @@ class Grouping(
 
 		println("element(tag=$tag)")
 
-		this.leChildren.add(Element(
+		this.children.add(Element(
 			tag = tag,
 			attributes = attributes
 		))
