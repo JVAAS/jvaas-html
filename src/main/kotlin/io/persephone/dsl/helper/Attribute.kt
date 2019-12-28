@@ -6,5 +6,6 @@ open class Attribute(
 	val deprecated: Boolean = false,
 	val implemented: Boolean = true,
 	val experimental: Boolean = false,
-	val standardized: Boolean = true
+	val standardized: Boolean = true,
+	val readonly: Boolean = false
 )

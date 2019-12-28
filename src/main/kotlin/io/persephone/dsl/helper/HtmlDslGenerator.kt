@@ -1,5 +1,7 @@
 package io.persephone.dsl.helper
 
+import kotlin.math.exp
+
 // based on -> Last modified: Jun 6, 2019, by MDN contributors
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
@@ -485,8 +487,65 @@ class HtmlDslGenerator {
 	 * Image and multimedia
 	 * HTML supports various multimedia resources such as images, audio, and video.
 	 */
-	val area = body.element(tag = "area")
-	val audio = body.element(tag = "audio")
+	val area = body.element(
+		tag = "area",
+		attributes = arrayOf(
+			Attribute("alt"),
+			Attribute("coords"),
+			Attribute("download"),
+			Attribute("href"),
+			Attribute("hreflang"),
+			Attribute("name", deprecated = true),
+			Attribute("nohref", deprecated = true),
+			Attribute("ping"),
+			Attribute("referrerpolicy", experimental = true),
+			Attribute("rel"),
+			Attribute("shape"),
+			Attribute("tabindex", deprecated = true),
+			Attribute("target"),
+			Attribute("type"),
+			*gaeAttributes
+		),
+		selfClosing = false
+	)
+	val audio = body.grouping(
+		tag = "audio",
+		attributes = arrayOf(
+			Attribute("autoplay"),
+			Attribute("controls"),
+			Attribute("crossorigin"),
+			Attribute("currentTime"),
+			Attribute("disableRemotePlayback", experimental = true),
+			Attribute("duration", readonly = true),
+			Attribute("loop"),
+			Attribute("muted"),
+			Attribute("preload"),
+			Attribute("src"),
+
+			Attribute("audioprocess"),
+			Attribute("canplay"),
+			Attribute("canplaythrough"),
+			Attribute("complete"),
+			Attribute("durationchange"),
+			Attribute("emptied"),
+			Attribute("ended"),
+			Attribute("loadeddata"),
+			Attribute("loadedmetadata"),
+			Attribute("pause"),
+			Attribute("play"),
+			Attribute("playing"),
+			Attribute("ratechange"),
+			Attribute("seeked"),
+			Attribute("seeking"),
+			Attribute("stalled"),
+			Attribute("suspend"),
+			Attribute("timeupdate"),
+			Attribute("volumechange"),
+			Attribute("waiting"),
+
+			*gaeAttributes
+		)
+	)
 	val img = body.element(tag = "img")
 	val map = body.element(tag = "map")
 	val track = body.element(tag = "track")
@@ -872,6 +931,17 @@ class HtmlDslGenerator {
 		u.children = phrasingContent.toMutableList()
 
 		`var`.children = phrasingContent.toMutableList()
+
+		// image and multimedia
+
+		audio.children = mutableListOf(track, source)
+
+		// embedded content
+
+		// scripting
+
+		// demarcating edits
+
 
 	}
 
