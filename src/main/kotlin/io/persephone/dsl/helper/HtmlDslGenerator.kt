@@ -780,14 +780,18 @@ class HtmlDslGenerator {
 		tag = "del",
 		attributes = arrayOf(
 			Attribute("cite"),
-			Attribute("datetime")
+			Attribute("datetime"),
+
+			*gaeAttributes
 		)
 	)
 	val ins = body.element(
 		tag = "ins",
 		attributes = arrayOf(
 			Attribute("cite"),
-			Attribute("datetime")
+			Attribute("datetime"),
+
+			*gaeAttributes
 		)
 	)
 
@@ -795,16 +799,136 @@ class HtmlDslGenerator {
 	 * Table content
 	 * The elements here are used to create and handle tabular data.
 	 */
-	val caption = body.grouping(tag = "caption")
-	val col = body.grouping(tag = "col")
-	val colgroup = body.grouping(tag = "colgroup")
-	val table = body.grouping(tag = "table")
-	val tbody = body.grouping(tag = "tbody")
-	val td = body.grouping(tag = "td")
-	val tfoot = body.grouping(tag = "tfoot")
-	val th = body.grouping(tag = "th")
-	val thead = body.grouping(tag = "thead")
-	val tr = body.grouping(tag = "tr")
+	val caption = body.grouping(
+		tag = "caption",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val col = body.element(
+		tag = "col",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("span"),
+			Attribute("valign", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val colgroup = body.grouping(
+		tag = "colgroup",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("span"),
+			Attribute("valign", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val table = body.grouping(
+		tag = "table",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", deprecated = true),
+			Attribute("border", deprecated = true),
+			Attribute("cellpadding", deprecated = true),
+			Attribute("cellspacing", deprecated = true),
+			Attribute("frame", deprecated = true),
+			Attribute("rules", deprecated = true),
+			Attribute("summary", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val tbody = body.grouping(
+		tag = "tbody",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("valign", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val td = body.grouping(
+		tag = "td",
+		attributes = arrayOf(
+			Attribute("abbr", deprecated = true),
+			Attribute("align", deprecated = true),
+			Attribute("axis", deprecated = true),
+			Attribute("bgcolor", deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("colspan"),
+			Attribute("headers"),
+			Attribute("height", deprecated = true),
+			Attribute("rowspan"),
+			Attribute("scope", deprecated = true),
+			Attribute("valign", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val tfoot = body.grouping(
+		tag = "tfoot",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("valign", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val th = body.grouping(
+		tag = "th",
+		attributes = arrayOf(
+			Attribute("abbr"),
+			Attribute("align", deprecated = true),
+			Attribute("axis", deprecated = true),
+			Attribute("bgcolor", deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("colspan"),
+			Attribute("headers"),
+			Attribute("height", deprecated = true),
+			Attribute("rowspan"),
+			Attribute("scope"),
+			Attribute("valign", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val thead = body.grouping(
+		tag = "thead",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("valign", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val tr = body.grouping(
+		tag = "tr",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("bgcolor", standardized = false, deprecated = true),
+			Attribute("char", deprecated = true),
+			Attribute("charoff", deprecated = true),
+			Attribute("valign", deprecated = true),
+			*gaeAttributes
+		)
+	)
 
 	/**
 	 * Forms
@@ -1091,6 +1215,7 @@ class HtmlDslGenerator {
 		// TODO: handle "transparent" content in here as well
 
 		// embedded content
+
 		`object`.children = mutableListOf(param)
 
 		picture.children = mutableListOf(source, img)
@@ -1107,10 +1232,38 @@ class HtmlDslGenerator {
 
 		)
 
-		// scripting
+		// table element
+
+		caption.children = flowContent.toMutableList()
+
+		colgroup.children = mutableListOf(col)
+
+		table.children = mutableListOf(caption, colgroup, thead, tbody, tr, tfoot)
+
+		tbody.children = mutableListOf(tr)
+
+		td.children = flowContent.toMutableList()
+
+		tfoot.children = mutableListOf(tr)
+
+		th.children = flowContent.
+			minus(header).
+			minus(footer).
+			minus(*sectioningContent).
+			minus(*headingContent).
+			toMutableList()
+
+		thead.children = mutableListOf(tr)
+
+		tr.children = mutableListOf(td, th)
+
+		// forms
 
 
-		// demarcating edits
+		// interactive elements
+
+		// web components
+
 
 
 	}
