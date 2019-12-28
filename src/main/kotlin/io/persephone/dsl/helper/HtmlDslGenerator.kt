@@ -1125,11 +1125,46 @@ class HtmlDslGenerator {
 	 * Interactive elements
 	 * HTML offers a selection of elements which help to create interactive user interface objects.
 	 */
-	val details = body.grouping(tag = "details")
-	val dialog = body.grouping(tag = "dialog")
-	val menu = body.grouping(tag = "menu")
-	val menuitem1 = body.grouping(tag = "menuitem", deprecated = true)
-	val summary = body.grouping(tag = "summary")
+	val details = body.grouping(
+		tag = "details",
+		attributes = arrayOf(
+			Attribute("open"),
+			*gaeAttributes
+		)
+	)
+	val dialog = body.grouping(
+		tag = "dialog",
+		attributes = arrayOf(
+			Attribute("open"),
+			*gaeAttributes
+		)
+	)
+	val menu = body.grouping(
+		tag = "menu",
+		attributes = arrayOf(
+			Attribute("label", deprecated = true),
+			Attribute("type"),
+			*gaeAttributes
+		)
+	)
+	val menuitem = body.element(
+		tag = "menuitem",
+		attributes = arrayOf(
+			Attribute("checked"),
+			Attribute("command"),
+			Attribute("default"),
+			Attribute("disabled"),
+			Attribute("icon"),
+			Attribute("label"),
+			Attribute("radiogroup"),
+			Attribute("type"),
+			*gaeAttributes
+		),
+		deprecated = true)
+	val summary = body.grouping(
+		tag = "summary",
+		attributes = gaeAttributes
+	)
 
 	/**
 	 * Web Components
@@ -1137,11 +1172,35 @@ class HtmlDslGenerator {
 	 * create and use custom elements as if it were regular HTML. In addition, you can create
 	 * custom versions of standard HTML elements.
 	 */
-	val content1 = body.grouping(tag = "content", deprecated = true)
-	val element1 = body.grouping(tag = "element", deprecated = true)
-	val shadow1 = body.grouping(tag = "shadow", deprecated = true)
-	val slot = body.grouping(tag = "slot")
-	val template = body.grouping(tag = "template")
+	val content = body.grouping(
+		tag = "content",
+		attributes = arrayOf(
+			Attribute("select"),
+			*gaeAttributes
+		),
+		deprecated = true
+	)
+	val element = body.grouping(
+		tag = "element",
+		attributes = gaeAttributes,
+		deprecated = true
+	)
+	val shadow = body.grouping(
+		tag = "shadow",
+		attributes = gaeAttributes,
+		deprecated = true
+	)
+	val slot = body.grouping(
+		tag = "slot",
+		attributes = arrayOf(
+			Attribute("name"),
+			*gaeAttributes
+		)
+	)
+	val template = body.grouping(
+		tag = "template",
+		attributes = gaeAttributes
+	)
 
 	// grouping of elements
 	val metadataContent = arrayOf(
@@ -1467,8 +1526,26 @@ class HtmlDslGenerator {
 
 		// interactive elements
 
+		details.children = flowContent.
+			plus(summary).
+			toMutableList()
+
+		dialog.children = flowContent.toMutableList()
+
+		menu.children = flowContent.
+			plus(li).
+			plus(menuitem, hr).
+			toMutableList()
+
+		summary.children = phrasingContent.
+			plus(*headingContent).
+			toMutableList()
+
+		content.children = flowContent.toMutableList()
+
 		// web components
 
+		template.children = body.children
 
 
 	}
