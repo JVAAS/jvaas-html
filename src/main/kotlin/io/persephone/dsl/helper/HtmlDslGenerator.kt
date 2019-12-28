@@ -315,38 +315,169 @@ class HtmlDslGenerator {
 	 * Use the HTML inline text semantic to define the meaning, structure, or style of a word,
 	 * line, or any arbitrary piece of text.
 	 */
-	val a = body.grouping(tag = "a")
-	val abbr = body.element(tag = "abbr")
-	val b = body.element(tag = "b")
-	val bdi = body.element(tag = "bdi")
-	val bdo = body.element(tag = "bdo")
-	val br = body.element(tag = "br")
-	val cite = body.element(tag = "cite")
-	val code = body.element(tag = "code")
-	val data = body.element(tag = "data")
-	val dfn = body.element(tag = "dfn")
-	val em = body.element(tag = "em")
-	val i = body.element(tag = "i")
-	val kbd = body.element(tag = "kbd")
-	val mark = body.element(tag = "mark")
-	val q = body.element(tag = "q")
-	val rb = body.element(tag = "rb")
-	val rp = body.element(tag = "rp")
-	val rt = body.element(tag = "rt")
-	val rtc = body.element(tag = "rtc")
-	val ruby = body.element(tag = "ruby")
-	val s = body.element(tag = "s")
-	val samp = body.element(tag = "samp")
-	val small = body.element(tag = "small")
-	val span = body.element(tag = "span")
-	val strong = body.element(tag = "strong")
-	val sub = body.element(tag = "sub")
-	val sup = body.element(tag = "sup")
-	val time = body.element(tag = "time")
-	val tt = body.element(tag = "tt", deprecated = true)
-	val u = body.element(tag = "u")
-	val `var` = body.element(tag = "var")
-	val wbr = body.element(tag = "wbr")
+	val a = body.grouping(
+		tag = "a",
+		attributes = arrayOf(
+			Attribute("download"),
+			Attribute("href"),
+			Attribute("hreflang"),
+			Attribute("ping"),
+			Attribute("referrerpolicy", experimental = true),
+			Attribute("rel"),
+			Attribute("target"),
+			Attribute("type"),
+
+			Attribute("charset", deprecated = true),
+			Attribute("coords", deprecated = true),
+			Attribute("name", deprecated = true),
+			Attribute("rev", deprecated = true),
+			Attribute("shape", deprecated = true),
+
+			*gaeAttributes
+		)
+
+	)
+	val abbr = body.element(
+		tag = "abbr",
+		attributes = gaeAttributes
+	)
+	val b = body.element(
+		tag = "b",
+		attributes = gaeAttributes
+	)
+	val bdi = body.element(
+		tag = "bdi",
+		attributes = gaeAttributes
+	)
+	val bdo = body.element(
+		tag = "bdo",
+		attributes = arrayOf(
+			Attribute("dir"),
+			*gaeAttributes
+		)
+
+	)
+	val br = body.element(
+		tag = "br",
+		attributes = arrayOf(
+			Attribute("clear", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val cite = body.element(
+		tag = "cite",
+		attributes = gaeAttributes
+	)
+	val code = body.element(
+		tag = "code",
+		attributes = gaeAttributes
+	)
+	val data = body.element(
+		tag = "data",
+		attributes = arrayOf(
+			Attribute("value"),
+			*gaeAttributes
+		)
+	)
+	val dfn = body.element(
+		tag = "dfn",
+		attributes = gaeAttributes
+	)
+	val em = body.element(
+		tag = "em",
+		attributes = gaeAttributes
+	)
+	val i = body.element(
+		tag = "i",
+		attributes = gaeAttributes
+	)
+	val kbd = body.element(
+		tag = "kbd",
+		attributes = gaeAttributes
+	)
+	val mark = body.element(
+		tag = "mark",
+		attributes = gaeAttributes
+	)
+	val q = body.element(
+		tag = "q",
+		attributes = arrayOf(
+			Attribute("cite"),
+			*gaeAttributes
+		)
+	)
+	val rb = body.element(
+		tag = "rb",
+		attributes = gaeAttributes
+	)
+	val rp = body.element(
+		tag = "rp",
+		attributes = gaeAttributes
+	)
+	val rt = body.element(
+		tag = "rt",
+		attributes = gaeAttributes
+	)
+	val rtc = body.element(
+		tag = "rtc",
+		attributes = gaeAttributes
+	)
+	val ruby = body.element(
+		tag = "ruby",
+		attributes = gaeAttributes
+	)
+	val s = body.element(
+		tag = "s",
+		attributes = gaeAttributes
+	)
+	val samp = body.element(
+		tag = "samp",
+		attributes = gaeAttributes
+	)
+	val small = body.element(
+		tag = "small",
+		attributes = gaeAttributes
+	)
+	val span = body.element(
+		tag = "span",
+		attributes = gaeAttributes
+	)
+	val strong = body.element(
+		tag = "strong",
+		attributes = gaeAttributes
+	)
+	val sub = body.element(
+		tag = "sub",
+		attributes = gaeAttributes
+	)
+	val sup = body.element(
+		tag = "sup",
+		attributes = gaeAttributes
+	)
+	val time = body.element(
+		tag = "time",
+		attributes = arrayOf(
+			Attribute("datetime"),
+			*gaeAttributes
+		)
+	)
+	val tt = body.element(
+		tag = "tt",
+		attributes = gaeAttributes,
+		deprecated = true
+	)
+	val u = body.element(
+		tag = "u",
+		attributes = gaeAttributes
+	)
+	val `var` = body.element(
+		tag = "var",
+		attributes = gaeAttributes
+	)
+	val wbr = body.element(
+		tag = "wbr",
+		attributes = gaeAttributes
+	)
 
 
 	/**
