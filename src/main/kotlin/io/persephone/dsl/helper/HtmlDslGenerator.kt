@@ -936,20 +936,104 @@ class HtmlDslGenerator {
 	 * can fill out and submit to the Web site or application. There's a great deal of further
 	 * information about this available in the HTML forms guide.
 	 */
-	val button = body.grouping(tag = "button")
-	val datalist = body.grouping(tag = "datalist")
-	val fieldset = body.grouping(tag = "fieldset")
-	val form = body.grouping(tag = "form")
-	val input = body.grouping(tag = "input")
-	val label = body.grouping(tag = "label")
-	val legend = body.grouping(tag = "legend")
-	val meter = body.grouping(tag = "meter")
-	val optgroup = body.grouping(tag = "optgroup")
-	val option = body.grouping(tag = "option")
-	val output = body.grouping(tag = "output")
-	val progress = body.grouping(tag = "progress")
-	val select = body.grouping(tag = "select")
-	val textarea = body.grouping(tag = "textarea")
+	val button = body.grouping(
+		tag = "button",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val datalist = body.grouping(
+		tag = "datalist",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val fieldset = body.grouping(
+		tag = "fieldset",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val form = body.grouping(
+		tag = "form",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val input = body.grouping(
+		tag = "input",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val label = body.grouping(
+		tag = "label",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val legend = body.grouping(
+		tag = "legend",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val meter = body.grouping(
+		tag = "meter",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val optgroup = body.grouping(
+		tag = "optgroup",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val option = body.grouping(
+		tag = "option",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val output = body.grouping(
+		tag = "output",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val progress = body.grouping(
+		tag = "progress",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val select = body.grouping(
+		tag = "select",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val textarea = body.grouping(
+		tag = "textarea",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
 
 	/**
 	 * Interactive elements
@@ -1258,7 +1342,41 @@ class HtmlDslGenerator {
 		tr.children = mutableListOf(td, th)
 
 		// forms
+		button.children = phrasingContent.
+			minus(*interactiveContent).
+			toMutableList()
 
+		datalist.children = phrasingContent.
+			plus(option).
+			toMutableList()
+
+		fieldset.children = flowContent.
+			plus(legend).
+			toMutableList()
+
+		form.children = flowContent.
+			minus(form).
+			toMutableList()
+
+		label.children = phrasingContent.
+			minus(label).
+			toMutableList()
+
+		legend.children = phrasingContent.toMutableList()
+
+		meter.children = phrasingContent.
+			minus(meter).
+			toMutableList()
+
+		optgroup.children = mutableListOf(option)
+
+		output.children = phrasingContent.toMutableList()
+
+		progress.children = phrasingContent.
+			minus(progress).
+			toMutableList()
+
+		select.children = mutableListOf(option, optgroup)
 
 		// interactive elements
 
