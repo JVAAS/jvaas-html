@@ -1,18 +1,40 @@
 package io.persephone.dsl.helper
 
-import java.io.File
-
 // based on -> Last modified: Jun 6, 2019, by MDN contributors
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 class HtmlDslGenerator {
 
 	val globalAttributes = arrayOf(
-		"accesskey", "autocapitalize", "class->classes", "contenteditable",
-		// data
-		"dir", "draggable", "dropzone", "hidden", "id", "inputmode", "is->isses",
-		"itemid", "itemprop", "itemref", "itemscope", "itemtype", "lang", "part",
-		"slot", "spellcheck", "style", "tabindex", "title", "translate"
+		Attribute("accesskey"),
+		Attribute("autocapitalize"),
+		Attribute("class", generates = "classes"),
+		Attribute("contenteditable"),
+		Attribute("contextmenu", deprecated = true),
+		Attribute("data-*", implemented = false),
+		Attribute("dir"),
+		Attribute("draggable"),
+		Attribute("dropzone", experimental = true),
+		Attribute("exportparts", experimental = true),
+		Attribute("hidden"),
+		Attribute("id"),
+		Attribute("inputmode"),
+		Attribute("is", generates = "isses"),
+
+		Attribute("itemid"),
+		Attribute("itemprop"),
+		Attribute("itemref"),
+		Attribute("itemscope"),
+		Attribute("itemtype"),
+
+		Attribute("lang"),
+		Attribute("part"),
+		Attribute("slot"),
+		Attribute("spellcheck", experimental = true),
+		Attribute("style"),
+		Attribute("tabindex"),
+		Attribute("title"),
+		Attribute("translate", experimental = true)
 	)
 
 	val globalEvents = arrayOf(
@@ -25,15 +47,17 @@ class HtmlDslGenerator {
 		"onplaying", "onprogress", "onratechange", "onreset", "onresize", "onscroll", "onseeked", "onseeking",
 		"onselect", "onshow", "onsort", "onstalled", "onsubmit", "onsuspend", "ontimeupdate", "ontoggle",
 		"onvolumechange", "onwaiting"
-	)
+	).map {
+		Attribute(tag = it)
+	}.toTypedArray()
 
-	val gaeAttributes = arrayOf(*globalAttributes, *globalEvents)
+	val gaeAttributes: Array<Attribute> = arrayOf(*globalAttributes, *globalEvents)
 
 
 	val root = Grouping(tag = "document")
 	val html = root.grouping(
 		tag = "html",
-		attributes = arrayOf("xmlns", *gaeAttributes)
+		attributes = arrayOf(Attribute("xmlns"), *gaeAttributes)
 	)
 
 	/**
@@ -42,13 +66,44 @@ class HtmlDslGenerator {
 	 * and data to help software (search engines, browsers, etc.) use and render the page. Metadata for
 	 * styles and scripts may be defined in the page or link to another file that has the information.
 	 */
-	val head = html.grouping(tag = "head", attributes = gaeAttributes)
+	val head = html.grouping(tag = "head")
 
-	val base = head.element(tag = "base", attributes = arrayOf("href", "target"), selfClosing = true)
-	val link = head.element(tag = "link", attributes = arrayOf("rel", "type", "href"), selfClosing = true)
-	val meta = head.element(tag = "meta", attributes = arrayOf("charset", "name", "content"), selfClosing = true)
-	val style = head.element(tag = "style", attributes = arrayOf("type", "media", "nonce", "title"))
-	val title = head.element(tag = "title", attributes = arrayOf())
+	val base = head.element(
+		tag = "base",
+		attributes = arrayOf(
+			Attribute("href"),
+			Attribute("target")
+		),
+		selfClosing = true)
+	val link = head.element(
+		tag = "link",
+		attributes = arrayOf(
+			Attribute("rel"),
+			Attribute("type"),
+			Attribute("href")
+		),
+		selfClosing = true)
+	val meta = head.element(
+		tag = "meta",
+		attributes = arrayOf(
+			Attribute("charset"),
+			Attribute("name"),
+			Attribute("content")
+		),
+		selfClosing = true)
+	val style = head.element(
+		tag = "style",
+		attributes = arrayOf(
+			Attribute("type"),
+			Attribute("media"),
+			Attribute("nonce"),
+			Attribute("title")
+		),
+		selfClosing = false)
+	val title = head.element(
+		tag = "title",
+		attributes = arrayOf(),
+		selfClosing = false)
 
 	/**
 	 * Sectioning root
@@ -62,21 +117,21 @@ class HtmlDslGenerator {
 	 * Use the sectioning elements to create a broad outline for your page content, including header
 	 * and footer navigation, and heading elements to identify sections of content.
 	 */
-	val address = body.grouping(tag = "address", attributes = gaeAttributes, children = body.children)
-	val article = body.grouping(tag = "article", children = body.children)
-	val aside = body.grouping(tag = "aside", children = body.children)
-	val footer = body.grouping(tag = "footer", children = body.children)
-	val header = body.grouping(tag = "header", children = body.children)
+	val address = body.grouping(tag = "address", attributes = gaeAttributes)
+	val article = body.grouping(tag = "article")
+	val aside = body.grouping(tag = "aside")
+	val footer = body.grouping(tag = "footer")
+	val header = body.grouping(tag = "header")
 	val h1 = body.element(tag = "h1")
 	val h2 = body.element(tag = "h2")
 	val h3 = body.element(tag = "h3")
 	val h4 = body.element(tag = "h4")
 	val h5 = body.element(tag = "h5")
 	val h6 = body.element(tag = "h6")
-	val hgroup = body.grouping(tag = "hgroup", children = body.children, deprecated = true)
-	val main1 = body.grouping(tag = "main", children = body.children)
-	val nav = body.grouping(tag = "nav", children = body.children)
-	val section = body.grouping(tag = "section", children = body.children)
+	val hgroup = body.grouping(tag = "hgroup", deprecated = true)
+	val main1 = body.grouping(tag = "main")
+	val nav = body.grouping(tag = "nav")
+	val section = body.grouping(tag = "section")
 
 	/**
 	 * Text content
@@ -84,20 +139,20 @@ class HtmlDslGenerator {
 	 * opening <body> and closing </body> tags. Important for accessibility and SEO, these elements
 	 * identify the purpose or structure of that content.
 	 */
-	val blockquote = body.grouping(tag = "blockquote", children = body.children)
+	val blockquote = body.grouping(tag = "blockquote")
 	val dd = body.element(tag = "dd")
-	val div = body.grouping(tag = "div", children = body.children)
-	val dl = body.grouping(tag = "dl", children = body.children)
+	val div = body.grouping(tag = "div")
+	val dl = body.grouping(tag = "dl")
 	val dt = body.element(tag = "dt")
 	val figcaption = body.element(tag = "figcaption")
-	val figure = body.grouping(tag = "figure", children = body.children)
+	val figure = body.grouping(tag = "figure")
 	val hr = body.element(tag = "hr", selfClosing = true)
 	val li = body.grouping(tag = "li")
-	val main2 = body.grouping(tag = "main", children = body.children)
-	val ol = body.grouping(tag = "ol", children = body.children)
-	val p = body.grouping(tag = "p", children = body.children)
-	val pre = body.grouping(tag = "pre", children = body.children)
-	val ul = body.grouping(tag = "ul", children = body.children)
+	val main2 = body.grouping(tag = "main")
+	val ol = body.grouping(tag = "ol")
+	val p = body.grouping(tag = "p")
+	val pre = body.grouping(tag = "pre")
+	val ul = body.grouping(tag = "ul")
 
 	/**
 	 * Inline text semantics
@@ -382,6 +437,7 @@ class HtmlDslGenerator {
 
 	init {
 
+
 		// handle children
 		hgroup.children = mutableListOf(h1, h2, h3, h4, h5, h6)
 
@@ -401,19 +457,13 @@ class HtmlDslGenerator {
 
 			val root = HtmlDslGenerator()
 
-			val blah = """
-				
-
-			""".trimIndent().split(",").forEach {
-				print(it.replace("<", "").replace(">", "").trim() + ", ")
-			}
-
-			//println(root)
+			println(root)
 
 
 		}
 	}
 
+	/*
 	private fun generateParentElements(elements: Array<Element>, tagType: String, empty: Boolean = false, additionalAttributes: List<String>) {
 
 		val path = getPath()
@@ -454,6 +504,9 @@ class HtmlDslGenerator {
 		}
 	}
 
+	 */
+
+	/*
 	private fun generateChildElements(list: Array<Element>, tagType: String, additionalAttributes: List<String>) {
 
 		val path = getPath()
@@ -491,14 +544,11 @@ class HtmlDslGenerator {
 				} else {
 					out.println("""class ${el.tag.toUpperCase()} : $tagType("${el.tag}")""")
 				}
-
 				out.println("")
-
 			}
-
 		}
-
 	}
+	 */
 
 	private fun getPath(): String {
 		return this::class.java.protectionDomain.codeSource.location.path.replace("/build/classes/kotlin/main/", "")

@@ -4,7 +4,7 @@ class Grouping(
 
 	tag: String,
 	deprecated: Boolean = false,
-	attributes: Array<String> = arrayOf(),
+	attributes: Array<Attribute> = arrayOf(),
 	init: (Grouping.() -> Unit)? = null
 
 ): Element(
@@ -22,7 +22,7 @@ class Grouping(
 	fun grouping(
 		tag: String,
 		deprecated: Boolean = false,
-		attributes: Array<String> = arrayOf(),
+		attributes: Array<Attribute> = arrayOf(),
 		children: MutableList<Element>? = null,
 		init: (Grouping.() -> Unit)? = null
 	): Grouping {
@@ -48,7 +48,7 @@ class Grouping(
 		tag: String,
 		deprecated: Boolean = false,
 		selfClosing: Boolean = false,
-		attributes: Array<String> = arrayOf()
+		attributes: Array<Attribute> = arrayOf()
 	): Element {
 
 		val newElement = Element(
