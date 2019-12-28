@@ -5,5 +5,6 @@ open class Attribute(
 	val generates: String? = null,
 	val deprecated: Boolean = false,
 	val implemented: Boolean = true,
-	val experimental: Boolean = false
+	val experimental: Boolean = false,
+	val standardized: Boolean = true
 )

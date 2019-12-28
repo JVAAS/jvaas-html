@@ -154,21 +154,66 @@ class HtmlDslGenerator {
 	 * Use the sectioning elements to create a broad outline for your page content, including header
 	 * and footer navigation, and heading elements to identify sections of content.
 	 */
-	val address = body.grouping(tag = "address", attributes = gaeAttributes)
-	val article = body.grouping(tag = "article")
-	val aside = body.grouping(tag = "aside")
-	val footer = body.grouping(tag = "footer")
-	val header = body.grouping(tag = "header")
-	val h1 = body.element(tag = "h1")
-	val h2 = body.element(tag = "h2")
-	val h3 = body.element(tag = "h3")
-	val h4 = body.element(tag = "h4")
-	val h5 = body.element(tag = "h5")
-	val h6 = body.element(tag = "h6")
-	val hgroup = body.grouping(tag = "hgroup", deprecated = true)
-	val main1 = body.grouping(tag = "main")
-	val nav = body.grouping(tag = "nav")
-	val section = body.grouping(tag = "section")
+	val address = body.grouping(
+		tag = "address",
+		attributes = gaeAttributes
+	)
+	val article = body.grouping(
+		tag = "article",
+		attributes = gaeAttributes
+	)
+	val aside = body.grouping(
+		tag = "aside",
+		attributes = gaeAttributes
+	)
+	val footer = body.grouping(
+		tag = "footer",
+		attributes = gaeAttributes
+	)
+	val header = body.grouping(
+		tag = "header",
+		attributes = gaeAttributes
+	)
+	val h1 = body.grouping(
+		tag = "h1",
+		attributes = gaeAttributes
+	)
+	val h2 = body.grouping(
+		tag = "h2",
+		attributes = gaeAttributes
+	)
+	val h3 = body.grouping(
+		tag = "h3",
+		attributes = gaeAttributes
+	)
+	val h4 = body.grouping(
+		tag = "h4",
+		attributes = gaeAttributes
+	)
+	val h5 = body.grouping(
+		tag = "h5",
+		attributes = gaeAttributes
+	)
+	val h6 = body.grouping(
+		tag = "h6",
+		attributes = gaeAttributes
+	)
+	val hgroup = body.grouping(
+		tag = "hgroup",
+		attributes = gaeAttributes, deprecated = true
+	)
+	val main1 = body.grouping(
+		tag = "main",
+		attributes = gaeAttributes
+	)
+	val nav = body.grouping(
+		tag = "nav",
+		attributes = gaeAttributes
+	)
+	val section = body.grouping(
+		tag = "section",
+		attributes = gaeAttributes
+	)
 
 	/**
 	 * Text content
@@ -176,12 +221,20 @@ class HtmlDslGenerator {
 	 * opening <body> and closing </body> tags. Important for accessibility and SEO, these elements
 	 * identify the purpose or structure of that content.
 	 */
-	val blockquote = body.grouping(tag = "blockquote")
-	val dd = body.element(tag = "dd")
+	val blockquote = body.grouping(
+		tag = "blockquote",
+		attributes = arrayOf(
+			Attribute("cite"),
+			*gaeAttributes
+		)
+	)
+	val dd = body.grouping(
+		tag = "dd"
+	)
 	val div = body.grouping(tag = "div")
 	val dl = body.grouping(tag = "dl")
-	val dt = body.element(tag = "dt")
-	val figcaption = body.element(tag = "figcaption")
+	val dt = body.grouping(tag = "dt")
+	val figcaption = body.grouping(tag = "figcaption")
 	val figure = body.grouping(tag = "figure")
 	val hr = body.element(tag = "hr", selfClosing = true)
 	val li = body.grouping(tag = "li")
@@ -413,7 +466,7 @@ class HtmlDslGenerator {
 		script, select, small, span, strong, sub, sup,
 		// TODO: implement svg
 		// svg,
-		textarea, time, `var`, video, wbr
+		textarea, time, `var`, video, wbr,
 
 		/**
 		 * A few other elements belong to this category, but only if a specific condition is fulfilled:
@@ -426,6 +479,9 @@ class HtmlDslGenerator {
 		 * <map>, if it contains only phrasing content
 		 * <meta>, if the itemprop attribute is present
 		 */
+
+		a, area, del, ins, link, map, meta
+
 	)
 
 	val embeddedContent = arrayOf(
@@ -475,17 +531,87 @@ class HtmlDslGenerator {
 	init {
 
 		head.children = metadataContent.toMutableList()
+
 		body.children = flowContent.toMutableList()
 
+		// content sectioning
 
-		// handle children
-		hgroup.children = mutableListOf(h1, h2, h3, h4, h5, h6)
+		address.children = flowContent.
+			minus(address).
+			minus(*headingContent).
+			minus(*sectioningContent).
+			minus(header).
+			minus(footer).
+			toMutableList()
 
-		dl.children = mutableListOf(dt, dd)
+		article.children = flowContent.toMutableList()
 
-		ol.children = mutableListOf(li)
-		ul.children = mutableListOf(li)
-		li.children = mutableListOf(ol, ul)
+		aside.children = flowContent.toMutableList()
+
+		footer.children = flowContent.
+			minus(footer).
+			minus(header).
+			toMutableList()
+
+		header.children = flowContent.
+			minus(footer).
+			minus(header).
+			toMutableList()
+
+		h1.children = phrasingContent.toMutableList()
+		h2.children = phrasingContent.toMutableList()
+		h3.children = phrasingContent.toMutableList()
+		h4.children = phrasingContent.toMutableList()
+		h5.children = phrasingContent.toMutableList()
+		h6.children = phrasingContent.toMutableList()
+
+		hgroup.children = mutableListOf(
+			h1, h2, h3, h4, h5, h6
+		)
+
+		main1.children = flowContent.toMutableList()
+
+		nav.children = flowContent.toMutableList()
+
+		section.children = flowContent.toMutableList()
+
+		// text content
+
+		blockquote.children = flowContent.toMutableList()
+
+		dd.children = flowContent.toMutableList()
+
+		div.children = flowContent.toMutableList()
+
+		dl.children = mutableListOf(dt, dd, div)
+
+		dt.children = flowContent.
+			minus(header).
+			minus(footer).
+			minus(*sectioningContent).
+			minus(*headingContent).
+			toMutableList()
+
+		figcaption.children = flowContent.toMutableList()
+
+		figure.children = flowContent.
+			plus(figcaption).
+			toMutableList()
+
+		li.children = flowContent.toMutableList()
+
+		main2.children = flowContent.toMutableList()
+
+		ol.children = mutableListOf(li, script, template)
+
+		p.children = phrasingContent.toMutableList()
+
+		pre.children = phrasingContent.toMutableList()
+
+		ul.children = mutableListOf(li, script, template)
+
+
+
 
 
 	}
@@ -589,6 +715,28 @@ class HtmlDslGenerator {
 			array[0] = array.first().toChar().toUpperCase().toByte()
 		}
 		return String(array)
+	}
+
+	private inline fun <reified T: Any> Array<T>.plus(vararg t: T): Array<T> {
+
+		var input = this.copyOf().toSet()
+		t.forEach {
+			input = input.plus(it)
+		}
+
+		return input.toTypedArray()
+
+	}
+
+	private inline fun <reified T: Any> Array<T>.minus(vararg t: T): Array<T> {
+
+		var input = this.copyOf().toSet()
+		t.forEach {
+			input = input.minus(it)
+		}
+
+		return input.toTypedArray()
+
 	}
 
 	companion object {
