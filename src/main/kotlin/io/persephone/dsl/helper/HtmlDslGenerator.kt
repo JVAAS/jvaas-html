@@ -661,14 +661,50 @@ class HtmlDslGenerator {
 	val iframe = body.element(
 		tag = "iframe",
 		attributes = arrayOf(
+			Attribute("allow"),
+			Attribute("allowfullscreen"),
+			Attribute("allowpaymentrequest"),
+			Attribute("csp", experimental = true),
+			Attribute("height"),
+			Attribute("importance", experimental = true),
+			Attribute("loading", experimental = true),
+			Attribute("name"),
+			Attribute("referrerpolicy"),
+			Attribute("sandbox"),
+			Attribute("src"),
+			Attribute("srcdoc"),
+			Attribute("width"),
+
+			Attribute("align", deprecated = true),
+			Attribute("frameborder", deprecated = true),
+			Attribute("longdesc", deprecated = true),
+			Attribute("marginheight", deprecated = true),
+			Attribute("marginwidth", deprecated = true),
+			Attribute("scrolling", deprecated = true)
+
 
 			*gaeAttributes
 		)
 	)
-	val `object` = body.element(
+	val `object` = body.grouping(
 		tag = "object",
 		attributes = arrayOf(
-
+			Attribute("archive", deprecated = true),
+			Attribute("border", deprecated = true),
+			Attribute("classid", deprecated = true),
+			Attribute("codebase", deprecated = true),
+			Attribute("codetype", deprecated = true),
+			Attribute("data"),
+			Attribute("declare", deprecated = true),
+			Attribute("form"),
+			Attribute("height"),
+			Attribute("name"),
+			Attribute("standby", deprecated = true),
+			Attribute("tabindex", deprecated = true),
+			Attribute("type"),
+			Attribute("typemustmatch"),
+			Attribute("usemap"),
+			Attribute("width"),
 
 			*gaeAttributes
 		)
@@ -676,27 +712,30 @@ class HtmlDslGenerator {
 	val param = body.element(
 		tag = "param",
 		attributes = arrayOf(
-
+			Attribute("name"),
+			Attribute("type", deprecated = true),
+			Attribute("value"),
+			Attribute("valuetype", deprecated = true),
 
 			*gaeAttributes
-		),
 		)
-	val picture = body.element(
+	)
+	val picture = body.grouping(
 		tag = "picture",
-		attributes = arrayOf(
-
-
-			*gaeAttributes
-		),
-		)
+		attributes = gaeAttributes
+	)
 	val source = body.element(
 		tag = "source",
 		attributes = arrayOf(
-
+			Attribute("media"),
+			Attribute("sizes"),
+			Attribute("src"),
+			Attribute("srcset"),
+			Attribute("type"),
 
 			*gaeAttributes
-		),
 		)
+	)
 
 
 	/**
@@ -848,7 +887,7 @@ class HtmlDslGenerator {
 	)
 
 	val interactiveContent = arrayOf(
-		a, button, details, embed, iframe, keygen, label, select, textarea
+		a, button, details, embed, iframe, label, select, textarea
 		/**
 		 * Some elements belong to this category only under specific conditions:
 		 *
@@ -862,23 +901,23 @@ class HtmlDslGenerator {
 	)
 
 	val formAssociatedContent = arrayOf(
-		button, fieldset, input, keygen, label, meter, `object`, output, progress, select, textarea
+		button, fieldset, input, label, meter, `object`, output, progress, select, textarea
 	)
 
 	val formAssociatedContentListed = arrayOf(
-		button, fieldset, input, keygen, `object`, output, select, textarea
+		button, fieldset, input, `object`, output, select, textarea
 	)
 
 	val formAssociatedContentLabelable = arrayOf(
-		button, input, keygen, meter, output, progress, select, textarea
+		button, input, meter, output, progress, select, textarea
 	)
 
 	val formAssociatedContentSubmittable = arrayOf(
-		button, input, keygen, `object`, select, textarea
+		button, input, `object`, select, textarea
 	)
 
 	val formAssociatedContentResetable = arrayOf(
-		input, keygen, output, select, textarea
+		input, output, select, textarea
 	)
 
 	init {
@@ -1013,9 +1052,12 @@ class HtmlDslGenerator {
 		video.children = mutableListOf(track, source)
 
 		// TODO: handle "transparent" content in here as well
-		applet.children = mutableListOf(param)
 
 		// embedded content
+		`object`.children = mutableListOf(param)
+
+		picture.children = mutableListOf(source, img)
+
 
 		// scripting
 
