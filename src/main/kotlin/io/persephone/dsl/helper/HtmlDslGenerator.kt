@@ -74,7 +74,8 @@ class HtmlDslGenerator {
 			Attribute("href"),
 			Attribute("target")
 		),
-		selfClosing = true)
+		selfClosing = true
+	)
 	val link = head.element(
 		tag = "link",
 		attributes = arrayOf(
@@ -82,7 +83,8 @@ class HtmlDslGenerator {
 			Attribute("type"),
 			Attribute("href")
 		),
-		selfClosing = true)
+		selfClosing = true
+	)
 	val meta = head.element(
 		tag = "meta",
 		attributes = arrayOf(
@@ -90,7 +92,8 @@ class HtmlDslGenerator {
 			Attribute("name"),
 			Attribute("content")
 		),
-		selfClosing = true)
+		selfClosing = true
+	)
 	val style = head.element(
 		tag = "style",
 		attributes = arrayOf(
@@ -99,16 +102,50 @@ class HtmlDslGenerator {
 			Attribute("nonce"),
 			Attribute("title")
 		),
-		selfClosing = false)
+		selfClosing = false
+	)
 	val title = head.element(
 		tag = "title",
 		attributes = arrayOf(),
-		selfClosing = false)
+		selfClosing = false
+	)
 
 	/**
 	 * Sectioning root
 	 */
-	val body = html.grouping(tag = "body", attributes = gaeAttributes)
+	val body = html.grouping(
+		tag = "body",
+		attributes = arrayOf(
+			Attribute("alink", deprecated = true),
+			Attribute("background", deprecated = true),
+			Attribute("bgcolor", deprecated = true),
+			Attribute("bottommargin", deprecated = true),
+			Attribute("leftmargin", deprecated = true),
+			Attribute("link", deprecated = true),
+			Attribute("onafterprint"),
+			Attribute("onbeforeunload"),
+			Attribute("onblur"),
+			Attribute("onerror"),
+			Attribute("onfocus"),
+			Attribute("onhashchange"),
+			Attribute("onlanguagechange", experimental = true),
+			Attribute("onload"),
+			Attribute("onmessage"),
+			Attribute("onoffline"),
+			Attribute("ononline"),
+			Attribute("onopstate"),
+			Attribute("onredo"),
+			Attribute("onresize"),
+			Attribute("onstorage"),
+			Attribute("onundo"),
+			Attribute("onunload"),
+			Attribute("rightmargin", deprecated = true),
+			Attribute("text", deprecated = true),
+			Attribute("topmargin", deprecated = true),
+			Attribute("vlink", deprecated = true),
+			*gaeAttributes
+		)
+	)
 
 	/**
 	 * Content sectioning
@@ -437,6 +474,9 @@ class HtmlDslGenerator {
 
 	init {
 
+		head.children = metadataContent.toMutableList()
+		body.children = flowContent.toMutableList()
+
 
 		// handle children
 		hgroup.children = mutableListOf(h1, h2, h3, h4, h5, h6)
@@ -450,18 +490,7 @@ class HtmlDslGenerator {
 
 	}
 
-	companion object {
 
-		@JvmStatic
-		fun main(args: Array<String>) {
-
-			val root = HtmlDslGenerator()
-
-			println(root)
-
-
-		}
-	}
 
 	/*
 	private fun generateParentElements(elements: Array<Element>, tagType: String, empty: Boolean = false, additionalAttributes: List<String>) {
@@ -560,6 +589,19 @@ class HtmlDslGenerator {
 			array[0] = array.first().toChar().toUpperCase().toByte()
 		}
 		return String(array)
+	}
+
+	companion object {
+
+		@JvmStatic
+		fun main(args: Array<String>) {
+
+			val root = HtmlDslGenerator()
+
+			println(root)
+
+
+		}
 	}
 
 }
