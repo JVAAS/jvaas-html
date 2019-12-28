@@ -3,7 +3,7 @@ package io.persephone.dsl.helper
 class Grouping(
 
 	tag: String,
-	attributes: List<String> = listOf(),
+	attributes: Array<String> = arrayOf(),
 	init: (Grouping.() -> Unit)? = null
 
 ): Element(
@@ -20,7 +20,8 @@ class Grouping(
 
 	fun grouping(
 		tag: String,
-		attributes: List<String> = listOf(),
+		deprecated: Boolean = false,
+		attributes: Array<String> = arrayOf(),
 		children: MutableList<Element>? = null,
 		init: (Grouping.() -> Unit)? = null
 	): Grouping {
@@ -43,15 +44,15 @@ class Grouping(
 
 	fun element(
 		tag: String,
+		deprecated: Boolean = false,
 		selfClosing: Boolean = false,
-		attributes: List<String> = listOf()
+		attributes: Array<String> = arrayOf()
 	): Element {
-
-		println("element(tag=$tag)")
 
 		val newElement = Element(
 			tag = tag,
-			attributes = attributes
+			attributes = attributes,
+			selfClosing = selfClosing
 		)
 
 		this.children.add(newElement)

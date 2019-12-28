@@ -5,7 +5,7 @@ open class Element(
 	val tag: String,
 	val selfClosing: Boolean = false,
 
-	val attributes: List<String> = listOf(),
+	val attributes: Array<String> = arrayOf(),
 	val extends: String = ""
 
 )
