@@ -683,7 +683,7 @@ class HtmlDslGenerator {
 			Attribute("scrolling", deprecated = true)
 
 
-			*gaeAttributes
+				* gaeAttributes
 		)
 	)
 	val `object` = body.grouping(
@@ -814,12 +814,12 @@ class HtmlDslGenerator {
 
 	// grouping of elements
 	val metadataContent = arrayOf(
-		base, command, link, meta, noscript, script, style, title
+		base, link, meta, noscript, script, style, title
 	)
 	val flowContent = arrayOf(
-		a, abbr, address, article, aside, audio, b, bdo, bdi, blockquote, br, button, canvas, cite, code, command, data,
+		a, abbr, address, article, aside, audio, b, bdo, bdi, blockquote, br, button, canvas, cite, code, data,
 		datalist, del, details, dfn, div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
-		hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main1, main2, map, mark,
+		hgroup, hr, i, iframe, img, input, ins, kbd, label, main1, main2, map, mark,
 		// TODO: implement math: https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math
 		// math,
 		menu, meter, nav,
@@ -850,8 +850,8 @@ class HtmlDslGenerator {
 	)
 
 	val phrasingContent = arrayOf(
-		abbr, audio, b, bdo, br, button, canvas, cite, code, command, data, datalist, dfn, em, embed, i, iframe, img,
-		input, kbd, keygen, label, mark,
+		abbr, audio, b, bdo, br, button, canvas, cite, code, data, datalist, dfn, em, embed, i, iframe, img,
+		input, kbd, label, mark,
 		// TODO: implement math
 		//math,
 		meter, noscript, `object`, output, picture, progress, q, ruby, samp,
