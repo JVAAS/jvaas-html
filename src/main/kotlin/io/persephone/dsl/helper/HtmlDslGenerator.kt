@@ -1,7 +1,5 @@
 package io.persephone.dsl.helper
 
-import kotlin.math.exp
-
 // based on -> Last modified: Jun 6, 2019, by MDN contributors
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
@@ -546,10 +544,102 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
-	val img = body.element(tag = "img")
-	val map = body.element(tag = "map")
-	val track = body.element(tag = "track")
-	val video = body.element(tag = "video")
+	val img = body.element(
+		tag = "img",
+		attributes = arrayOf(
+			Attribute("alt"),
+			Attribute("crossorigin"),
+			Attribute("decoding"),
+			Attribute("height"),
+			Attribute("importance", experimental = true),
+			Attribute("intrinsicsize", deprecated = true),
+			Attribute("ismap"),
+			Attribute("loading", experimental = true),
+			Attribute("referrerpolicy", experimental = true),
+			Attribute("sizes"),
+			Attribute("src"),
+			Attribute("srcset"),
+			Attribute("width"),
+			Attribute("usemap"),
+
+			Attribute("align", deprecated = true),
+			Attribute("border", deprecated = true),
+			Attribute("hspace", deprecated = true),
+			Attribute("longdesc", deprecated = true),
+			Attribute("name", deprecated = true),
+			Attribute("vspace", deprecated = true),
+
+			*gaeAttributes
+		)
+	)
+	val map = body.grouping(
+		tag = "map",
+		attributes = arrayOf(
+			Attribute("name"),
+			*gaeAttributes
+		)
+	)
+	val track = body.element(
+		tag = "track",
+		attributes = arrayOf(
+			Attribute("default"),
+			Attribute("kind"),
+			Attribute("label"),
+			Attribute("src"),
+			Attribute("srclang"),
+
+			*gaeAttributes
+		),
+		selfClosing = true
+	)
+	val video = body.grouping(
+		tag = "video",
+		attributes = arrayOf(
+			Attribute("autoplay"),
+			Attribute("autoPictureInPicture", experimental = true),
+			Attribute("buffered"),
+			Attribute("controls"),
+			Attribute("controllist", experimental = true),
+			Attribute("crossorigin"),
+			Attribute("currentTime"),
+			Attribute("disablePictureInPicture", experimental = true),
+			Attribute("disableRemotePlayback", experimental = true),
+			Attribute("duration", readonly = true),
+			Attribute("height"),
+			Attribute("intrinsicsize", experimental = true),
+			Attribute("loop"),
+			Attribute("muted"),
+			Attribute("playsinline"),
+			Attribute("poster"),
+			Attribute("preload"),
+			Attribute("src"),
+			Attribute("width"),
+
+			Attribute("audioprocess", deprecated = true),
+			Attribute("canplay"),
+			Attribute("canplaythrough"),
+			Attribute("complete"),
+			Attribute("durationchange"),
+			Attribute("emptied"),
+			Attribute("ended"),
+			Attribute("loadeddata"),
+			Attribute("loadedmetadata"),
+			Attribute("pause"),
+			Attribute("play"),
+			Attribute("playing"),
+			Attribute("progress"),
+			Attribute("ratechange"),
+			Attribute("seeked"),
+			Attribute("seeking"),
+			Attribute("stalled"),
+			Attribute("suspend"),
+			Attribute("timeupdate"),
+			Attribute("volumechanged"),
+			Attribute("waiting"),
+
+			*gaeAttributes
+		)
+	)
 
 
 	/**
@@ -557,12 +647,56 @@ class HtmlDslGenerator {
 	 * In addition to regular multimedia content, HTML can include a variety of other content,
 	 * even if it's not always easy to interact with.
 	 */
-	val embed = body.element(tag = "embed")
-	val iframe = body.element(tag = "iframe")
-	val `object` = body.element(tag = "object")
-	val param = body.element(tag = "param")
-	val picture = body.element(tag = "picture")
-	val source = body.element(tag = "source")
+	val embed = body.element(
+		tag = "embed",
+		attributes = arrayOf(
+			Attribute("height"),
+			Attribute("src"),
+			Attribute("type"),
+			Attribute("width"),
+
+			*gaeAttributes
+		),
+		selfClosing = true)
+	val iframe = body.element(
+		tag = "iframe",
+		attributes = arrayOf(
+
+			*gaeAttributes
+		)
+	)
+	val `object` = body.element(
+		tag = "object",
+		attributes = arrayOf(
+
+
+			*gaeAttributes
+		)
+	)
+	val param = body.element(
+		tag = "param",
+		attributes = arrayOf(
+
+
+			*gaeAttributes
+		),
+		)
+	val picture = body.element(
+		tag = "picture",
+		attributes = arrayOf(
+
+
+			*gaeAttributes
+		),
+		)
+	val source = body.element(
+		tag = "source",
+		attributes = arrayOf(
+
+
+			*gaeAttributes
+		),
+		)
 
 
 	/**
@@ -638,44 +772,6 @@ class HtmlDslGenerator {
 	val shadow1 = body.grouping(tag = "shadow", deprecated = true)
 	val slot = body.grouping(tag = "slot")
 	val template = body.grouping(tag = "template")
-
-	/**
-	 * Obsolete and deprecated elements
-	 * Warning: These are old HTML elements which are deprecated and should not be used.
-	 * You should never use them in new projects, and should replace them in old projects as soon as you can.
-	 * They are listed here for informational purposes only.
-	 */
-	val acronym = body.grouping(tag = "acronym", deprecated = true)
-	val applet = body.grouping(tag = "applet", deprecated = true)
-	val basefont = body.grouping(tag = "basefont", deprecated = true)
-	val bgsound = body.grouping(tag = "bgsound", deprecated = true)
-	val big = body.grouping(tag = "big", deprecated = true)
-	val blink = body.grouping(tag = "blink", deprecated = true)
-	val center = body.grouping(tag = "center", deprecated = true)
-	val command = body.grouping(tag = "command", deprecated = true)
-	val content2 = body.grouping(tag = "content", deprecated = true)
-	val dir = body.grouping(tag = "dir", deprecated = true)
-	val element2 = body.grouping(tag = "element", deprecated = true)
-	val font = body.grouping(tag = "font", deprecated = true)
-	val frame = body.grouping(tag = "frame", deprecated = true)
-	val frameset = body.grouping(tag = "frameset", deprecated = true)
-	val image = body.grouping(tag = "image", deprecated = true)
-	val isindex = body.grouping(tag = "isindex", deprecated = true)
-	val keygen = body.grouping(tag = "keygen", deprecated = true)
-	val listing = body.grouping(tag = "listing", deprecated = true)
-	val marquee = body.grouping(tag = "marquee", deprecated = true)
-	val menuitem2 = body.grouping(tag = "menuitem", deprecated = true)
-	val multicol = body.grouping(tag = "multicol", deprecated = true)
-	val nextid = body.grouping(tag = "nextid", deprecated = true)
-	val nobr = body.grouping(tag = "nobr", deprecated = true)
-	val noembed = body.grouping(tag = "noembed", deprecated = true)
-	val noframes = body.grouping(tag = "noframes", deprecated = true)
-	val plaintext = body.grouping(tag = "plaintext", deprecated = true)
-	val shadow2 = body.grouping(tag = "shadow", deprecated = true)
-	val spacer = body.grouping(tag = "spacer", deprecated = true)
-	val strike = body.grouping(tag = "strike", deprecated = true)
-	val tt2 = body.grouping(tag = "tt", deprecated = true)
-	val xmp = body.grouping(tag = "xmp", deprecated = true)
 
 	// grouping of elements
 	val metadataContent = arrayOf(
@@ -793,27 +889,15 @@ class HtmlDslGenerator {
 
 		// content sectioning
 
-		address.children = flowContent.
-			minus(address).
-			minus(*headingContent).
-			minus(*sectioningContent).
-			minus(header).
-			minus(footer).
-			toMutableList()
+		address.children = flowContent.minus(address).minus(*headingContent).minus(*sectioningContent).minus(header).minus(footer).toMutableList()
 
 		article.children = flowContent.toMutableList()
 
 		aside.children = flowContent.toMutableList()
 
-		footer.children = flowContent.
-			minus(footer).
-			minus(header).
-			toMutableList()
+		footer.children = flowContent.minus(footer).minus(header).toMutableList()
 
-		header.children = flowContent.
-			minus(footer).
-			minus(header).
-			toMutableList()
+		header.children = flowContent.minus(footer).minus(header).toMutableList()
 
 		h1.children = phrasingContent.toMutableList()
 		h2.children = phrasingContent.toMutableList()
@@ -842,18 +926,11 @@ class HtmlDslGenerator {
 
 		dl.children = mutableListOf(dt, dd, div)
 
-		dt.children = flowContent.
-			minus(header).
-			minus(footer).
-			minus(*sectioningContent).
-			minus(*headingContent).
-			toMutableList()
+		dt.children = flowContent.minus(header).minus(footer).minus(*sectioningContent).minus(*headingContent).toMutableList()
 
 		figcaption.children = flowContent.toMutableList()
 
-		figure.children = flowContent.
-			plus(figcaption).
-			toMutableList()
+		figure.children = flowContent.plus(figcaption).toMutableList()
 
 		li.children = flowContent.toMutableList()
 
@@ -869,10 +946,7 @@ class HtmlDslGenerator {
 
 		// inline text semantics
 
-		a.children = flowContent.
-			minus(*interactiveContent).
-			plus(*phrasingContent).
-			toMutableList()
+		a.children = flowContent.minus(*interactiveContent).plus(*phrasingContent).toMutableList()
 
 		abbr.children = phrasingContent.toMutableList()
 
@@ -888,9 +962,7 @@ class HtmlDslGenerator {
 
 		data.children = phrasingContent.toMutableList()
 
-		dfn.children = phrasingContent.
-			minus(dfn).
-			toMutableList()
+		dfn.children = phrasingContent.minus(dfn).toMutableList()
 
 		em.children = phrasingContent.toMutableList()
 
@@ -904,9 +976,7 @@ class HtmlDslGenerator {
 
 		rt.children = phrasingContent.toMutableList()
 
-		rtc.children = phrasingContent.
-			plus(rt).
-			toMutableList()
+		rtc.children = phrasingContent.plus(rt).toMutableList()
 
 		ruby.children = phrasingContent.toMutableList()
 
@@ -934,7 +1004,16 @@ class HtmlDslGenerator {
 
 		// image and multimedia
 
+		// TODO: handle "transparent" content in here as well
 		audio.children = mutableListOf(track, source)
+
+		map.children = mutableListOf(area)
+
+		// TODO: handle "transparent" content in here as well
+		video.children = mutableListOf(track, source)
+
+		// TODO: handle "transparent" content in here as well
+		applet.children = mutableListOf(param)
 
 		// embedded content
 
@@ -944,7 +1023,6 @@ class HtmlDslGenerator {
 
 
 	}
-
 
 
 	/*
@@ -1046,7 +1124,7 @@ class HtmlDslGenerator {
 		return String(array)
 	}
 
-	private inline fun <reified T: Any> Array<T>.plus(vararg t: T): Array<T> {
+	private inline fun <reified T : Any> Array<T>.plus(vararg t: T): Array<T> {
 
 		var input = this.copyOf().toSet()
 		t.forEach {
@@ -1057,7 +1135,7 @@ class HtmlDslGenerator {
 
 	}
 
-	private inline fun <reified T: Any> Array<T>.minus(vararg t: T): Array<T> {
+	private inline fun <reified T : Any> Array<T>.minus(vararg t: T): Array<T> {
 
 		var input = this.copyOf().toSet()
 		t.forEach {
