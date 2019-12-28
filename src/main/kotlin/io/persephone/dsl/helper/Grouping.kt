@@ -7,7 +7,7 @@ class Grouping(
 	attributes: Array<Attribute> = arrayOf(),
 	init: (Grouping.() -> Unit)? = null
 
-): Element(
+) : Element(
 	tag = tag,
 	selfClosing = false,
 	attributes = attributes

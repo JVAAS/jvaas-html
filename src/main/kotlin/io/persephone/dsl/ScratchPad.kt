@@ -1,6 +1,5 @@
 package io.persephone.dsl
 
-import io.persephone.dsl.element.HTML
 import io.persephone.dsl.helper.Document
 
 object ScratchPad {

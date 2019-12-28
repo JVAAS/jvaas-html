@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.*
+import io.persephone.dsl.HeadTag
 
 class TITLE : HeadTag("title")
 

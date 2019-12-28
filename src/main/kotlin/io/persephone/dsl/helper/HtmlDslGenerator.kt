@@ -641,7 +641,6 @@ class HtmlDslGenerator {
 		)
 	)
 
-
 	/**
 	 * Embedded content
 	 * In addition to regular multimedia content, HTML can include a variety of other content,
@@ -680,10 +679,9 @@ class HtmlDslGenerator {
 			Attribute("longdesc", deprecated = true),
 			Attribute("marginheight", deprecated = true),
 			Attribute("marginwidth", deprecated = true),
-			Attribute("scrolling", deprecated = true)
+			Attribute("scrolling", deprecated = true),
 
-
-				* gaeAttributes
+			* gaeAttributes
 		)
 	)
 	val `object` = body.grouping(
@@ -737,22 +735,61 @@ class HtmlDslGenerator {
 		)
 	)
 
-
 	/**
 	 * Scripting
 	 * 	In order to create dynamic content and Web applications, HTML supports the use of scripting
 	 * 	languages, most prominently JavaScript. Certain elements support this capability.
 	 */
-	val canvas = body.element(tag = "canvas")
-	val noscript = body.element(tag = "noscript")
-	val script = body.element(tag = "script")
+	val canvas = body.grouping(
+		tag = "canvas",
+		attributes = arrayOf(
+			Attribute("height"),
+			Attribute("width"),
+
+			*gaeAttributes
+		)
+	)
+	val noscript = body.grouping(
+		tag = "noscript",
+		attributes = gaeAttributes
+	)
+	val script = body.element(
+		tag = "script",
+		attributes = arrayOf(
+			Attribute("async"),
+			Attribute("crossorigin"),
+			Attribute("defer"),
+			Attribute("integrity"),
+			Attribute("nomodule"),
+			Attribute("nonce"),
+			Attribute("referrerpolicy"),
+			Attribute("src"),
+			Attribute("type"),
+			Attribute("charset", deprecated = true),
+			Attribute("language", deprecated = true),
+
+			*gaeAttributes
+		)
+	)
 
 	/**
 	 * Demarcating edits
 	 * These elements let you provide indications that specific parts of the text have been altered.
 	 */
-	val del = body.element(tag = "del")
-	val ins = body.element(tag = "ins")
+	val del = body.element(
+		tag = "del",
+		attributes = arrayOf(
+			Attribute("cite"),
+			Attribute("datetime")
+		)
+	)
+	val ins = body.element(
+		tag = "ins",
+		attributes = arrayOf(
+			Attribute("cite"),
+			Attribute("datetime")
+		)
+	)
 
 	/**
 	 * Table content
@@ -1058,8 +1095,20 @@ class HtmlDslGenerator {
 
 		picture.children = mutableListOf(source, img)
 
+		canvas.children = mutableListOf(a, button, input)
+
+		noscript.children = mutableListOf(
+
+			// if inside head element
+			link, style, meta,
+
+			// if inside body element
+			*flowContent.plus(*phrasingContent).minus(noscript)
+
+		)
 
 		// scripting
+
 
 		// demarcating edits
 
