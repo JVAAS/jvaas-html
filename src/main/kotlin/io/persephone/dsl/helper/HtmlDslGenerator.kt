@@ -337,19 +337,19 @@ class HtmlDslGenerator {
 		)
 
 	)
-	val abbr = body.element(
+	val abbr = body.grouping(
 		tag = "abbr",
 		attributes = gaeAttributes
 	)
-	val b = body.element(
+	val b = body.grouping(
 		tag = "b",
 		attributes = gaeAttributes
 	)
-	val bdi = body.element(
+	val bdi = body.grouping(
 		tag = "bdi",
 		attributes = gaeAttributes
 	)
-	val bdo = body.element(
+	val bdo = body.grouping(
 		tag = "bdo",
 		attributes = arrayOf(
 			Attribute("dir"),
@@ -362,44 +362,45 @@ class HtmlDslGenerator {
 		attributes = arrayOf(
 			Attribute("clear", deprecated = true),
 			*gaeAttributes
-		)
+		),
+		selfClosing = true
 	)
-	val cite = body.element(
+	val cite = body.grouping(
 		tag = "cite",
 		attributes = gaeAttributes
 	)
-	val code = body.element(
+	val code = body.grouping(
 		tag = "code",
 		attributes = gaeAttributes
 	)
-	val data = body.element(
+	val data = body.grouping(
 		tag = "data",
 		attributes = arrayOf(
 			Attribute("value"),
 			*gaeAttributes
 		)
 	)
-	val dfn = body.element(
+	val dfn = body.grouping(
 		tag = "dfn",
 		attributes = gaeAttributes
 	)
-	val em = body.element(
+	val em = body.grouping(
 		tag = "em",
 		attributes = gaeAttributes
 	)
-	val i = body.element(
+	val i = body.grouping(
 		tag = "i",
 		attributes = gaeAttributes
 	)
-	val kbd = body.element(
+	val kbd = body.grouping(
 		tag = "kbd",
 		attributes = gaeAttributes
 	)
-	val mark = body.element(
+	val mark = body.grouping(
 		tag = "mark",
 		attributes = gaeAttributes
 	)
-	val q = body.element(
+	val q = body.grouping(
 		tag = "q",
 		attributes = arrayOf(
 			Attribute("cite"),
@@ -414,63 +415,63 @@ class HtmlDslGenerator {
 		tag = "rp",
 		attributes = gaeAttributes
 	)
-	val rt = body.element(
+	val rt = body.grouping(
 		tag = "rt",
 		attributes = gaeAttributes
 	)
-	val rtc = body.element(
+	val rtc = body.grouping(
 		tag = "rtc",
 		attributes = gaeAttributes
 	)
-	val ruby = body.element(
+	val ruby = body.grouping(
 		tag = "ruby",
 		attributes = gaeAttributes
 	)
-	val s = body.element(
+	val s = body.grouping(
 		tag = "s",
 		attributes = gaeAttributes
 	)
-	val samp = body.element(
+	val samp = body.grouping(
 		tag = "samp",
 		attributes = gaeAttributes
 	)
-	val small = body.element(
+	val small = body.grouping(
 		tag = "small",
 		attributes = gaeAttributes
 	)
-	val span = body.element(
+	val span = body.grouping(
 		tag = "span",
 		attributes = gaeAttributes
 	)
-	val strong = body.element(
+	val strong = body.grouping(
 		tag = "strong",
 		attributes = gaeAttributes
 	)
-	val sub = body.element(
+	val sub = body.grouping(
 		tag = "sub",
 		attributes = gaeAttributes
 	)
-	val sup = body.element(
+	val sup = body.grouping(
 		tag = "sup",
 		attributes = gaeAttributes
 	)
-	val time = body.element(
+	val time = body.grouping(
 		tag = "time",
 		attributes = arrayOf(
 			Attribute("datetime"),
 			*gaeAttributes
 		)
 	)
-	val tt = body.element(
+	val tt = body.grouping(
 		tag = "tt",
 		attributes = gaeAttributes,
 		deprecated = true
 	)
-	val u = body.element(
+	val u = body.grouping(
 		tag = "u",
 		attributes = gaeAttributes
 	)
-	val `var` = body.element(
+	val `var` = body.grouping(
 		tag = "var",
 		attributes = gaeAttributes
 	)
@@ -807,9 +808,70 @@ class HtmlDslGenerator {
 
 		ul.children = mutableListOf(li, script, template)
 
+		// inline text semantics
 
+		a.children = flowContent.
+			minus(*interactiveContent).
+			plus(*phrasingContent).
+			toMutableList()
 
+		abbr.children = phrasingContent.toMutableList()
 
+		b.children = phrasingContent.toMutableList()
+
+		bdi.children = phrasingContent.toMutableList()
+
+		bdo.children = phrasingContent.toMutableList()
+
+		cite.children = phrasingContent.toMutableList()
+
+		code.children = phrasingContent.toMutableList()
+
+		data.children = phrasingContent.toMutableList()
+
+		dfn.children = phrasingContent.
+			minus(dfn).
+			toMutableList()
+
+		em.children = phrasingContent.toMutableList()
+
+		i.children = phrasingContent.toMutableList()
+
+		kbd.children = phrasingContent.toMutableList()
+
+		mark.children = phrasingContent.toMutableList()
+
+		q.children = phrasingContent.toMutableList()
+
+		rt.children = phrasingContent.toMutableList()
+
+		rtc.children = phrasingContent.
+			plus(rt).
+			toMutableList()
+
+		ruby.children = phrasingContent.toMutableList()
+
+		s.children = phrasingContent.toMutableList()
+
+		samp.children = phrasingContent.toMutableList()
+
+		small.children = phrasingContent.toMutableList()
+
+		span.children = phrasingContent.toMutableList()
+
+		strong.children = phrasingContent.toMutableList()
+
+		sub.children = phrasingContent.toMutableList()
+
+		sup.children = phrasingContent.toMutableList()
+
+		time.children = phrasingContent.toMutableList()
+
+		tt.children = phrasingContent.toMutableList()
+
+		u.children = phrasingContent.toMutableList()
+
+		`var`.children = phrasingContent.toMutableList()
 
 	}
 
