@@ -939,98 +939,184 @@ class HtmlDslGenerator {
 	val button = body.grouping(
 		tag = "button",
 		attributes = arrayOf(
-
+			Attribute("autofocus"),
+			Attribute("autocomplete", standardized = false),
+			Attribute("disabled"),
+			Attribute("form"),
+			Attribute("formaction"),
+			Attribute("formenctype"),
+			Attribute("formmethod"),
+			Attribute("formnovalidate"),
+			Attribute("formtarget"),
+			Attribute("name"),
+			Attribute("type"),
+			Attribute("value"),
 			*gaeAttributes
 		)
 	)
 	val datalist = body.grouping(
 		tag = "datalist",
-		attributes = arrayOf(
-
-			*gaeAttributes
-		)
+		attributes = gaeAttributes
 	)
 	val fieldset = body.grouping(
 		tag = "fieldset",
 		attributes = arrayOf(
-
+			Attribute("disabled"),
+			Attribute("form"),
+			Attribute("name"),
 			*gaeAttributes
 		)
 	)
 	val form = body.grouping(
 		tag = "form",
 		attributes = arrayOf(
-
+			Attribute("accept", deprecated = true),
+			Attribute("accept-charset", generates = "acceptCharset"),
+			Attribute("action"),
+			Attribute("autocapitalize", standardized = false),
+			Attribute("autocomplete"),
+			Attribute("enctype"),
+			Attribute("method"),
+			Attribute("name"),
+			Attribute("novalidate"),
+			Attribute("target"),
 			*gaeAttributes
 		)
 	)
 	val input = body.grouping(
 		tag = "input",
 		attributes = arrayOf(
-
+			Attribute("accept"),
+			Attribute("alt"),
+			Attribute("autocomplete"),
+			Attribute("autofocus"),
+			Attribute("capture"),
+			Attribute("checked"),
+			Attribute("dirname"),
+			Attribute("disabled"),
+			Attribute("form"),
+			Attribute("formaction"),
+			Attribute("formenctype"),
+			Attribute("formmethod"),
+			Attribute("formnovalidate"),
+			Attribute("formtarget"),
+			Attribute("height"),
+			Attribute("id"),
+			Attribute("inputmode"),
+			Attribute("list"),
+			Attribute("max"),
+			Attribute("maxlength"),
+			Attribute("min"),
+			Attribute("minlength"),
+			Attribute("multiple"),
+			Attribute("name"),
+			Attribute("pattern"),
+			Attribute("placeholder"),
+			Attribute("readonly"),
+			Attribute("required"),
+			Attribute("size"),
+			Attribute("src"),
+			Attribute("step"),
+			Attribute("tabindex"),
+			Attribute("title"),
+			Attribute("type"),
+			Attribute("value"),
+			Attribute("width"),
 			*gaeAttributes
 		)
 	)
 	val label = body.grouping(
 		tag = "label",
 		attributes = arrayOf(
-
+			Attribute("for"),
+			Attribute("form"),
 			*gaeAttributes
 		)
 	)
 	val legend = body.grouping(
 		tag = "legend",
-		attributes = arrayOf(
-
-			*gaeAttributes
-		)
+		attributes = gaeAttributes
 	)
 	val meter = body.grouping(
 		tag = "meter",
 		attributes = arrayOf(
-
+			Attribute("value"),
+			Attribute("min"),
+			Attribute("max"),
+			Attribute("low"),
+			Attribute("high"),
+			Attribute("optimum"),
+			Attribute("form"),
 			*gaeAttributes
 		)
 	)
 	val optgroup = body.grouping(
 		tag = "optgroup",
 		attributes = arrayOf(
-
+			Attribute("disabled"),
+			Attribute("label"),
 			*gaeAttributes
 		)
 	)
 	val option = body.grouping(
 		tag = "option",
 		attributes = arrayOf(
-
+			Attribute("disabled"),
+			Attribute("label"),
+			Attribute("selected"),
+			Attribute("value"),
 			*gaeAttributes
 		)
 	)
 	val output = body.grouping(
 		tag = "output",
 		attributes = arrayOf(
-
+			Attribute("for"),
+			Attribute("form"),
+			Attribute("name"),
 			*gaeAttributes
 		)
 	)
 	val progress = body.grouping(
 		tag = "progress",
 		attributes = arrayOf(
-
+			Attribute("max"),
+			Attribute("value"),
 			*gaeAttributes
 		)
 	)
 	val select = body.grouping(
 		tag = "select",
 		attributes = arrayOf(
-
+			Attribute("autocomplete"),
+			Attribute("autofocus"),
+			Attribute("disabled"),
+			Attribute("form"),
+			Attribute("multiple"),
+			Attribute("name"),
+			Attribute("required"),
+			Attribute("size"),
 			*gaeAttributes
 		)
 	)
 	val textarea = body.grouping(
 		tag = "textarea",
 		attributes = arrayOf(
-
+			Attribute("autocapitalize"),
+			Attribute("autocomplete"),
+			Attribute("autofocus"),
+			Attribute("cols"),
+			Attribute("disabled"),
+			Attribute("form"),
+			Attribute("maxlength"),
+			Attribute("minlength"),
+			Attribute("name"),
+			Attribute("placeholder"),
+			Attribute("readonly"),
+			Attribute("required"),
+			Attribute("rows"),
+			Attribute("spellcheck"),
+			Attribute("wrap"),
 			*gaeAttributes
 		)
 	)
@@ -1342,6 +1428,7 @@ class HtmlDslGenerator {
 		tr.children = mutableListOf(td, th)
 
 		// forms
+
 		button.children = phrasingContent.
 			minus(*interactiveContent).
 			toMutableList()
