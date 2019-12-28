@@ -3,6 +3,7 @@ package io.persephone.dsl.helper
 class Grouping(
 
 	tag: String,
+	deprecated: Boolean = false,
 	attributes: Array<String> = arrayOf(),
 	init: (Grouping.() -> Unit)? = null
 
@@ -29,6 +30,7 @@ class Grouping(
 		val newGroup = Grouping(
 			tag = tag,
 			attributes = attributes,
+			deprecated = deprecated,
 			init = null
 		)
 

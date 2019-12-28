@@ -1,7 +1,8 @@
 package io.persephone.dsl.helper
 
-
+// based on -> Last modified: Jun 6, 2019, by MDN contributors
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
 class HtmlDslGenerator {
 
 	val globalAttributes = arrayOf(
@@ -50,7 +51,7 @@ class HtmlDslGenerator {
 	/**
 	 * Sectioning root
 	 */
-	val body = html.grouping(tag = "body")
+	val body = html.grouping(tag = "body", attributes = gaeAttributes)
 
 	/**
 	 * Content sectioning
@@ -59,7 +60,7 @@ class HtmlDslGenerator {
 	 * Use the sectioning elements to create a broad outline for your page content, including header
 	 * and footer navigation, and heading elements to identify sections of content.
 	 */
-	val address = body.grouping(tag = "address", children = body.children)
+	val address = body.grouping(tag = "address", attributes = gaeAttributes, children = body.children)
 	val article = body.grouping(tag = "article", children = body.children)
 	val aside = body.grouping(tag = "aside", children = body.children)
 	val footer = body.grouping(tag = "footer", children = body.children)
@@ -70,7 +71,7 @@ class HtmlDslGenerator {
 	val h4 = body.element(tag = "h4")
 	val h5 = body.element(tag = "h5")
 	val h6 = body.element(tag = "h6")
-	val hgroup = body.grouping(tag = "hgroup", children = body.children)
+	val hgroup = body.grouping(tag = "hgroup", children = body.children, deprecated = true)
 	val main1 = body.grouping(tag = "main", children = body.children)
 	val nav = body.grouping(tag = "nav", children = body.children)
 	val section = body.grouping(tag = "section", children = body.children)
@@ -131,7 +132,7 @@ class HtmlDslGenerator {
 	val time = body.element(tag = "time")
 	val tt = body.element(tag = "tt", deprecated = true)
 	val u = body.element(tag = "u")
-	val var1 = body.element(tag = "var")
+	val `var` = body.element(tag = "var")
 	val wbr = body.element(tag = "wbr")
 
 
@@ -154,7 +155,7 @@ class HtmlDslGenerator {
 	 */
 	val embed = body.element(tag = "embed")
 	val iframe = body.element(tag = "iframe")
-	val object1 = body.element(tag = "object")
+	val `object` = body.element(tag = "object")
 	val param = body.element(tag = "param")
 	val picture = body.element(tag = "picture")
 	val source = body.element(tag = "source")
@@ -199,7 +200,7 @@ class HtmlDslGenerator {
 	 */
 	val button = body.grouping(tag = "button")
 	val datalist = body.grouping(tag = "datalist")
-	val fieldlist = body.grouping(tag = "fieldlist")
+	val fieldset = body.grouping(tag = "fieldset")
 	val form = body.grouping(tag = "form")
 	val input = body.grouping(tag = "input")
 	val label = body.grouping(tag = "label")
@@ -272,6 +273,111 @@ class HtmlDslGenerator {
 	val tt2 = body.grouping(tag = "tt", deprecated = true)
 	val xmp = body.grouping(tag = "xmp", deprecated = true)
 
+	// grouping of elements
+	val metadataContent = arrayOf(
+		base, command, link, meta, noscript, script, style, title
+	)
+	val flowContent = arrayOf(
+		a, abbr, address, article, aside, audio, b, bdo, bdi, blockquote, br, button, canvas, cite, code, command, data,
+		datalist, del, details, dfn, div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+		hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main1, main2, map, mark,
+		// TODO: implement math: https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math
+		// math,
+		menu, meter, nav,
+		noscript, `object`, ol, output, p, picture, pre, progress, q, ruby, s, samp, script, section, select, small,
+		span, strong, sub, sup,
+		// TODO: implement svg: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
+		// svg,
+		table, template, textarea, time, ul, `var`, video, wbr
+
+		// TODO: implement this specification
+		/**
+		 * A few other elements belong to this category, but only if a specific condition is fulfilled:
+		 *
+		 *	<area>, if it is a descendant of a <map> element
+		 *	<link>, if the itemprop attribute is present
+		 *	<meta>, if the itemprop attribute is present
+		 *	<style>, if the scoped attribute is present
+		 */
+	)
+
+
+	val sectioningContent = arrayOf(
+		article, aside, nav, section
+	)
+
+	val headingContent = arrayOf(
+		h1, h2, h3, h4, h5, h6, hgroup
+	)
+
+	val phrasingContent = arrayOf(
+		abbr, audio, b, bdo, br, button, canvas, cite, code, command, data, datalist, dfn, em, embed, i, iframe, img,
+		input, kbd, keygen, label, mark,
+		// TODO: implement math
+		//math,
+		meter, noscript, `object`, output, picture, progress, q, ruby, samp,
+		script, select, small, span, strong, sub, sup,
+		// TODO: implement svg
+		// svg,
+		textarea, time, `var`, video, wbr
+
+		/**
+		 * A few other elements belong to this category, but only if a specific condition is fulfilled:
+		 *
+		 * <a>, if it contains only phrasing content
+		 * <area>, if it is a descendant of a <map> element
+		 * <del>, if it contains only phrasing content
+		 * <ins>, if it contains only phrasing content
+		 * <link>, if the itemprop attribute is present
+		 * <map>, if it contains only phrasing content
+		 * <meta>, if the itemprop attribute is present
+		 */
+	)
+
+	val embeddedContent = arrayOf(
+		canvas, embed, iframe, img,
+		// TODO: implement math
+		//math,
+		`object`, picture,
+		// TODO: implement SVG
+		//svg,
+		video
+	)
+
+	val interactiveContent = arrayOf(
+		a, button, details, embed, iframe, keygen, label, select, textarea
+		/**
+		 * Some elements belong to this category only under specific conditions:
+		 *
+		 * <audio>, if the controls attribute is present
+		 * <img>, if the usemap attribute is present
+		 * <input>, if the type attribute is not in the hidden state
+		 * <menu>, if the type attribute is in the toolbar state
+		 * <object>, if the usemap attribute is present
+		 * <video>, if the controls attribute is present
+		 */
+	)
+
+	val formAssociatedContent = arrayOf(
+		button, fieldset, input, keygen, label, meter, `object`, output, progress, select, textarea
+	)
+
+	val formAssociatedContentListed = arrayOf(
+		button, fieldset, input, keygen, `object`, output, select, textarea
+	)
+
+	val formAssociatedContentLabelable = arrayOf(
+		button, input, keygen, meter, output, progress, select, textarea
+	)
+
+	val formAssociatedContentSubmittable = arrayOf(
+		button, input, keygen, `object`, select, textarea
+	)
+
+	val formAssociatedContentResetable = arrayOf(
+		input, keygen, output, select, textarea
+	)
+
 	init {
 
 		// handle children
@@ -292,6 +398,14 @@ class HtmlDslGenerator {
 		fun main(args: Array<String>) {
 
 			val root = HtmlDslGenerator()
+
+			val blah = """
+				
+
+			""".trimIndent().split(",").forEach {
+				print(it.replace("<", "").replace(">", "").trim() + ", ")
+			}
+
 			//println(root)
 
 
