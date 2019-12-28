@@ -43,6 +43,7 @@ class Grouping(
 
 	fun element(
 		tag: String,
+		selfClosing: Boolean = false,
 		attributes: List<String> = listOf()
 	): Element {
 
