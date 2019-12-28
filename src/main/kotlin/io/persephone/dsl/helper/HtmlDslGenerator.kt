@@ -229,20 +229,86 @@ class HtmlDslGenerator {
 		)
 	)
 	val dd = body.grouping(
-		tag = "dd"
+		tag = "dd",
+		attributes = arrayOf(
+			Attribute("nowrap", standardized = false),
+			*gaeAttributes
+		)
 	)
-	val div = body.grouping(tag = "div")
-	val dl = body.grouping(tag = "dl")
-	val dt = body.grouping(tag = "dt")
-	val figcaption = body.grouping(tag = "figcaption")
-	val figure = body.grouping(tag = "figure")
-	val hr = body.element(tag = "hr", selfClosing = true)
-	val li = body.grouping(tag = "li")
-	val main2 = body.grouping(tag = "main")
-	val ol = body.grouping(tag = "ol")
-	val p = body.grouping(tag = "p")
-	val pre = body.grouping(tag = "pre")
-	val ul = body.grouping(tag = "ul")
+	val div = body.grouping(
+		tag = "div",
+		attributes = gaeAttributes
+	)
+	val dl = body.grouping(
+		tag = "dl",
+		attributes = gaeAttributes
+	)
+	val dt = body.grouping(
+		tag = "dt",
+		attributes = gaeAttributes
+	)
+	val figcaption = body.grouping(
+		tag = "figcaption",
+		attributes = gaeAttributes
+	)
+	val figure = body.grouping(
+		tag = "figure",
+		attributes = gaeAttributes
+	)
+	val hr = body.element(
+		tag = "hr",
+		attributes = arrayOf(
+			Attribute("align", deprecated = true),
+			Attribute("color", standardized = false),
+			Attribute("noshade", deprecated = true),
+			Attribute("size", deprecated = true),
+			Attribute("width", deprecated = true),
+			*gaeAttributes
+		),
+		selfClosing = true
+	)
+	val li = body.grouping(
+		tag = "li",
+		attributes = arrayOf(
+			Attribute("value", deprecated = false),
+			Attribute("type", deprecated = true),
+			*gaeAttributes
+		)
+	)
+	val main2 = body.grouping(
+		tag = "main",
+		attributes = gaeAttributes
+	)
+	val ol = body.grouping(
+		tag = "ol",
+		attributes = arrayOf(
+			Attribute("reversed"),
+			Attribute("start"),
+			Attribute("type"),
+			*gaeAttributes
+		)
+	)
+	val p = body.grouping(
+		tag = "p",
+		attributes = gaeAttributes
+	)
+	val pre = body.grouping(
+		tag = "pre",
+		attributes = arrayOf(
+			Attribute("cols", deprecated = true),
+			Attribute("width", deprecated = true),
+			Attribute("wrap", standardized = false),
+			*gaeAttributes
+		)
+	)
+	val ul = body.grouping(
+		tag = "ul",
+		attributes = arrayOf(
+			Attribute("compact", deprecated = true),
+			Attribute("type", deprecated = true),
+			*gaeAttributes
+		)
+	)
 
 	/**
 	 * Inline text semantics
