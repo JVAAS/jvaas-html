@@ -19,7 +19,7 @@ class MENUITEM(
 	icon: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -98,7 +98,10 @@ class MENUITEM(
 	title: String? = null,
 	type: String? = null,
 	init: (MENUITEM.() -> Unit)? = null
-) : Tag(tagName = "menuitem", selfClosing = false) {
+) : Tag(
+	tagName = "menuitem",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -212,11 +215,11 @@ class MENUITEM(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -851,7 +854,7 @@ class MENUITEM(
 		this.icon = icon
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -930,4 +933,5 @@ class MENUITEM(
 		this.title = title
 		this.type = type
 	}
+
 }

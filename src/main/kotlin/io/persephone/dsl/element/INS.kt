@@ -16,7 +16,7 @@ class INS(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -92,7 +92,10 @@ class INS(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (INS.() -> Unit)? = null
-) : Tag(tagName = "ins", selfClosing = false) {
+) : Tag(
+	tagName = "ins",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -182,11 +185,11 @@ class INS(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -794,7 +797,7 @@ class INS(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -870,4 +873,5 @@ class INS(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 }

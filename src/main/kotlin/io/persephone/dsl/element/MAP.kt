@@ -14,7 +14,7 @@ class MAP(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -91,7 +91,10 @@ class MAP(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (MAP.() -> Unit)? = null
-) : Tag(tagName = "map", selfClosing = false) {
+) : Tag(
+	tagName = "map",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -165,11 +168,11 @@ class MAP(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -783,7 +786,7 @@ class MAP(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -860,6 +863,7 @@ class MAP(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 	fun area(
 		accesskey: String? = null,
 		alt: String? = null,
@@ -875,7 +879,7 @@ class MAP(
 		hreflang: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -971,7 +975,7 @@ class MAP(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

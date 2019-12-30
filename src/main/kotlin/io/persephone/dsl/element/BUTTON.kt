@@ -22,7 +22,7 @@ class BUTTON(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -101,7 +101,10 @@ class BUTTON(
 	type: String? = null,
 	value: String? = null,
 	init: (BUTTON.() -> Unit)? = null
-) : Tag(tagName = "button", selfClosing = false) {
+) : Tag(
+	tagName = "button",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -239,11 +242,11 @@ class BUTTON(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -881,7 +884,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -960,6 +963,7 @@ class BUTTON(
 		this.type = type
 		this.value = value
 	}
+
 	fun abbr(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -970,7 +974,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1056,7 +1060,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1148,7 +1152,7 @@ class BUTTON(
 		hreflang: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1244,7 +1248,7 @@ class BUTTON(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1348,7 +1352,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1463,7 +1467,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1567,7 +1571,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1653,7 +1657,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1741,7 +1745,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1828,7 +1832,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1915,7 +1919,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2000,7 +2004,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2088,7 +2092,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2176,7 +2180,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2264,7 +2268,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2350,7 +2354,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2437,7 +2441,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2523,7 +2527,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2610,7 +2614,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2697,7 +2701,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2785,7 +2789,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2871,7 +2875,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2960,7 +2964,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3048,7 +3052,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3135,7 +3139,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3221,7 +3225,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3308,7 +3312,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3394,7 +3398,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3481,7 +3485,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3567,7 +3571,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3658,7 +3662,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		ismap: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
@@ -3753,7 +3757,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.ismap = ismap
 		this.itemid = itemid
 		this.itemprop = itemprop
@@ -3863,7 +3867,7 @@ class BUTTON(
 		id: String? = null,
 		inputmode: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3985,7 +3989,7 @@ class BUTTON(
 		this.id = id
 		this.inputmode = inputmode
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4093,7 +4097,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4181,7 +4185,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4268,7 +4272,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4354,7 +4358,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4451,7 +4455,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4538,7 +4542,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4626,7 +4630,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4712,7 +4716,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4811,7 +4815,7 @@ class BUTTON(
 		high: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4904,7 +4908,7 @@ class BUTTON(
 		this.high = high
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4996,7 +5000,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5082,7 +5086,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5159,7 +5163,7 @@ class BUTTON(
 		this.title = title
 	}
 
-	fun object(
+	fun `object`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
@@ -5172,7 +5176,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5266,7 +5270,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5360,7 +5364,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5449,7 +5453,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5537,7 +5541,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5623,7 +5627,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5710,7 +5714,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5798,7 +5802,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5888,7 +5892,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5975,7 +5979,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6062,7 +6066,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6148,7 +6152,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6235,7 +6239,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6321,7 +6325,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6412,7 +6416,7 @@ class BUTTON(
 		id: String? = null,
 		inputmode: String? = null,
 		integrity: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6507,7 +6511,7 @@ class BUTTON(
 		this.id = id
 		this.inputmode = inputmode
 		this.integrity = integrity
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6599,7 +6603,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6685,7 +6689,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6772,7 +6776,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6858,7 +6862,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6945,7 +6949,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7031,7 +7035,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7118,7 +7122,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7204,7 +7208,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7291,7 +7295,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7377,7 +7381,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7465,7 +7469,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7552,7 +7556,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7639,7 +7643,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7725,7 +7729,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7825,7 +7829,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7945,7 +7949,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8053,7 +8057,7 @@ class BUTTON(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8139,7 +8143,7 @@ class BUTTON(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

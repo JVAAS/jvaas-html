@@ -16,7 +16,7 @@ class DEL(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -92,7 +92,10 @@ class DEL(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (DEL.() -> Unit)? = null
-) : Tag(tagName = "del", selfClosing = false) {
+) : Tag(
+	tagName = "del",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -182,11 +185,11 @@ class DEL(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -794,7 +797,7 @@ class DEL(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -870,4 +873,5 @@ class DEL(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 }

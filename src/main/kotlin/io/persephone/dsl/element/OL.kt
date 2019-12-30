@@ -14,7 +14,7 @@ class OL(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -93,7 +93,10 @@ class OL(
 	title: String? = null,
 	type: String? = null,
 	init: (OL.() -> Unit)? = null
-) : Tag(tagName = "ol", selfClosing = false) {
+) : Tag(
+	tagName = "ol",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -167,11 +170,11 @@ class OL(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -801,7 +804,7 @@ class OL(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -880,6 +883,7 @@ class OL(
 		this.title = title
 		this.type = type
 	}
+
 	fun li(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -890,7 +894,7 @@ class OL(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -977,7 +981,7 @@ class OL(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1069,7 +1073,7 @@ class OL(
 		id: String? = null,
 		inputmode: String? = null,
 		integrity: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1164,7 +1168,7 @@ class OL(
 		this.id = id
 		this.inputmode = inputmode
 		this.integrity = integrity
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1256,7 +1260,7 @@ class OL(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1342,7 +1346,7 @@ class OL(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

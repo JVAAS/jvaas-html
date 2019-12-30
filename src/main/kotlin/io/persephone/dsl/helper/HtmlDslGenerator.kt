@@ -21,7 +21,7 @@ class HtmlDslGenerator {
 		Attribute("hidden"),
 		Attribute("id"),
 		Attribute("inputmode"),
-		Attribute("is", generates = "isses"),
+		Attribute("is", generates = "`is`"),
 
 		Attribute("itemid"),
 		Attribute("itemprop"),
@@ -775,7 +775,8 @@ class HtmlDslGenerator {
 			Attribute("width"),
 
 			*gaeAttributes
-		)
+		),
+		generates = "`object`"
 	)
 	val param = body.element(
 		tag = "param",
@@ -1098,7 +1099,7 @@ class HtmlDslGenerator {
 	val label = body.grouping(
 		tag = "label",
 		attributes = arrayOf(
-			Attribute("for"),
+			Attribute("for", generates = "`for`"),
 			Attribute("form"),
 			*gaeAttributes
 		)
@@ -1768,7 +1769,10 @@ class HtmlDslGenerator {
 							}
 						}
 
-						out.println(""") : Tag(tagName = "${el.tag}", selfClosing = ${el.selfClosing}) {""".trimMargin())
+						out.println(""") : Tag(""".trimMargin().makeTabs())
+						out.println("""\ttagName = "${el.tag}",""".trimMargin().makeTabs())
+						out.println("""\tselfClosing = ${el.selfClosing}""".trimMargin().makeTabs())
+						out.println(""") {""".trimMargin().makeTabs())
 
 						out.println("")
 
@@ -1797,13 +1801,14 @@ class HtmlDslGenerator {
 							""".trimIndent().makeTabs())
 						}
 						out.println("""\t}""".trimIndent().makeTabs())
+						out.println("")
 
 						// add functions to file
 						if (children.isNotEmpty()) {
 							children.forEach { child ->
 
 								out.println("""
-									\tfun ${child.tag}(
+									\tfun ${child.generates ?: child.tag}(
 								""".trimIndent().replace("""\t""", "\t"))
 
 								val childParams = mutableListOf<String>()

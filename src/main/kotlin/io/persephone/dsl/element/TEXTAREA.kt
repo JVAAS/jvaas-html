@@ -20,7 +20,7 @@ class TEXTAREA(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -105,7 +105,10 @@ class TEXTAREA(
 	title: String? = null,
 	wrap: String? = null,
 	init: (TEXTAREA.() -> Unit)? = null
-) : Tag(tagName = "textarea", selfClosing = false) {
+) : Tag(
+	tagName = "textarea",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -227,11 +230,11 @@ class TEXTAREA(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -915,7 +918,7 @@ class TEXTAREA(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1000,4 +1003,5 @@ class TEXTAREA(
 		this.title = title
 		this.wrap = wrap
 	}
+
 }

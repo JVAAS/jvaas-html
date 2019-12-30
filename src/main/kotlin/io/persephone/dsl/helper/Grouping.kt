@@ -1,8 +1,8 @@
 package io.persephone.dsl.helper
 
 class Grouping(
-
 	tag: String,
+	generates: String? = null,
 	deprecated: Boolean = false,
 	attributes: Array<Attribute> = arrayOf(),
 	init: (Grouping.() -> Unit)? = null
@@ -10,6 +10,8 @@ class Grouping(
 ) : Element(
 	tag = tag,
 	selfClosing = false,
+	generates = generates,
+	deprecated = deprecated,
 	attributes = attributes
 ) {
 
@@ -21,6 +23,7 @@ class Grouping(
 
 	fun grouping(
 		tag: String,
+		generates: String? = null,
 		deprecated: Boolean = false,
 		attributes: Array<Attribute> = arrayOf(),
 		children: MutableList<Element>? = null,
@@ -29,6 +32,7 @@ class Grouping(
 
 		val newGroup = Grouping(
 			tag = tag,
+			generates = generates,
 			attributes = attributes,
 			deprecated = deprecated,
 			init = null
@@ -46,6 +50,7 @@ class Grouping(
 
 	fun element(
 		tag: String,
+		generates: String? = null,
 		deprecated: Boolean = false,
 		selfClosing: Boolean = false,
 		attributes: Array<Attribute> = arrayOf()
@@ -53,6 +58,7 @@ class Grouping(
 
 		val newElement = Element(
 			tag = tag,
+			generates = generates,
 			attributes = attributes,
 			selfClosing = selfClosing
 		)

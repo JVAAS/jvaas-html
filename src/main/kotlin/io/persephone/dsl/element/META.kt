@@ -8,7 +8,10 @@ class META(
 	charset: String? = null,
 	content: String? = null,
 	name: String? = null
-) : Tag(tagName = "meta", selfClosing = true) {
+) : Tag(
+	tagName = "meta",
+	selfClosing = true
+) {
 
 	var charset: String?
 		get() = attributes.get("charset")
@@ -39,4 +42,5 @@ class META(
 		this.content = content
 		this.name = name
 	}
+
 }

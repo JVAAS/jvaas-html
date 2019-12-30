@@ -18,7 +18,7 @@ class IMG(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	ismap: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
@@ -99,7 +99,10 @@ class IMG(
 	title: String? = null,
 	usemap: String? = null,
 	width: String? = null
-) : Tag(tagName = "img", selfClosing = true) {
+) : Tag(
+	tagName = "img",
+	selfClosing = true
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -205,11 +208,11 @@ class IMG(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -867,7 +870,7 @@ class IMG(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.ismap = ismap
 		this.itemid = itemid
 		this.itemprop = itemprop
@@ -949,4 +952,5 @@ class IMG(
 		this.usemap = usemap
 		this.width = width
 	}
+
 }

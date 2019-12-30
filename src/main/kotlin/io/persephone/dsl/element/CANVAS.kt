@@ -15,7 +15,7 @@ class CANVAS(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -92,7 +92,10 @@ class CANVAS(
 	title: String? = null,
 	width: String? = null,
 	init: (CANVAS.() -> Unit)? = null
-) : Tag(tagName = "canvas", selfClosing = false) {
+) : Tag(
+	tagName = "canvas",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -174,11 +177,11 @@ class CANVAS(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -793,7 +796,7 @@ class CANVAS(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -870,6 +873,7 @@ class CANVAS(
 		this.title = title
 		this.width = width
 	}
+
 	fun a(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -883,7 +887,7 @@ class CANVAS(
 		hreflang: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -976,7 +980,7 @@ class CANVAS(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1075,7 +1079,7 @@ class CANVAS(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1172,7 +1176,7 @@ class CANVAS(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1279,7 +1283,7 @@ class CANVAS(
 		id: String? = null,
 		inputmode: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1401,7 +1405,7 @@ class CANVAS(
 		this.id = id
 		this.inputmode = inputmode
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

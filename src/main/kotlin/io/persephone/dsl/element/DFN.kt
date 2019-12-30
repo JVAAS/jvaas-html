@@ -14,7 +14,7 @@ class DFN(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -90,7 +90,10 @@ class DFN(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (DFN.() -> Unit)? = null
-) : Tag(tagName = "dfn", selfClosing = false) {
+) : Tag(
+	tagName = "dfn",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -164,11 +167,11 @@ class DFN(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -774,7 +777,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -850,6 +853,7 @@ class DFN(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 	fun a(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -863,7 +867,7 @@ class DFN(
 		hreflang: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -956,7 +960,7 @@ class DFN(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1047,7 +1051,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1133,7 +1137,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1225,7 +1229,7 @@ class DFN(
 		hreflang: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1321,7 +1325,7 @@ class DFN(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1425,7 +1429,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1540,7 +1544,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1644,7 +1648,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1730,7 +1734,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1818,7 +1822,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1905,7 +1909,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1992,7 +1996,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2077,7 +2081,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2172,7 +2176,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2269,7 +2273,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2360,7 +2364,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2448,7 +2452,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2536,7 +2540,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2622,7 +2626,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2709,7 +2713,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2795,7 +2799,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -2882,7 +2886,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -2969,7 +2973,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3057,7 +3061,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3143,7 +3147,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3232,7 +3236,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3320,7 +3324,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3407,7 +3411,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3493,7 +3497,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3581,7 +3585,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3670,7 +3674,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3760,7 +3764,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -3846,7 +3850,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -3937,7 +3941,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4033,7 +4037,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4130,7 +4134,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		ismap: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
@@ -4225,7 +4229,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.ismap = ismap
 		this.itemid = itemid
 		this.itemprop = itemprop
@@ -4335,7 +4339,7 @@ class DFN(
 		id: String? = null,
 		inputmode: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4457,7 +4461,7 @@ class DFN(
 		this.id = id
 		this.inputmode = inputmode
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4565,7 +4569,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4653,7 +4657,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4740,7 +4744,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4826,7 +4830,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -4910,12 +4914,12 @@ class DFN(
 		contenteditable: String? = null,
 		dir: String? = null,
 		draggable: String? = null,
-		for: String? = null,
+		`for`: String? = null,
 		form: String? = null,
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -4998,12 +5002,12 @@ class DFN(
 		this.contenteditable = contenteditable
 		this.dir = dir
 		this.draggable = draggable
-		this.for = for
+		this.`for` = `for`
 		this.form = form
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5100,7 +5104,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5187,7 +5191,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5275,7 +5279,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5361,7 +5365,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5460,7 +5464,7 @@ class DFN(
 		high: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5553,7 +5557,7 @@ class DFN(
 		this.high = high
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5645,7 +5649,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5731,7 +5735,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -5808,7 +5812,7 @@ class DFN(
 		this.title = title
 	}
 
-	fun object(
+	fun `object`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
@@ -5821,7 +5825,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -5915,7 +5919,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6009,7 +6013,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6098,7 +6102,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6186,7 +6190,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6272,7 +6276,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6359,7 +6363,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6447,7 +6451,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6537,7 +6541,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6624,7 +6628,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6711,7 +6715,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6797,7 +6801,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -6884,7 +6888,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -6970,7 +6974,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7061,7 +7065,7 @@ class DFN(
 		id: String? = null,
 		inputmode: String? = null,
 		integrity: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7156,7 +7160,7 @@ class DFN(
 		this.id = id
 		this.inputmode = inputmode
 		this.integrity = integrity
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7252,7 +7256,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7346,7 +7350,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7437,7 +7441,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7523,7 +7527,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7610,7 +7614,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7696,7 +7700,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7783,7 +7787,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -7869,7 +7873,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -7956,7 +7960,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8042,7 +8046,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8129,7 +8133,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8215,7 +8219,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8308,7 +8312,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8409,7 +8413,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8506,7 +8510,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8593,7 +8597,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8680,7 +8684,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8766,7 +8770,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -8866,7 +8870,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -8986,7 +8990,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -9094,7 +9098,7 @@ class DFN(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -9180,7 +9184,7 @@ class DFN(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

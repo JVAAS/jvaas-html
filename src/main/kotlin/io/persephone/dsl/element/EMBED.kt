@@ -15,7 +15,7 @@ class EMBED(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -93,7 +93,10 @@ class EMBED(
 	title: String? = null,
 	type: String? = null,
 	width: String? = null
-) : Tag(tagName = "embed", selfClosing = true) {
+) : Tag(
+	tagName = "embed",
+	selfClosing = true
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -175,11 +178,11 @@ class EMBED(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -810,7 +813,7 @@ class EMBED(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -889,4 +892,5 @@ class EMBED(
 		this.type = type
 		this.width = width
 	}
+
 }

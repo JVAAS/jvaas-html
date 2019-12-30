@@ -14,7 +14,7 @@ class PICTURE(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -90,7 +90,10 @@ class PICTURE(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (PICTURE.() -> Unit)? = null
-) : Tag(tagName = "picture", selfClosing = false) {
+) : Tag(
+	tagName = "picture",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -164,11 +167,11 @@ class PICTURE(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -774,7 +777,7 @@ class PICTURE(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -850,6 +853,7 @@ class PICTURE(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 	fun img(
 		accesskey: String? = null,
 		alt: String? = null,
@@ -864,7 +868,7 @@ class PICTURE(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		ismap: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
@@ -959,7 +963,7 @@ class PICTURE(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.ismap = ismap
 		this.itemid = itemid
 		this.itemprop = itemprop
@@ -1052,7 +1056,7 @@ class PICTURE(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1143,7 +1147,7 @@ class PICTURE(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

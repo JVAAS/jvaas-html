@@ -18,7 +18,7 @@ class SCRIPT(
 	id: String? = null,
 	inputmode: String? = null,
 	integrity: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -99,7 +99,10 @@ class SCRIPT(
 	title: String? = null,
 	type: String? = null,
 	init: (SCRIPT.() -> Unit)? = null
-) : Tag(tagName = "script", selfClosing = false) {
+) : Tag(
+	tagName = "script",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -205,11 +208,11 @@ class SCRIPT(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -859,7 +862,7 @@ class SCRIPT(
 		this.id = id
 		this.inputmode = inputmode
 		this.integrity = integrity
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -940,4 +943,5 @@ class SCRIPT(
 		this.title = title
 		this.type = type
 	}
+
 }

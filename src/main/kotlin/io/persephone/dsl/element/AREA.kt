@@ -19,7 +19,7 @@ class AREA(
 	hreflang: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -100,7 +100,10 @@ class AREA(
 	title: String? = null,
 	type: String? = null,
 	init: (AREA.() -> Unit)? = null
-) : Tag(tagName = "area", selfClosing = false) {
+) : Tag(
+	tagName = "area",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -214,11 +217,11 @@ class AREA(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -869,7 +872,7 @@ class AREA(
 		this.hreflang = hreflang
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -950,4 +953,5 @@ class AREA(
 		this.title = title
 		this.type = type
 	}
+
 }

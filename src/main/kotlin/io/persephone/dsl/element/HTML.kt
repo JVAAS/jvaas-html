@@ -14,7 +14,7 @@ class HTML(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -91,7 +91,10 @@ class HTML(
 	title: String? = null,
 	xmlns: String? = null,
 	init: (HTML.() -> Unit)? = null
-) : Tag(tagName = "html", selfClosing = false) {
+) : Tag(
+	tagName = "html",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -165,11 +168,11 @@ class HTML(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -783,7 +786,7 @@ class HTML(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -860,6 +863,7 @@ class HTML(
 		this.title = title
 		this.xmlns = xmlns
 	}
+
 	fun body(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -870,7 +874,7 @@ class HTML(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -972,7 +976,7 @@ class HTML(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

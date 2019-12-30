@@ -18,7 +18,7 @@ class IFRAME(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -100,7 +100,10 @@ class IFRAME(
 	title: String? = null,
 	width: String? = null,
 	init: (IFRAME.() -> Unit)? = null
-) : Tag(tagName = "iframe", selfClosing = false) {
+) : Tag(
+	tagName = "iframe",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -206,11 +209,11 @@ class IFRAME(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -868,7 +871,7 @@ class IFRAME(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -950,4 +953,5 @@ class IFRAME(
 		this.title = title
 		this.width = width
 	}
+
 }

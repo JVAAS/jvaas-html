@@ -15,7 +15,7 @@ class OPTION(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -94,7 +94,10 @@ class OPTION(
 	title: String? = null,
 	value: String? = null,
 	init: (OPTION.() -> Unit)? = null
-) : Tag(tagName = "option", selfClosing = false) {
+) : Tag(
+	tagName = "option",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -176,11 +179,11 @@ class OPTION(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -811,7 +814,7 @@ class OPTION(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -890,4 +893,5 @@ class OPTION(
 		this.title = title
 		this.value = value
 	}
+
 }

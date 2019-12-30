@@ -10,7 +10,10 @@ class STYLE(
 	title: String? = null,
 	type: String? = null,
 	init: (STYLE.() -> Unit)? = null
-) : Tag(tagName = "style", selfClosing = false) {
+) : Tag(
+	tagName = "style",
+	selfClosing = false
+) {
 
 	var media: String?
 		get() = attributes.get("media")
@@ -50,4 +53,5 @@ class STYLE(
 		this.title = title
 		this.type = type
 	}
+
 }

@@ -17,7 +17,7 @@ class OBJECT(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -98,7 +98,10 @@ class OBJECT(
 	usemap: String? = null,
 	width: String? = null,
 	init: (OBJECT.() -> Unit)? = null
-) : Tag(tagName = "object", selfClosing = false) {
+) : Tag(
+	tagName = "object",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -196,11 +199,11 @@ class OBJECT(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -849,7 +852,7 @@ class OBJECT(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -930,6 +933,7 @@ class OBJECT(
 		this.usemap = usemap
 		this.width = width
 	}
+
 	fun param(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -940,7 +944,7 @@ class OBJECT(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1028,7 +1032,7 @@ class OBJECT(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

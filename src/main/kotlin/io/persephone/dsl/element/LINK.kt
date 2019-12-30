@@ -8,7 +8,10 @@ class LINK(
 	href: String? = null,
 	rel: String? = null,
 	type: String? = null
-) : Tag(tagName = "link", selfClosing = true) {
+) : Tag(
+	tagName = "link",
+	selfClosing = true
+) {
 
 	var href: String?
 		get() = attributes.get("href")
@@ -39,4 +42,5 @@ class LINK(
 		this.rel = rel
 		this.type = type
 	}
+
 }

@@ -15,7 +15,7 @@ class OPTGROUP(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -92,7 +92,10 @@ class OPTGROUP(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (OPTGROUP.() -> Unit)? = null
-) : Tag(tagName = "optgroup", selfClosing = false) {
+) : Tag(
+	tagName = "optgroup",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -174,11 +177,11 @@ class OPTGROUP(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -793,7 +796,7 @@ class OPTGROUP(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -870,6 +873,7 @@ class OPTGROUP(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 	fun option(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -881,7 +885,7 @@ class OPTGROUP(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -971,7 +975,7 @@ class OPTGROUP(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

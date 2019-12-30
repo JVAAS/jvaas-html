@@ -1,7 +1,9 @@
 package io.persephone.dsl
 
-import io.persephone.dsl.element.DIV
-import io.persephone.dsl.element.SPAN
+//import io.persephone.dsl.element.DIV
+
+//import io.persephone.dsl.element.DIV
+//import io.persephone.dsl.element.SPAN
 
 //import io.persephone.dsl.helper.Document
 
@@ -11,13 +13,17 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-		SPAN(classes = "test") {
-			a {
-				h1 {
-					href = ""
-				}
-			}
-		}
+
+
+
+
+//		SPAN(classes = "test") {
+//			a {
+//				h1 {
+//					href = ""
+//				}
+//			}
+//		}
 
 
 //		val output2 = Document(

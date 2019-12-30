@@ -14,7 +14,7 @@ class BR(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -89,7 +89,10 @@ class BR(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null
-) : Tag(tagName = "br", selfClosing = true) {
+) : Tag(
+	tagName = "br",
+	selfClosing = true
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -163,11 +166,11 @@ class BR(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -773,7 +776,7 @@ class BR(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -849,4 +852,5 @@ class BR(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 }

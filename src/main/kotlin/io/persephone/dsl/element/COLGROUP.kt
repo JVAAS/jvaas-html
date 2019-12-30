@@ -14,7 +14,7 @@ class COLGROUP(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -91,7 +91,10 @@ class COLGROUP(
 	tabindex: String? = null,
 	title: String? = null,
 	init: (COLGROUP.() -> Unit)? = null
-) : Tag(tagName = "colgroup", selfClosing = false) {
+) : Tag(
+	tagName = "colgroup",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -165,11 +168,11 @@ class COLGROUP(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -783,7 +786,7 @@ class COLGROUP(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -860,6 +863,7 @@ class COLGROUP(
 		this.tabindex = tabindex
 		this.title = title
 	}
+
 	fun col(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -870,7 +874,7 @@ class COLGROUP(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -957,7 +961,7 @@ class COLGROUP(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

@@ -26,7 +26,7 @@ class AUDIO(
 	hidden: String? = null,
 	id: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -119,7 +119,10 @@ class AUDIO(
 	volumechange: String? = null,
 	waiting: String? = null,
 	init: (AUDIO.() -> Unit)? = null
-) : Tag(tagName = "audio", selfClosing = false) {
+) : Tag(
+	tagName = "audio",
+	selfClosing = false
+) {
 
 	var accesskey: String?
 		get() = attributes.get("accesskey")
@@ -289,11 +292,11 @@ class AUDIO(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -1047,7 +1050,7 @@ class AUDIO(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1140,6 +1143,7 @@ class AUDIO(
 		this.volumechange = volumechange
 		this.waiting = waiting
 	}
+
 	fun source(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
@@ -1150,7 +1154,7 @@ class AUDIO(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1241,7 +1245,7 @@ class AUDIO(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1334,7 +1338,7 @@ class AUDIO(
 		hidden: String? = null,
 		id: String? = null,
 		inputmode: String? = null,
-		isses: String? = null,
+		`is`: String? = null,
 		itemid: String? = null,
 		itemprop: String? = null,
 		itemref: String? = null,
@@ -1424,7 +1428,7 @@ class AUDIO(
 		this.hidden = hidden
 		this.id = id
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref

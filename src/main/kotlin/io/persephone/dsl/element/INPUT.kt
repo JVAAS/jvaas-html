@@ -31,7 +31,7 @@ class INPUT(
 	id: String? = null,
 	inputmode: String? = null,
 	inputmode: String? = null,
-	isses: String? = null,
+	`is`: String? = null,
 	itemid: String? = null,
 	itemprop: String? = null,
 	itemref: String? = null,
@@ -126,7 +126,10 @@ class INPUT(
 	value: String? = null,
 	width: String? = null,
 	init: (INPUT.() -> Unit)? = null
-) : Tag(tagName = "input", selfClosing = false) {
+) : Tag(
+	tagName = "input",
+	selfClosing = false
+) {
 
 	var accept: String?
 		get() = attributes.get("accept")
@@ -336,11 +339,11 @@ class INPUT(
 			}
 		}
 
-	var isses: String?
-		get() = attributes.get("isses")
+	var `is`: String?
+		get() = attributes.get("`is`")
 		set(value) {
 			value?.let {
-				attributes["isses"] = it
+				attributes["`is`"] = it
 			}
 		}
 
@@ -1115,7 +1118,7 @@ class INPUT(
 		this.id = id
 		this.inputmode = inputmode
 		this.inputmode = inputmode
-		this.isses = isses
+		this.`is` = `is`
 		this.itemid = itemid
 		this.itemprop = itemprop
 		this.itemref = itemref
@@ -1210,4 +1213,5 @@ class INPUT(
 		this.value = value
 		this.width = width
 	}
+
 }

@@ -7,7 +7,10 @@ import io.persephone.dsl.element.*
 class BASE(
 	href: String? = null,
 	target: String? = null
-) : Tag(tagName = "base", selfClosing = true) {
+) : Tag(
+	tagName = "base",
+	selfClosing = true
+) {
 
 	var href: String?
 		get() = attributes.get("href")
@@ -29,4 +32,5 @@ class BASE(
 		this.href = href
 		this.target = target
 	}
+
 }

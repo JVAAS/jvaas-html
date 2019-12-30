@@ -20,6 +20,7 @@ java {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		jvmTarget = "1.8"
+		freeCompilerArgs = listOf("-Xmx=4096m")
 	}
 }
 
