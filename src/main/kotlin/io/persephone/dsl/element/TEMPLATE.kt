@@ -14380,7 +14380,7 @@ class TEMPLATE(
 		this.title = title
 	}
 
-	fun var(
+	fun `var`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,

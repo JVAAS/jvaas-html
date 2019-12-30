@@ -536,6 +536,7 @@ class HtmlDslGenerator {
 
 	val `var` = body.grouping(
 		tag = "var",
+		generates = "`var`",
 		attributes = gaeAttributes
 	)
 
