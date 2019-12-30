@@ -1,5 +1,7 @@
 package io.persephone.dsl
 
+//import io.persephone.dsl.element.SPAN
+
 //import io.persephone.dsl.element.DIV
 
 //import io.persephone.dsl.element.DIV
@@ -20,7 +22,6 @@ object ScratchPad {
 //		SPAN(classes = "test") {
 //			a {
 //				h1 {
-//					href = ""
 //				}
 //			}
 //		}
