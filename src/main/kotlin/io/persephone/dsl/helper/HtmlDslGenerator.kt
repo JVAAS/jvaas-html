@@ -1681,7 +1681,7 @@ class HtmlDslGenerator {
 
 						// extract attributes and children
 						val attributes = el.attributes.
-							distinctBy { it.tag }.
+							distinctBy { it.generates ?: it.tag }.
 							filter { !it.deprecated }.
 							filter { it.standardized }.
 							filter { !it.experimental }.
@@ -1693,7 +1693,7 @@ class HtmlDslGenerator {
 							el.children.toList()
 						} else {
 							listOf()
-						}.sortedBy { it.tag }
+						}.distinctBy { it.generates ?: it.tag }.sortedBy { it.tag }
 
 						out.println("""@DslMarker""")
 						out.println("""annotation class ${el.tag.toCamelCase()}Marker""")
@@ -1763,7 +1763,7 @@ class HtmlDslGenerator {
 
 								val childParams = mutableListOf<String>()
 								val childAttributes =
-									child.attributes.distinctBy { it.tag }.
+									child.attributes.distinctBy { it.generates ?: it.tag }.
 									filter { !it.deprecated }.
 									filter{ it.standardized }.
 									filter{ !it.experimental }.
