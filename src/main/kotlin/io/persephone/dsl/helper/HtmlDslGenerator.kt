@@ -1727,7 +1727,7 @@ class HtmlDslGenerator {
 
 
 					File(
-						"$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt.txt"
+						"$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt"
 					).printWriter().use { out ->
 						out.println("""package io.persephone.dsl.element""")
 						out.println("")
@@ -1791,7 +1791,7 @@ class HtmlDslGenerator {
 								\t\tthis.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}
 							""".trimIndent().makeTabs())
 						}
-						out.println("""\t}""")
+						out.println("""\t}""".trimIndent().makeTabs())
 
 						// add functions to file
 						if (children.isNotEmpty()) {

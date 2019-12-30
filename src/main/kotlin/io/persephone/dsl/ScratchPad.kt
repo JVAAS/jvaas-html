@@ -1,5 +1,7 @@
 package io.persephone.dsl
 
+import io.persephone.dsl.element.DIV
+
 //import io.persephone.dsl.helper.Document
 
 object ScratchPad {
