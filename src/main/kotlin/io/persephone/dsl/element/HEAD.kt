@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class HeadMarker
@@ -426,6 +426,10 @@ class HEAD(
 	fun title(
 		init: (TITLE.() -> Unit)? = null
 	) = initTag(TITLE(), init).apply {
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

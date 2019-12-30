@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class CanvasMarker
@@ -1495,6 +1495,10 @@ class CANVAS(
 		this.type = type
 		this.value = value
 		this.width = width
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class StyleMarker
@@ -56,6 +56,10 @@ class STYLE(
 		this.nonce = nonce
 		this.title = title
 		this.type = type
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

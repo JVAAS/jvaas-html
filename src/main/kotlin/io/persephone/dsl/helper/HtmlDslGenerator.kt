@@ -1676,7 +1676,7 @@ class HtmlDslGenerator {
 					).printWriter().use { out ->
 						out.println("""package io.persephone.dsl.element""")
 						out.println("")
-						out.println("import io.persephone.dsl.Tag")
+						out.println("import io.persephone.dsl.*")
 						out.println("")
 
 						// extract attributes and children
@@ -1808,6 +1808,16 @@ class HtmlDslGenerator {
 							}
 
 						}
+
+						if (!el.selfClosing) {
+							out.println("""
+								\toperator fun String.unaryPlus() {
+								\t\tchildren.add(Text(this))
+								\t}
+							""".trimIndent().makeTabs())
+							out.println("")
+						}
+
 						out.println("}")
 
 					}

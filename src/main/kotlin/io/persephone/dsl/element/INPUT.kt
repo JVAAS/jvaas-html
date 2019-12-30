@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class InputMarker
@@ -1176,6 +1176,10 @@ class INPUT(
 		this.type = type
 		this.value = value
 		this.width = width
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

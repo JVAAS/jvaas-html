@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class HtmlMarker
@@ -1066,6 +1066,10 @@ class HTML(
 	fun head(
 		init: (HEAD.() -> Unit)? = null
 	) = initTag(HEAD(), init).apply {
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

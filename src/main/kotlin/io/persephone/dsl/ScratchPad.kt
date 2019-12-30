@@ -8,10 +8,13 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-
 //		DIV(classes = "testing") {
 //			div(classes = "testing") {
 //				span {
+//					+"TEST"
+//					span {
+//						+"TEST"
+//					}
 //				}
 //			}
 //			a {
@@ -22,7 +25,7 @@ object ScratchPad {
 //				}
 //			}
 //		}
-//
+
 
 //		SPAN(classes = "test") {
 //			a {

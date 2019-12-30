@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class HgroupMarker
@@ -1894,6 +1894,10 @@ class HGROUP(
 		this.style = style
 		this.tabindex = tabindex
 		this.title = title
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

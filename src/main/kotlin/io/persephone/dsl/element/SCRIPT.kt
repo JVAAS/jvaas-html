@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class ScriptMarker
@@ -946,6 +946,10 @@ class SCRIPT(
 		this.tabindex = tabindex
 		this.title = title
 		this.type = type
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

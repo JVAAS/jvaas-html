@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class OptgroupMarker
@@ -1057,6 +1057,10 @@ class OPTGROUP(
 		this.tabindex = tabindex
 		this.title = title
 		this.value = value
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }

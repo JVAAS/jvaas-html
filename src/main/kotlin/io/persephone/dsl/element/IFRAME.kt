@@ -1,6 +1,6 @@
 package io.persephone.dsl.element
 
-import io.persephone.dsl.Tag
+import io.persephone.dsl.*
 
 @DslMarker
 annotation class IframeMarker
@@ -956,6 +956,10 @@ class IFRAME(
 		this.tabindex = tabindex
 		this.title = title
 		this.width = width
+	}
+
+	operator fun String.unaryPlus() {
+		children.add(Text(this))
 	}
 
 }
