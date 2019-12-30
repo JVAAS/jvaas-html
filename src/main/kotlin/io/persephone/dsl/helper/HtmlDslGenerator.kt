@@ -1705,7 +1705,7 @@ class HtmlDslGenerator {
 						out.println("""class ${el.tag.toUpperCase()}(""")
 
 						val initParams = mutableListOf<String>()
-						attributes.forEachIndexed { index, attribute ->
+						attributes.forEach { attribute ->
 							initParams.add("""\t${attribute.generates ?: attribute.tag}: String? = null""")
 						}
 						if (!el.selfClosing) {
