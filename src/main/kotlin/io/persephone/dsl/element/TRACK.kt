@@ -1,7 +1,6 @@
 package io.persephone.dsl.element
 
 import io.persephone.dsl.Tag
-import io.persephone.dsl.element.*
 
 @DslMarker
 annotation class TrackMarker

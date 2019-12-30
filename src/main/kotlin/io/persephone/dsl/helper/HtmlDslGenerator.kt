@@ -1733,7 +1733,6 @@ class HtmlDslGenerator {
 						out.println("""package io.persephone.dsl.element""")
 						out.println("")
 						out.println("import io.persephone.dsl.Tag")
-						out.println("import io.persephone.dsl.element.*")
 						out.println("")
 
 						// extract attributes and children
