@@ -1754,20 +1754,28 @@ class HtmlDslGenerator {
 						// add attributes to file
 						if (attributes.isNotEmpty()) {
 							attributes.
-								filter{ !it.deprecated }.
-								filter{ it.standardized }.
-								filter{ it.experimental }.
-								filter{ it.implemented }.
+								filter { !it.deprecated }.
+								filter { it.standardized }.
+								filter { !it.experimental }.
+								filter { it.implemented }.
 								forEach { attribute ->
-								out.println("""
-									\tvar ${attribute.generates ?: attribute.tag}: String?
-									\t\tget() = attributes.getOrNull("${attribute.generates ?: attribute.tag}")
-									\t\tset(value) {
-									\t\t\tvalue?.let {
-									\t\t\t\tattributes["${attribute.generates ?: attribute.tag}"] = it
-									\t\t\t}
-									\t\t}
-								""".trimIndent().makeTabs())
+									if (attribute.readonly) {
+										out.println("""
+											\tvar ${attribute.generates ?: attribute.tag}: String?
+											\t\tget() = attributes.getOrNull("${attribute.generates ?: attribute.tag}")
+										""".trimIndent().makeTabs())
+									} else {
+										out.println("""
+											\tvar ${attribute.generates ?: attribute.tag}: String?
+											\t\tget() = attributes.getOrNull("${attribute.generates ?: attribute.tag}")
+											\t\tset(value) {
+											\t\t\tvalue?.let {
+											\t\t\t\tattributes["${attribute.generates ?: attribute.tag}"] = it
+											\t\t\t}
+											\t\t}
+										""".trimIndent().makeTabs())
+									}
+
 								out.println("""""")
 							}
 						}
@@ -1784,7 +1792,7 @@ class HtmlDslGenerator {
 								child.attributes.
 									filter { !it.deprecated }.
 									filter{ it.standardized }.
-									filter{ it.experimental }.
+									filter{ !it.experimental }.
 									filter{ it.implemented }.
 									sortedBy { it.tag }.
 									forEach { attribute ->
@@ -1816,7 +1824,7 @@ class HtmlDslGenerator {
 								child.attributes.
 									filter { !it.deprecated }.
 									filter{ it.standardized }.
-									filter{ it.experimental }.
+									filter{ !it.experimental }.
 									filter{ it.implemented }.
 									sortedBy { it.tag }.
 									forEach { attribute ->
