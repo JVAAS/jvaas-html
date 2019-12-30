@@ -13,14 +13,6 @@ class OBJECT {
 			}
 		}
 
-	var archive: String?
-		get() = attributes.getOrDefault("archive", "")
-		set(value) {
-			value?.let {
-				attributes["archive"] = it
-			}
-		}
-
 	var autocapitalize: String?
 		get() = attributes.getOrDefault("autocapitalize", "")
 		set(value) {
@@ -29,43 +21,11 @@ class OBJECT {
 			}
 		}
 
-	var border: String?
-		get() = attributes.getOrDefault("border", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["border"] = it
-			}
-		}
-
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
-		set(value) {
-			value?.let {
-				attributes["class"] = it
-			}
-		}
-
-	var classid: String?
-		get() = attributes.getOrDefault("classid", "")
-		set(value) {
-			value?.let {
-				attributes["classid"] = it
-			}
-		}
-
-	var codebase: String?
-		get() = attributes.getOrDefault("codebase", "")
-		set(value) {
-			value?.let {
-				attributes["codebase"] = it
-			}
-		}
-
-	var codetype: String?
-		get() = attributes.getOrDefault("codetype", "")
-		set(value) {
-			value?.let {
-				attributes["codetype"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -74,14 +34,6 @@ class OBJECT {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -98,14 +50,6 @@ class OBJECT {
 		set(value) {
 			value?.let {
 				attributes["data-*"] = it
-			}
-		}
-
-	var declare: String?
-		get() = attributes.getOrDefault("declare", "")
-		set(value) {
-			value?.let {
-				attributes["declare"] = it
 			}
 		}
 
@@ -181,11 +125,11 @@ class OBJECT {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -773,27 +717,11 @@ class OBJECT {
 			}
 		}
 
-	var standby: String?
-		get() = attributes.getOrDefault("standby", "")
-		set(value) {
-			value?.let {
-				attributes["standby"] = it
-			}
-		}
-
 	var style: String?
 		get() = attributes.getOrDefault("style", "")
 		set(value) {
 			value?.let {
 				attributes["style"] = it
-			}
-		}
-
-	var tabindex: String?
-		get() = attributes.getOrDefault("tabindex", "")
-		set(value) {
-			value?.let {
-				attributes["tabindex"] = it
 			}
 		}
 
@@ -853,5 +781,191 @@ class OBJECT {
 			}
 		}
 
-}
+	fun param(
+		accesskey: String? = null,
+		autocapitalize: String? = null,
+		classes: String? = null,
+		contenteditable: String? = null,
+		data-*: String? = null,
+		dir: String? = null,
+		draggable: String? = null,
+		dropzone: String? = null,
+		exportparts: String? = null,
+		hidden: String? = null,
+		id: String? = null,
+		inputmode: String? = null,
+		isses: String? = null,
+		itemid: String? = null,
+		itemprop: String? = null,
+		itemref: String? = null,
+		itemscope: String? = null,
+		itemtype: String? = null,
+		lang: String? = null,
+		name: String? = null,
+		onabort: String? = null,
+		onautocomplete: String? = null,
+		onautocompleteerror: String? = null,
+		onblur: String? = null,
+		oncancel: String? = null,
+		oncanplay: String? = null,
+		oncanplaythrough: String? = null,
+		onchange: String? = null,
+		onclick: String? = null,
+		onclose: String? = null,
+		oncontextmenu: String? = null,
+		oncuechange: String? = null,
+		ondblclick: String? = null,
+		ondrag: String? = null,
+		ondragend: String? = null,
+		ondragenter: String? = null,
+		ondragexit: String? = null,
+		ondragleave: String? = null,
+		ondragover: String? = null,
+		ondragstart: String? = null,
+		ondrop: String? = null,
+		ondurationchange: String? = null,
+		onemptied: String? = null,
+		onended: String? = null,
+		onerror: String? = null,
+		onfocus: String? = null,
+		oninput: String? = null,
+		oninvalid: String? = null,
+		onkeydown: String? = null,
+		onkeypress: String? = null,
+		onkeyup: String? = null,
+		onload: String? = null,
+		onloadeddata: String? = null,
+		onloadedmetadata: String? = null,
+		onloadstart: String? = null,
+		onmousedown: String? = null,
+		onmouseenter: String? = null,
+		onmouseleave: String? = null,
+		onmousemove: String? = null,
+		onmouseout: String? = null,
+		onmouseover: String? = null,
+		onmouseup: String? = null,
+		onmousewheel: String? = null,
+		onpause: String? = null,
+		onplay: String? = null,
+		onplaying: String? = null,
+		onprogress: String? = null,
+		onratechange: String? = null,
+		onreset: String? = null,
+		onresize: String? = null,
+		onscroll: String? = null,
+		onseeked: String? = null,
+		onseeking: String? = null,
+		onselect: String? = null,
+		onshow: String? = null,
+		onsort: String? = null,
+		onstalled: String? = null,
+		onsubmit: String? = null,
+		onsuspend: String? = null,
+		ontimeupdate: String? = null,
+		ontoggle: String? = null,
+		onvolumechange: String? = null,
+		onwaiting: String? = null,
+		part: String? = null,
+		slot: String? = null,
+		spellcheck: String? = null,
+		style: String? = null,
+		tabindex: String? = null,
+		title: String? = null,
+		translate: String? = null,
+		value: String? = null,
+		init: (PARAM.() -> Unit)? = null
+	) = initTag(PARAM.(), init).apply {
+		this.accesskey = accesskey
+		this.autocapitalize = autocapitalize
+		this.classes = classes
+		this.contenteditable = contenteditable
+		this.data-* = data-*
+		this.dir = dir
+		this.draggable = draggable
+		this.dropzone = dropzone
+		this.exportparts = exportparts
+		this.hidden = hidden
+		this.id = id
+		this.inputmode = inputmode
+		this.isses = isses
+		this.itemid = itemid
+		this.itemprop = itemprop
+		this.itemref = itemref
+		this.itemscope = itemscope
+		this.itemtype = itemtype
+		this.lang = lang
+		this.name = name
+		this.onabort = onabort
+		this.onautocomplete = onautocomplete
+		this.onautocompleteerror = onautocompleteerror
+		this.onblur = onblur
+		this.oncancel = oncancel
+		this.oncanplay = oncanplay
+		this.oncanplaythrough = oncanplaythrough
+		this.onchange = onchange
+		this.onclick = onclick
+		this.onclose = onclose
+		this.oncontextmenu = oncontextmenu
+		this.oncuechange = oncuechange
+		this.ondblclick = ondblclick
+		this.ondrag = ondrag
+		this.ondragend = ondragend
+		this.ondragenter = ondragenter
+		this.ondragexit = ondragexit
+		this.ondragleave = ondragleave
+		this.ondragover = ondragover
+		this.ondragstart = ondragstart
+		this.ondrop = ondrop
+		this.ondurationchange = ondurationchange
+		this.onemptied = onemptied
+		this.onended = onended
+		this.onerror = onerror
+		this.onfocus = onfocus
+		this.oninput = oninput
+		this.oninvalid = oninvalid
+		this.onkeydown = onkeydown
+		this.onkeypress = onkeypress
+		this.onkeyup = onkeyup
+		this.onload = onload
+		this.onloadeddata = onloadeddata
+		this.onloadedmetadata = onloadedmetadata
+		this.onloadstart = onloadstart
+		this.onmousedown = onmousedown
+		this.onmouseenter = onmouseenter
+		this.onmouseleave = onmouseleave
+		this.onmousemove = onmousemove
+		this.onmouseout = onmouseout
+		this.onmouseover = onmouseover
+		this.onmouseup = onmouseup
+		this.onmousewheel = onmousewheel
+		this.onpause = onpause
+		this.onplay = onplay
+		this.onplaying = onplaying
+		this.onprogress = onprogress
+		this.onratechange = onratechange
+		this.onreset = onreset
+		this.onresize = onresize
+		this.onscroll = onscroll
+		this.onseeked = onseeked
+		this.onseeking = onseeking
+		this.onselect = onselect
+		this.onshow = onshow
+		this.onsort = onsort
+		this.onstalled = onstalled
+		this.onsubmit = onsubmit
+		this.onsuspend = onsuspend
+		this.ontimeupdate = ontimeupdate
+		this.ontoggle = ontoggle
+		this.onvolumechange = onvolumechange
+		this.onwaiting = onwaiting
+		this.part = part
+		this.slot = slot
+		this.spellcheck = spellcheck
+		this.style = style
+		this.tabindex = tabindex
+		this.title = title
+		this.translate = translate
+		this.value = value
+	}
 
+}

@@ -13,14 +13,6 @@ class COL {
 			}
 		}
 
-	var align: String?
-		get() = attributes.getOrDefault("align", "")
-		set(value) {
-			value?.let {
-				attributes["align"] = it
-			}
-		}
-
 	var autocapitalize: String?
 		get() = attributes.getOrDefault("autocapitalize", "")
 		set(value) {
@@ -29,35 +21,11 @@ class COL {
 			}
 		}
 
-	var bgcolor: String?
-		get() = attributes.getOrDefault("bgcolor", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["bgcolor"] = it
-			}
-		}
-
-	var char: String?
-		get() = attributes.getOrDefault("char", "")
-		set(value) {
-			value?.let {
-				attributes["char"] = it
-			}
-		}
-
-	var charoff: String?
-		get() = attributes.getOrDefault("charoff", "")
-		set(value) {
-			value?.let {
-				attributes["charoff"] = it
-			}
-		}
-
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
-		set(value) {
-			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -66,14 +34,6 @@ class COL {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -141,11 +101,11 @@ class COL {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -765,21 +725,4 @@ class COL {
 			}
 		}
 
-	var valign: String?
-		get() = attributes.getOrDefault("valign", "")
-		set(value) {
-			value?.let {
-				attributes["valign"] = it
-			}
-		}
-
-	var width: String?
-		get() = attributes.getOrDefault("width", "")
-		set(value) {
-			value?.let {
-				attributes["width"] = it
-			}
-		}
-
 }
-

@@ -21,11 +21,11 @@ class PICTURE {
 			}
 		}
 
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -34,14 +34,6 @@ class PICTURE {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -109,11 +101,11 @@ class PICTURE {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -725,5 +717,405 @@ class PICTURE {
 			}
 		}
 
-}
+	fun img(
+		accesskey: String? = null,
+		alt: String? = null,
+		autocapitalize: String? = null,
+		classes: String? = null,
+		contenteditable: String? = null,
+		crossorigin: String? = null,
+		data-*: String? = null,
+		decoding: String? = null,
+		dir: String? = null,
+		draggable: String? = null,
+		dropzone: String? = null,
+		exportparts: String? = null,
+		height: String? = null,
+		hidden: String? = null,
+		id: String? = null,
+		importance: String? = null,
+		inputmode: String? = null,
+		isses: String? = null,
+		ismap: String? = null,
+		itemid: String? = null,
+		itemprop: String? = null,
+		itemref: String? = null,
+		itemscope: String? = null,
+		itemtype: String? = null,
+		lang: String? = null,
+		loading: String? = null,
+		onabort: String? = null,
+		onautocomplete: String? = null,
+		onautocompleteerror: String? = null,
+		onblur: String? = null,
+		oncancel: String? = null,
+		oncanplay: String? = null,
+		oncanplaythrough: String? = null,
+		onchange: String? = null,
+		onclick: String? = null,
+		onclose: String? = null,
+		oncontextmenu: String? = null,
+		oncuechange: String? = null,
+		ondblclick: String? = null,
+		ondrag: String? = null,
+		ondragend: String? = null,
+		ondragenter: String? = null,
+		ondragexit: String? = null,
+		ondragleave: String? = null,
+		ondragover: String? = null,
+		ondragstart: String? = null,
+		ondrop: String? = null,
+		ondurationchange: String? = null,
+		onemptied: String? = null,
+		onended: String? = null,
+		onerror: String? = null,
+		onfocus: String? = null,
+		oninput: String? = null,
+		oninvalid: String? = null,
+		onkeydown: String? = null,
+		onkeypress: String? = null,
+		onkeyup: String? = null,
+		onload: String? = null,
+		onloadeddata: String? = null,
+		onloadedmetadata: String? = null,
+		onloadstart: String? = null,
+		onmousedown: String? = null,
+		onmouseenter: String? = null,
+		onmouseleave: String? = null,
+		onmousemove: String? = null,
+		onmouseout: String? = null,
+		onmouseover: String? = null,
+		onmouseup: String? = null,
+		onmousewheel: String? = null,
+		onpause: String? = null,
+		onplay: String? = null,
+		onplaying: String? = null,
+		onprogress: String? = null,
+		onratechange: String? = null,
+		onreset: String? = null,
+		onresize: String? = null,
+		onscroll: String? = null,
+		onseeked: String? = null,
+		onseeking: String? = null,
+		onselect: String? = null,
+		onshow: String? = null,
+		onsort: String? = null,
+		onstalled: String? = null,
+		onsubmit: String? = null,
+		onsuspend: String? = null,
+		ontimeupdate: String? = null,
+		ontoggle: String? = null,
+		onvolumechange: String? = null,
+		onwaiting: String? = null,
+		part: String? = null,
+		referrerpolicy: String? = null,
+		sizes: String? = null,
+		slot: String? = null,
+		spellcheck: String? = null,
+		src: String? = null,
+		srcset: String? = null,
+		style: String? = null,
+		tabindex: String? = null,
+		title: String? = null,
+		translate: String? = null,
+		usemap: String? = null,
+		width: String? = null
+	) = initTag(IMG.()).apply {
+		this.accesskey = accesskey
+		this.alt = alt
+		this.autocapitalize = autocapitalize
+		this.classes = classes
+		this.contenteditable = contenteditable
+		this.crossorigin = crossorigin
+		this.data-* = data-*
+		this.decoding = decoding
+		this.dir = dir
+		this.draggable = draggable
+		this.dropzone = dropzone
+		this.exportparts = exportparts
+		this.height = height
+		this.hidden = hidden
+		this.id = id
+		this.importance = importance
+		this.inputmode = inputmode
+		this.isses = isses
+		this.ismap = ismap
+		this.itemid = itemid
+		this.itemprop = itemprop
+		this.itemref = itemref
+		this.itemscope = itemscope
+		this.itemtype = itemtype
+		this.lang = lang
+		this.loading = loading
+		this.onabort = onabort
+		this.onautocomplete = onautocomplete
+		this.onautocompleteerror = onautocompleteerror
+		this.onblur = onblur
+		this.oncancel = oncancel
+		this.oncanplay = oncanplay
+		this.oncanplaythrough = oncanplaythrough
+		this.onchange = onchange
+		this.onclick = onclick
+		this.onclose = onclose
+		this.oncontextmenu = oncontextmenu
+		this.oncuechange = oncuechange
+		this.ondblclick = ondblclick
+		this.ondrag = ondrag
+		this.ondragend = ondragend
+		this.ondragenter = ondragenter
+		this.ondragexit = ondragexit
+		this.ondragleave = ondragleave
+		this.ondragover = ondragover
+		this.ondragstart = ondragstart
+		this.ondrop = ondrop
+		this.ondurationchange = ondurationchange
+		this.onemptied = onemptied
+		this.onended = onended
+		this.onerror = onerror
+		this.onfocus = onfocus
+		this.oninput = oninput
+		this.oninvalid = oninvalid
+		this.onkeydown = onkeydown
+		this.onkeypress = onkeypress
+		this.onkeyup = onkeyup
+		this.onload = onload
+		this.onloadeddata = onloadeddata
+		this.onloadedmetadata = onloadedmetadata
+		this.onloadstart = onloadstart
+		this.onmousedown = onmousedown
+		this.onmouseenter = onmouseenter
+		this.onmouseleave = onmouseleave
+		this.onmousemove = onmousemove
+		this.onmouseout = onmouseout
+		this.onmouseover = onmouseover
+		this.onmouseup = onmouseup
+		this.onmousewheel = onmousewheel
+		this.onpause = onpause
+		this.onplay = onplay
+		this.onplaying = onplaying
+		this.onprogress = onprogress
+		this.onratechange = onratechange
+		this.onreset = onreset
+		this.onresize = onresize
+		this.onscroll = onscroll
+		this.onseeked = onseeked
+		this.onseeking = onseeking
+		this.onselect = onselect
+		this.onshow = onshow
+		this.onsort = onsort
+		this.onstalled = onstalled
+		this.onsubmit = onsubmit
+		this.onsuspend = onsuspend
+		this.ontimeupdate = ontimeupdate
+		this.ontoggle = ontoggle
+		this.onvolumechange = onvolumechange
+		this.onwaiting = onwaiting
+		this.part = part
+		this.referrerpolicy = referrerpolicy
+		this.sizes = sizes
+		this.slot = slot
+		this.spellcheck = spellcheck
+		this.src = src
+		this.srcset = srcset
+		this.style = style
+		this.tabindex = tabindex
+		this.title = title
+		this.translate = translate
+		this.usemap = usemap
+		this.width = width
+	}
 
+	fun source(
+		accesskey: String? = null,
+		autocapitalize: String? = null,
+		classes: String? = null,
+		contenteditable: String? = null,
+		data-*: String? = null,
+		dir: String? = null,
+		draggable: String? = null,
+		dropzone: String? = null,
+		exportparts: String? = null,
+		hidden: String? = null,
+		id: String? = null,
+		inputmode: String? = null,
+		isses: String? = null,
+		itemid: String? = null,
+		itemprop: String? = null,
+		itemref: String? = null,
+		itemscope: String? = null,
+		itemtype: String? = null,
+		lang: String? = null,
+		media: String? = null,
+		onabort: String? = null,
+		onautocomplete: String? = null,
+		onautocompleteerror: String? = null,
+		onblur: String? = null,
+		oncancel: String? = null,
+		oncanplay: String? = null,
+		oncanplaythrough: String? = null,
+		onchange: String? = null,
+		onclick: String? = null,
+		onclose: String? = null,
+		oncontextmenu: String? = null,
+		oncuechange: String? = null,
+		ondblclick: String? = null,
+		ondrag: String? = null,
+		ondragend: String? = null,
+		ondragenter: String? = null,
+		ondragexit: String? = null,
+		ondragleave: String? = null,
+		ondragover: String? = null,
+		ondragstart: String? = null,
+		ondrop: String? = null,
+		ondurationchange: String? = null,
+		onemptied: String? = null,
+		onended: String? = null,
+		onerror: String? = null,
+		onfocus: String? = null,
+		oninput: String? = null,
+		oninvalid: String? = null,
+		onkeydown: String? = null,
+		onkeypress: String? = null,
+		onkeyup: String? = null,
+		onload: String? = null,
+		onloadeddata: String? = null,
+		onloadedmetadata: String? = null,
+		onloadstart: String? = null,
+		onmousedown: String? = null,
+		onmouseenter: String? = null,
+		onmouseleave: String? = null,
+		onmousemove: String? = null,
+		onmouseout: String? = null,
+		onmouseover: String? = null,
+		onmouseup: String? = null,
+		onmousewheel: String? = null,
+		onpause: String? = null,
+		onplay: String? = null,
+		onplaying: String? = null,
+		onprogress: String? = null,
+		onratechange: String? = null,
+		onreset: String? = null,
+		onresize: String? = null,
+		onscroll: String? = null,
+		onseeked: String? = null,
+		onseeking: String? = null,
+		onselect: String? = null,
+		onshow: String? = null,
+		onsort: String? = null,
+		onstalled: String? = null,
+		onsubmit: String? = null,
+		onsuspend: String? = null,
+		ontimeupdate: String? = null,
+		ontoggle: String? = null,
+		onvolumechange: String? = null,
+		onwaiting: String? = null,
+		part: String? = null,
+		sizes: String? = null,
+		slot: String? = null,
+		spellcheck: String? = null,
+		src: String? = null,
+		srcset: String? = null,
+		style: String? = null,
+		tabindex: String? = null,
+		title: String? = null,
+		translate: String? = null,
+		type: String? = null,
+		init: (SOURCE.() -> Unit)? = null
+	) = initTag(SOURCE.(), init).apply {
+		this.accesskey = accesskey
+		this.autocapitalize = autocapitalize
+		this.classes = classes
+		this.contenteditable = contenteditable
+		this.data-* = data-*
+		this.dir = dir
+		this.draggable = draggable
+		this.dropzone = dropzone
+		this.exportparts = exportparts
+		this.hidden = hidden
+		this.id = id
+		this.inputmode = inputmode
+		this.isses = isses
+		this.itemid = itemid
+		this.itemprop = itemprop
+		this.itemref = itemref
+		this.itemscope = itemscope
+		this.itemtype = itemtype
+		this.lang = lang
+		this.media = media
+		this.onabort = onabort
+		this.onautocomplete = onautocomplete
+		this.onautocompleteerror = onautocompleteerror
+		this.onblur = onblur
+		this.oncancel = oncancel
+		this.oncanplay = oncanplay
+		this.oncanplaythrough = oncanplaythrough
+		this.onchange = onchange
+		this.onclick = onclick
+		this.onclose = onclose
+		this.oncontextmenu = oncontextmenu
+		this.oncuechange = oncuechange
+		this.ondblclick = ondblclick
+		this.ondrag = ondrag
+		this.ondragend = ondragend
+		this.ondragenter = ondragenter
+		this.ondragexit = ondragexit
+		this.ondragleave = ondragleave
+		this.ondragover = ondragover
+		this.ondragstart = ondragstart
+		this.ondrop = ondrop
+		this.ondurationchange = ondurationchange
+		this.onemptied = onemptied
+		this.onended = onended
+		this.onerror = onerror
+		this.onfocus = onfocus
+		this.oninput = oninput
+		this.oninvalid = oninvalid
+		this.onkeydown = onkeydown
+		this.onkeypress = onkeypress
+		this.onkeyup = onkeyup
+		this.onload = onload
+		this.onloadeddata = onloadeddata
+		this.onloadedmetadata = onloadedmetadata
+		this.onloadstart = onloadstart
+		this.onmousedown = onmousedown
+		this.onmouseenter = onmouseenter
+		this.onmouseleave = onmouseleave
+		this.onmousemove = onmousemove
+		this.onmouseout = onmouseout
+		this.onmouseover = onmouseover
+		this.onmouseup = onmouseup
+		this.onmousewheel = onmousewheel
+		this.onpause = onpause
+		this.onplay = onplay
+		this.onplaying = onplaying
+		this.onprogress = onprogress
+		this.onratechange = onratechange
+		this.onreset = onreset
+		this.onresize = onresize
+		this.onscroll = onscroll
+		this.onseeked = onseeked
+		this.onseeking = onseeking
+		this.onselect = onselect
+		this.onshow = onshow
+		this.onsort = onsort
+		this.onstalled = onstalled
+		this.onsubmit = onsubmit
+		this.onsuspend = onsuspend
+		this.ontimeupdate = ontimeupdate
+		this.ontoggle = ontoggle
+		this.onvolumechange = onvolumechange
+		this.onwaiting = onwaiting
+		this.part = part
+		this.sizes = sizes
+		this.slot = slot
+		this.spellcheck = spellcheck
+		this.src = src
+		this.srcset = srcset
+		this.style = style
+		this.tabindex = tabindex
+		this.title = title
+		this.translate = translate
+		this.type = type
+	}
+
+}

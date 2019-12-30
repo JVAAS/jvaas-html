@@ -13,14 +13,6 @@ class HR {
 			}
 		}
 
-	var align: String?
-		get() = attributes.getOrDefault("align", "")
-		set(value) {
-			value?.let {
-				attributes["align"] = it
-			}
-		}
-
 	var autocapitalize: String?
 		get() = attributes.getOrDefault("autocapitalize", "")
 		set(value) {
@@ -29,11 +21,11 @@ class HR {
 			}
 		}
 
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -50,14 +42,6 @@ class HR {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -125,11 +109,11 @@ class HR {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -178,14 +162,6 @@ class HR {
 		set(value) {
 			value?.let {
 				attributes["lang"] = it
-			}
-		}
-
-	var noshade: String?
-		get() = attributes.getOrDefault("noshade", "")
-		set(value) {
-			value?.let {
-				attributes["noshade"] = it
 			}
 		}
 
@@ -701,14 +677,6 @@ class HR {
 			}
 		}
 
-	var size: String?
-		get() = attributes.getOrDefault("size", "")
-		set(value) {
-			value?.let {
-				attributes["size"] = it
-			}
-		}
-
 	var slot: String?
 		get() = attributes.getOrDefault("slot", "")
 		set(value) {
@@ -757,13 +725,4 @@ class HR {
 			}
 		}
 
-	var width: String?
-		get() = attributes.getOrDefault("width", "")
-		set(value) {
-			value?.let {
-				attributes["width"] = it
-			}
-		}
-
 }
-

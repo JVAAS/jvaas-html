@@ -29,11 +29,11 @@ class AREA {
 			}
 		}
 
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -42,14 +42,6 @@ class AREA {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -149,11 +141,11 @@ class AREA {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -202,22 +194,6 @@ class AREA {
 		set(value) {
 			value?.let {
 				attributes["lang"] = it
-			}
-		}
-
-	var name: String?
-		get() = attributes.getOrDefault("name", "")
-		set(value) {
-			value?.let {
-				attributes["name"] = it
-			}
-		}
-
-	var nohref: String?
-		get() = attributes.getOrDefault("nohref", "")
-		set(value) {
-			value?.let {
-				attributes["nohref"] = it
 			}
 		}
 
@@ -797,14 +773,6 @@ class AREA {
 			}
 		}
 
-	var tabindex: String?
-		get() = attributes.getOrDefault("tabindex", "")
-		set(value) {
-			value?.let {
-				attributes["tabindex"] = it
-			}
-		}
-
 	var target: String?
 		get() = attributes.getOrDefault("target", "")
 		set(value) {
@@ -838,4 +806,3 @@ class AREA {
 		}
 
 }
-

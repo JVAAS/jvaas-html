@@ -29,19 +29,11 @@ class SCRIPT {
 			}
 		}
 
-	var charset: String?
-		get() = attributes.getOrDefault("charset", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["charset"] = it
-			}
-		}
-
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
-		set(value) {
-			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -50,14 +42,6 @@ class SCRIPT {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -149,11 +133,11 @@ class SCRIPT {
 			}
 		}
 
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -202,14 +186,6 @@ class SCRIPT {
 		set(value) {
 			value?.let {
 				attributes["lang"] = it
-			}
-		}
-
-	var language: String?
-		get() = attributes.getOrDefault("language", "")
-		set(value) {
-			value?.let {
-				attributes["language"] = it
 			}
 		}
 
@@ -814,4 +790,3 @@ class SCRIPT {
 		}
 
 }
-

@@ -78,6 +78,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val link = head.element(
 		tag = "link",
 		attributes = arrayOf(
@@ -87,6 +88,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val meta = head.element(
 		tag = "meta",
 		attributes = arrayOf(
@@ -96,6 +98,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val style = head.element(
 		tag = "style",
 		attributes = arrayOf(
@@ -106,6 +109,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = false
 	)
+
 	val title = head.element(
 		tag = "title",
 		attributes = arrayOf(),
@@ -160,58 +164,72 @@ class HtmlDslGenerator {
 		tag = "address",
 		attributes = gaeAttributes
 	)
+
 	val article = body.grouping(
 		tag = "article",
 		attributes = gaeAttributes
 	)
+
 	val aside = body.grouping(
 		tag = "aside",
 		attributes = gaeAttributes
 	)
+
 	val footer = body.grouping(
 		tag = "footer",
 		attributes = gaeAttributes
 	)
+
 	val header = body.grouping(
 		tag = "header",
 		attributes = gaeAttributes
 	)
+
 	val h1 = body.grouping(
 		tag = "h1",
 		attributes = gaeAttributes
 	)
+
 	val h2 = body.grouping(
 		tag = "h2",
 		attributes = gaeAttributes
 	)
+
 	val h3 = body.grouping(
 		tag = "h3",
 		attributes = gaeAttributes
 	)
+
 	val h4 = body.grouping(
 		tag = "h4",
 		attributes = gaeAttributes
 	)
+
 	val h5 = body.grouping(
 		tag = "h5",
 		attributes = gaeAttributes
 	)
+
 	val h6 = body.grouping(
 		tag = "h6",
 		attributes = gaeAttributes
 	)
+
 	val hgroup = body.grouping(
 		tag = "hgroup",
 		attributes = gaeAttributes, deprecated = true
 	)
+
 	val main1 = body.grouping(
 		tag = "main",
 		attributes = gaeAttributes
 	)
+
 	val nav = body.grouping(
 		tag = "nav",
 		attributes = gaeAttributes
 	)
+
 	val section = body.grouping(
 		tag = "section",
 		attributes = gaeAttributes
@@ -230,6 +248,7 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val dd = body.grouping(
 		tag = "dd",
 		attributes = arrayOf(
@@ -237,26 +256,32 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val div = body.grouping(
 		tag = "div",
 		attributes = gaeAttributes
 	)
+
 	val dl = body.grouping(
 		tag = "dl",
 		attributes = gaeAttributes
 	)
+
 	val dt = body.grouping(
 		tag = "dt",
 		attributes = gaeAttributes
 	)
+
 	val figcaption = body.grouping(
 		tag = "figcaption",
 		attributes = gaeAttributes
 	)
+
 	val figure = body.grouping(
 		tag = "figure",
 		attributes = gaeAttributes
 	)
+
 	val hr = body.element(
 		tag = "hr",
 		attributes = arrayOf(
@@ -269,6 +294,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val li = body.grouping(
 		tag = "li",
 		attributes = arrayOf(
@@ -277,10 +303,12 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val main2 = body.grouping(
 		tag = "main",
 		attributes = gaeAttributes
 	)
+
 	val ol = body.grouping(
 		tag = "ol",
 		attributes = arrayOf(
@@ -290,10 +318,12 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val p = body.grouping(
 		tag = "p",
 		attributes = gaeAttributes
 	)
+
 	val pre = body.grouping(
 		tag = "pre",
 		attributes = arrayOf(
@@ -303,6 +333,7 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val ul = body.grouping(
 		tag = "ul",
 		attributes = arrayOf(
@@ -339,18 +370,22 @@ class HtmlDslGenerator {
 		)
 
 	)
+
 	val abbr = body.grouping(
 		tag = "abbr",
 		attributes = gaeAttributes
 	)
+
 	val b = body.grouping(
 		tag = "b",
 		attributes = gaeAttributes
 	)
+
 	val bdi = body.grouping(
 		tag = "bdi",
 		attributes = gaeAttributes
 	)
+
 	val bdo = body.grouping(
 		tag = "bdo",
 		attributes = arrayOf(
@@ -359,6 +394,7 @@ class HtmlDslGenerator {
 		)
 
 	)
+
 	val br = body.element(
 		tag = "br",
 		attributes = arrayOf(
@@ -367,14 +403,17 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val cite = body.grouping(
 		tag = "cite",
 		attributes = gaeAttributes
 	)
+
 	val code = body.grouping(
 		tag = "code",
 		attributes = gaeAttributes
 	)
+
 	val data = body.grouping(
 		tag = "data",
 		attributes = arrayOf(
@@ -382,26 +421,32 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val dfn = body.grouping(
 		tag = "dfn",
 		attributes = gaeAttributes
 	)
+
 	val em = body.grouping(
 		tag = "em",
 		attributes = gaeAttributes
 	)
+
 	val i = body.grouping(
 		tag = "i",
 		attributes = gaeAttributes
 	)
+
 	val kbd = body.grouping(
 		tag = "kbd",
 		attributes = gaeAttributes
 	)
+
 	val mark = body.grouping(
 		tag = "mark",
 		attributes = gaeAttributes
 	)
+
 	val q = body.grouping(
 		tag = "q",
 		attributes = arrayOf(
@@ -409,54 +454,67 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val rb = body.element(
 		tag = "rb",
 		attributes = gaeAttributes
 	)
+
 	val rp = body.element(
 		tag = "rp",
 		attributes = gaeAttributes
 	)
+
 	val rt = body.grouping(
 		tag = "rt",
 		attributes = gaeAttributes
 	)
+
 	val rtc = body.grouping(
 		tag = "rtc",
 		attributes = gaeAttributes
 	)
+
 	val ruby = body.grouping(
 		tag = "ruby",
 		attributes = gaeAttributes
 	)
+
 	val s = body.grouping(
 		tag = "s",
 		attributes = gaeAttributes
 	)
+
 	val samp = body.grouping(
 		tag = "samp",
 		attributes = gaeAttributes
 	)
+
 	val small = body.grouping(
 		tag = "small",
 		attributes = gaeAttributes
 	)
+
 	val span = body.grouping(
 		tag = "span",
 		attributes = gaeAttributes
 	)
+
 	val strong = body.grouping(
 		tag = "strong",
 		attributes = gaeAttributes
 	)
+
 	val sub = body.grouping(
 		tag = "sub",
 		attributes = gaeAttributes
 	)
+
 	val sup = body.grouping(
 		tag = "sup",
 		attributes = gaeAttributes
 	)
+
 	val time = body.grouping(
 		tag = "time",
 		attributes = arrayOf(
@@ -464,19 +522,23 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val tt = body.grouping(
 		tag = "tt",
 		attributes = gaeAttributes,
 		deprecated = true
 	)
+
 	val u = body.grouping(
 		tag = "u",
 		attributes = gaeAttributes
 	)
+
 	val `var` = body.grouping(
 		tag = "var",
 		attributes = gaeAttributes
 	)
+
 	val wbr = body.element(
 		tag = "wbr",
 		attributes = gaeAttributes
@@ -508,6 +570,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = false
 	)
+
 	val audio = body.grouping(
 		tag = "audio",
 		attributes = arrayOf(
@@ -546,6 +609,7 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val img = body.element(
 		tag = "img",
 		attributes = arrayOf(
@@ -572,8 +636,10 @@ class HtmlDslGenerator {
 			Attribute("vspace", deprecated = true),
 
 			*gaeAttributes
-		)
+		),
+		selfClosing = true
 	)
+
 	val map = body.grouping(
 		tag = "map",
 		attributes = arrayOf(
@@ -581,6 +647,7 @@ class HtmlDslGenerator {
 			*gaeAttributes
 		)
 	)
+
 	val track = body.element(
 		tag = "track",
 		attributes = arrayOf(
@@ -594,6 +661,7 @@ class HtmlDslGenerator {
 		),
 		selfClosing = true
 	)
+
 	val video = body.grouping(
 		tag = "video",
 		attributes = arrayOf(
@@ -1477,12 +1545,7 @@ class HtmlDslGenerator {
 
 		tfoot.children = mutableListOf(tr)
 
-		th.children = flowContent.
-			minus(header).
-			minus(footer).
-			minus(*sectioningContent).
-			minus(*headingContent).
-			toMutableList()
+		th.children = flowContent.minus(header).minus(footer).minus(*sectioningContent).minus(*headingContent).toMutableList()
 
 		thead.children = mutableListOf(tr)
 
@@ -1490,58 +1553,37 @@ class HtmlDslGenerator {
 
 		// forms
 
-		button.children = phrasingContent.
-			minus(*interactiveContent).
-			toMutableList()
+		button.children = phrasingContent.minus(*interactiveContent).toMutableList()
 
-		datalist.children = phrasingContent.
-			plus(option).
-			toMutableList()
+		datalist.children = phrasingContent.plus(option).toMutableList()
 
-		fieldset.children = flowContent.
-			plus(legend).
-			toMutableList()
+		fieldset.children = flowContent.plus(legend).toMutableList()
 
-		form.children = flowContent.
-			minus(form).
-			toMutableList()
+		form.children = flowContent.minus(form).toMutableList()
 
-		label.children = phrasingContent.
-			minus(label).
-			toMutableList()
+		label.children = phrasingContent.minus(label).toMutableList()
 
 		legend.children = phrasingContent.toMutableList()
 
-		meter.children = phrasingContent.
-			minus(meter).
-			toMutableList()
+		meter.children = phrasingContent.minus(meter).toMutableList()
 
 		optgroup.children = mutableListOf(option)
 
 		output.children = phrasingContent.toMutableList()
 
-		progress.children = phrasingContent.
-			minus(progress).
-			toMutableList()
+		progress.children = phrasingContent.minus(progress).toMutableList()
 
 		select.children = mutableListOf(option, optgroup)
 
 		// interactive elements
 
-		details.children = flowContent.
-			plus(summary).
-			toMutableList()
+		details.children = flowContent.plus(summary).toMutableList()
 
 		dialog.children = flowContent.toMutableList()
 
-		menu.children = flowContent.
-			plus(li).
-			plus(menuitem, hr).
-			toMutableList()
+		menu.children = flowContent.plus(li).plus(menuitem, hr).toMutableList()
 
-		summary.children = phrasingContent.
-			plus(*headingContent).
-			toMutableList()
+		summary.children = phrasingContent.plus(*headingContent).toMutableList()
 
 		content.children = flowContent.toMutableList()
 
@@ -1611,7 +1653,6 @@ class HtmlDslGenerator {
 	 */
 
 
-
 	private inline fun <reified T : Any> Array<T>.plus(vararg t: T): Array<T> {
 
 		var input = this.copyOf().toSet()
@@ -1633,7 +1674,6 @@ class HtmlDslGenerator {
 		return input.toTypedArray()
 
 	}
-
 
 
 	companion object {
@@ -1670,6 +1710,10 @@ class HtmlDslGenerator {
 			return String(array)
 		}
 
+		private fun String.makeTabs(): String {
+			return this.replace("""\t""", "\t")
+		}
+
 		@JvmStatic
 		fun main(args: Array<String>) {
 
@@ -1682,35 +1726,95 @@ class HtmlDslGenerator {
 					println(el.tag)
 
 
-					File("$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt.txt").printWriter().use { out ->
+					File(
+						"$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt.txt"
+					).printWriter().use { out ->
 						out.println("""package io.persephone.dsl.element""")
 						out.println("")
 						out.println("import io.persephone.dsl.*")
 						out.println("")
 
-						val attributes = el.attributes.toMutableList()
+						// extract attributes and children
+						val attributes = el.attributes.
+							filter { !it.deprecated }.
+							sortedBy { it.tag }.
+							toMutableList()
 
+						val children = if (el is Grouping) {
+							el.children.toList()
+						} else {
+							listOf()
+						}.sortedBy { it.tag }
+
+						out.println("// generated by HtmlDslGenerator.kt")
+						out.println("""class ${el.tag.toUpperCase()} {""")
+
+						// add attributes to file
 						if (attributes.isNotEmpty()) {
-							out.println("// generated by HtmlDslGenerator.kt")
-							out.println("""class ${el.tag.toUpperCase()} {""")
 							out.println("")
-							attributes.sortedBy{ it.tag }.forEach { attribute ->
+							attributes.forEach { attribute ->
 								out.println("""
-						\tvar ${attribute.tag}: String?
-						\t\tget() = attributes.getOrDefault("${attribute.tag}", "")
-						\t\tset(value) {
-						\t\t\tvalue?.let {
-						\t\t\t\tattributes["${attribute.tag}"] = it
-						\t\t\t}
-						\t\t}
-					""".trimIndent().replace("""\t""", "\t"))
+									\tvar ${attribute.generates ?: attribute.tag}: String?
+									\t\tget() = attributes.getOrDefault("${attribute.generates ?: attribute.tag}", "")
+									\t\tset(value) {
+									\t\t\tvalue?.let {
+									\t\t\t\tattributes["${attribute.generates ?: attribute.tag}"] = it
+									\t\t\t}
+									\t\t}
+								""".trimIndent().makeTabs())
 								out.println("""""")
 							}
-							out.println("}")
-						} else {
-							out.println("""class ${el.tag.toUpperCase()}""")
 						}
-						out.println("")
+
+						// add functions to file
+						if (children.isNotEmpty()) {
+							children.forEach { child ->
+
+								out.println("""
+									\tfun ${child.tag}(
+								""".trimIndent().replace("""\t""", "\t"))
+
+								val childParams = mutableListOf<String>()
+								child.attributes.filter { !it.deprecated }.sortedBy { it.tag }.forEach { attribute ->
+									childParams.add("""
+										\t\t${attribute.generates ?: attribute.tag}: String? = null
+									""".trimIndent())
+								}
+
+								if (!child.selfClosing) {
+									childParams.add("""
+										\t\tinit: (${child.tag.toUpperCase()}.() -> Unit)? = null
+									""".trimIndent())
+								}
+
+								childParams.forEachIndexed { index, line ->
+									if (index == childParams.size - 1) {
+										out.println(line.makeTabs())
+									} else {
+										out.println(line.makeTabs() + ",")
+									}
+								}
+
+								if (!child.selfClosing) {
+									out.println("""\t) = initTag(${child.tag.toUpperCase()}.(), init).apply {""".makeTabs())
+								} else {
+									out.println("""\t) = initTag(${child.tag.toUpperCase()}.()).apply {""".makeTabs())
+								}
+
+								child.attributes.filter { !it.deprecated }.sortedBy { it.tag }.forEach { attribute ->
+									out.println("""\t\tthis.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}""".makeTabs())
+
+								}
+
+
+								out.println("""\t}""".makeTabs())
+								out.println("")
+
+							}
+
+						}
+						out.println("}")
+
 					}
 
 
@@ -1720,11 +1824,6 @@ class HtmlDslGenerator {
 
 
 			}
-
-
-
-
-
 
 
 		}

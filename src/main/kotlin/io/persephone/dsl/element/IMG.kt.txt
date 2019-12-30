@@ -13,14 +13,6 @@ class IMG {
 			}
 		}
 
-	var align: String?
-		get() = attributes.getOrDefault("align", "")
-		set(value) {
-			value?.let {
-				attributes["align"] = it
-			}
-		}
-
 	var alt: String?
 		get() = attributes.getOrDefault("alt", "")
 		set(value) {
@@ -37,19 +29,11 @@ class IMG {
 			}
 		}
 
-	var border: String?
-		get() = attributes.getOrDefault("border", "")
+	var classes: String?
+		get() = attributes.getOrDefault("classes", "")
 		set(value) {
 			value?.let {
-				attributes["border"] = it
-			}
-		}
-
-	var class: String?
-		get() = attributes.getOrDefault("class", "")
-		set(value) {
-			value?.let {
-				attributes["class"] = it
+				attributes["classes"] = it
 			}
 		}
 
@@ -58,14 +42,6 @@ class IMG {
 		set(value) {
 			value?.let {
 				attributes["contenteditable"] = it
-			}
-		}
-
-	var contextmenu: String?
-		get() = attributes.getOrDefault("contextmenu", "")
-		set(value) {
-			value?.let {
-				attributes["contextmenu"] = it
 			}
 		}
 
@@ -141,14 +117,6 @@ class IMG {
 			}
 		}
 
-	var hspace: String?
-		get() = attributes.getOrDefault("hspace", "")
-		set(value) {
-			value?.let {
-				attributes["hspace"] = it
-			}
-		}
-
 	var id: String?
 		get() = attributes.getOrDefault("id", "")
 		set(value) {
@@ -173,19 +141,11 @@ class IMG {
 			}
 		}
 
-	var intrinsicsize: String?
-		get() = attributes.getOrDefault("intrinsicsize", "")
+	var isses: String?
+		get() = attributes.getOrDefault("isses", "")
 		set(value) {
 			value?.let {
-				attributes["intrinsicsize"] = it
-			}
-		}
-
-	var is: String?
-		get() = attributes.getOrDefault("is", "")
-		set(value) {
-			value?.let {
-				attributes["is"] = it
+				attributes["isses"] = it
 			}
 		}
 
@@ -250,22 +210,6 @@ class IMG {
 		set(value) {
 			value?.let {
 				attributes["loading"] = it
-			}
-		}
-
-	var longdesc: String?
-		get() = attributes.getOrDefault("longdesc", "")
-		set(value) {
-			value?.let {
-				attributes["longdesc"] = it
-			}
-		}
-
-	var name: String?
-		get() = attributes.getOrDefault("name", "")
-		set(value) {
-			value?.let {
-				attributes["name"] = it
 			}
 		}
 
@@ -869,14 +813,6 @@ class IMG {
 			}
 		}
 
-	var vspace: String?
-		get() = attributes.getOrDefault("vspace", "")
-		set(value) {
-			value?.let {
-				attributes["vspace"] = it
-			}
-		}
-
 	var width: String?
 		get() = attributes.getOrDefault("width", "")
 		set(value) {
@@ -886,4 +822,3 @@ class IMG {
 		}
 
 }
-
