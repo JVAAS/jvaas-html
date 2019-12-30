@@ -1196,6 +1196,8 @@ class VIDEO(
 		this.volumechanged = volumechanged
 		this.waiting = waiting
 		this.width = width
+
+		init?.invoke(this)
 	}
 
 	fun source(

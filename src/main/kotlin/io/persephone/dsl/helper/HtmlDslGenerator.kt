@@ -1750,6 +1750,11 @@ class HtmlDslGenerator {
 								\t\tthis.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}
 							""".trimIndent().makeTabs())
 						}
+
+						if (!el.selfClosing) {
+							out.println("""""")
+							out.println("""\t\tinit?.invoke(this)""".trimIndent().makeTabs())
+						}
 						out.println("""\t}""".trimIndent().makeTabs())
 						out.println("")
 

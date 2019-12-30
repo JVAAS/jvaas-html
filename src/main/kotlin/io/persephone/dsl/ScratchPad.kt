@@ -1,6 +1,6 @@
 package io.persephone.dsl
 
-//import io.persephone.dsl.element.DIV
+import io.persephone.dsl.element.DIV
 
 object ScratchPad {
 
@@ -8,25 +8,29 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-//		DIV(classes = "testing") {
-//			div(classes = "testing") {
-//				span {
-//					+"TEST"
-//					span {
-//						+"TEST"
-//					}
-//				}
-//			}
-//			a {
-//				this.href = ""
-//				span {
-//					this.classes = ""
-//					this@a.href = ""
-//				}
-//			}
-//		}
+		val div = DIV(classes = "testing") {
+			div(classes = "testing") {
+				span {
+					+"TEST"
+					span {
+						+"TEST"
+					}
+				}
+			}
+			a {
+				this.href = ""
+				span {
+					this.classes = ""
+					this@a.href = ""
+				}
+			}
+		}
+
+		println(div)
 
 
+//
+//
 //		SPAN(classes = "test") {
 //			a {
 //				h1 {

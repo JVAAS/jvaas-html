@@ -56,6 +56,8 @@ class STYLE(
 		this.nonce = nonce
 		this.title = title
 		this.type = type
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

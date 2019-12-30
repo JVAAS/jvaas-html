@@ -856,6 +856,8 @@ class DL(
 		this.style = style
 		this.tabindex = tabindex
 		this.title = title
+
+		init?.invoke(this)
 	}
 
 	fun dd(

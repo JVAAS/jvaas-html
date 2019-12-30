@@ -866,6 +866,8 @@ class COL(
 		this.style = style
 		this.tabindex = tabindex
 		this.title = title
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

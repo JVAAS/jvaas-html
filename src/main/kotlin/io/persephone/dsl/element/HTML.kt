@@ -866,6 +866,8 @@ class HTML(
 		this.tabindex = tabindex
 		this.title = title
 		this.xmlns = xmlns
+
+		init?.invoke(this)
 	}
 
 	fun body(

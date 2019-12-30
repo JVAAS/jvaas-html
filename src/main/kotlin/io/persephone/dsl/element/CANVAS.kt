@@ -876,6 +876,8 @@ class CANVAS(
 		this.tabindex = tabindex
 		this.title = title
 		this.width = width
+
+		init?.invoke(this)
 	}
 
 	fun a(

@@ -946,6 +946,8 @@ class AREA(
 		this.target = target
 		this.title = title
 		this.type = type
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

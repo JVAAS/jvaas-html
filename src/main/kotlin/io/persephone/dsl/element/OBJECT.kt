@@ -926,6 +926,8 @@ class OBJECT(
 		this.typemustmatch = typemustmatch
 		this.usemap = usemap
 		this.width = width
+
+		init?.invoke(this)
 	}
 
 	fun param(

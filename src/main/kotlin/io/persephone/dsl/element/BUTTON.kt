@@ -966,6 +966,8 @@ class BUTTON(
 		this.title = title
 		this.type = type
 		this.value = value
+
+		init?.invoke(this)
 	}
 
 	fun abbr(

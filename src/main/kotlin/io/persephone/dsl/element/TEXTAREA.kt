@@ -996,6 +996,8 @@ class TEXTAREA(
 		this.tabindex = tabindex
 		this.title = title
 		this.wrap = wrap
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

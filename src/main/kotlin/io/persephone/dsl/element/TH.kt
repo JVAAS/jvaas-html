@@ -906,6 +906,8 @@ class TH(
 		this.style = style
 		this.tabindex = tabindex
 		this.title = title
+
+		init?.invoke(this)
 	}
 
 	fun a(

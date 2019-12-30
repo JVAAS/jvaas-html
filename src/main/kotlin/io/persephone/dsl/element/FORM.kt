@@ -926,6 +926,8 @@ class FORM(
 		this.tabindex = tabindex
 		this.target = target
 		this.title = title
+
+		init?.invoke(this)
 	}
 
 	fun a(

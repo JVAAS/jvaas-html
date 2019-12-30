@@ -1176,6 +1176,8 @@ class INPUT(
 		this.type = type
 		this.value = value
 		this.width = width
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

@@ -926,6 +926,8 @@ class A(
 		this.target = target
 		this.title = title
 		this.type = type
+
+		init?.invoke(this)
 	}
 
 	fun a(

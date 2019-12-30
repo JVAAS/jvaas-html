@@ -16,6 +16,8 @@ class TITLE(
 ) {
 
 	init {
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

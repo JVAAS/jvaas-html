@@ -936,6 +936,8 @@ class MENUITEM(
 		this.tabindex = tabindex
 		this.title = title
 		this.type = type
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

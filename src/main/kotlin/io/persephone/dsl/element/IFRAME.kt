@@ -956,6 +956,8 @@ class IFRAME(
 		this.tabindex = tabindex
 		this.title = title
 		this.width = width
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

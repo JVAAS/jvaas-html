@@ -1146,6 +1146,8 @@ class AUDIO(
 		this.title = title
 		this.volumechange = volumechange
 		this.waiting = waiting
+
+		init?.invoke(this)
 	}
 
 	fun source(

@@ -926,6 +926,8 @@ class METER(
 		this.tabindex = tabindex
 		this.title = title
 		this.value = value
+
+		init?.invoke(this)
 	}
 
 	fun a(

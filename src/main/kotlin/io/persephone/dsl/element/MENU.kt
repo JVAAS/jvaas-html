@@ -866,6 +866,8 @@ class MENU(
 		this.tabindex = tabindex
 		this.title = title
 		this.type = type
+
+		init?.invoke(this)
 	}
 
 	fun a(

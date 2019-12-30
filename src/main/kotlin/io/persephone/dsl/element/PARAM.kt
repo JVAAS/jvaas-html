@@ -876,6 +876,8 @@ class PARAM(
 		this.tabindex = tabindex
 		this.title = title
 		this.value = value
+
+		init?.invoke(this)
 	}
 
 	operator fun String.unaryPlus() {

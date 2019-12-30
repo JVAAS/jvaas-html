@@ -16,6 +16,8 @@ class HEAD(
 ) {
 
 	init {
+
+		init?.invoke(this)
 	}
 
 	fun base(
