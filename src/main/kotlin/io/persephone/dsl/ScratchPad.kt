@@ -1,6 +1,7 @@
 package io.persephone.dsl
 
 import io.persephone.dsl.element.DIV
+import io.persephone.dsl.element.HTML
 import kotlin.concurrent.thread
 
 object ScratchPad {
@@ -11,18 +12,15 @@ object ScratchPad {
 
 
 		println(
-
 			DIV(classes = "div1") {
 				+"text1"
-				a(href = "#") {
+				a(href = "#0") {
 					+"text2"
 					div(classes = "div2") {
 						+"text3"
-						href = ""
 					}
 					div(classes = "div3") {
 						+"text4"
-						href
 					}
 				}
 				hr(classes = "hr1")

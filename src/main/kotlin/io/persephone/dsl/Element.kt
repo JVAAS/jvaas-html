@@ -10,6 +10,10 @@ class Text(val text: String): Element {
 	}
 }
 
+@DslMarker
+annotation class TagMarker
+
+@TagMarker
 abstract class Tag(val tagName: String, var selfClosing: Boolean = false): Element {
 
 	val children = arrayListOf<Element>()
