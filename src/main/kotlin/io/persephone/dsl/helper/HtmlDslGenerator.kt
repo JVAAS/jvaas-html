@@ -1143,7 +1143,7 @@ class HtmlDslGenerator {
 	val output = body.grouping(
 		tag = "output",
 		attributes = arrayOf(
-			Attribute("for"),
+			Attribute("for", generates = "`for`"),
 			Attribute("form"),
 			Attribute("name"),
 			*gaeAttributes

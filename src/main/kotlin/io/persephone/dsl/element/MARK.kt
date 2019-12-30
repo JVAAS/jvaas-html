@@ -6171,7 +6171,7 @@ class MARK(
 		contenteditable: String? = null,
 		dir: String? = null,
 		draggable: String? = null,
-		for: String? = null,
+		`for`: String? = null,
 		form: String? = null,
 		hidden: String? = null,
 		id: String? = null,
@@ -6260,7 +6260,7 @@ class MARK(
 		this.contenteditable = contenteditable
 		this.dir = dir
 		this.draggable = draggable
-		this.for = for
+		this.`for` = `for`
 		this.form = form
 		this.hidden = hidden
 		this.id = id

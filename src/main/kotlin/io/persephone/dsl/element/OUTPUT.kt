@@ -15,7 +15,7 @@ class OUTPUT(
 	contenteditable: String? = null,
 	dir: String? = null,
 	draggable: String? = null,
-	for: String? = null,
+	`for`: String? = null,
 	form: String? = null,
 	hidden: String? = null,
 	id: String? = null,
@@ -150,11 +150,11 @@ class OUTPUT(
 			}
 		}
 
-	var for: String?
-		get() = attributes.get("for")
+	var `for`: String?
+		get() = attributes.get("`for`")
 		set(value) {
 			value?.let {
-				attributes["for"] = it
+				attributes["`for`"] = it
 			}
 		}
 
@@ -805,7 +805,7 @@ class OUTPUT(
 		this.contenteditable = contenteditable
 		this.dir = dir
 		this.draggable = draggable
-		this.for = for
+		this.`for` = `for`
 		this.form = form
 		this.hidden = hidden
 		this.id = id
@@ -6201,7 +6201,7 @@ class OUTPUT(
 		contenteditable: String? = null,
 		dir: String? = null,
 		draggable: String? = null,
-		for: String? = null,
+		`for`: String? = null,
 		form: String? = null,
 		hidden: String? = null,
 		id: String? = null,
@@ -6290,7 +6290,7 @@ class OUTPUT(
 		this.contenteditable = contenteditable
 		this.dir = dir
 		this.draggable = draggable
-		this.for = for
+		this.`for` = `for`
 		this.form = form
 		this.hidden = hidden
 		this.id = id
