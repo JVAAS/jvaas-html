@@ -95,7 +95,6 @@ class OBJECT(
 	part: String? = null,
 	slot: String? = null,
 	style: String? = null,
-	tabindex: String? = null,
 	title: String? = null,
 	type: String? = null,
 	typemustmatch: String? = null,
@@ -795,14 +794,6 @@ class OBJECT(
 			}
 		}
 
-	var tabindex: String?
-		get() = attributes.get("tabindex")
-		set(value) {
-			value?.let {
-				attributes["tabindex"] = it
-			}
-		}
-
 	var title: String?
 		get() = attributes.get("title")
 		set(value) {
@@ -930,7 +921,6 @@ class OBJECT(
 		this.part = part
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.title = title
 		this.type = type
 		this.typemustmatch = typemustmatch

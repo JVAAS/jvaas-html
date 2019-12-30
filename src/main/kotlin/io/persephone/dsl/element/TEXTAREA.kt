@@ -11,7 +11,6 @@ annotation class TextareaMarker
 class TEXTAREA(
 	accesskey: String? = null,
 	autocapitalize: String? = null,
-	autocapitalize: String? = null,
 	autocomplete: String? = null,
 	autofocus: String? = null,
 	classes: String? = null,
@@ -119,14 +118,6 @@ class TEXTAREA(
 		set(value) {
 			value?.let {
 				attributes["accesskey"] = it
-			}
-		}
-
-	var autocapitalize: String?
-		get() = attributes.get("autocapitalize")
-		set(value) {
-			value?.let {
-				attributes["autocapitalize"] = it
 			}
 		}
 
@@ -908,7 +899,6 @@ class TEXTAREA(
 
 	init {
 		this.accesskey = accesskey
-		this.autocapitalize = autocapitalize
 		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.autofocus = autofocus

@@ -891,7 +891,6 @@ class HTML(
 		onautocompleteerror: String? = null,
 		onbeforeunload: String? = null,
 		onblur: String? = null,
-		onblur: String? = null,
 		oncancel: String? = null,
 		oncanplay: String? = null,
 		oncanplaythrough: String? = null,
@@ -913,8 +912,6 @@ class HTML(
 		onemptied: String? = null,
 		onended: String? = null,
 		onerror: String? = null,
-		onerror: String? = null,
-		onfocus: String? = null,
 		onfocus: String? = null,
 		onhashchange: String? = null,
 		oninput: String? = null,
@@ -922,7 +919,6 @@ class HTML(
 		onkeydown: String? = null,
 		onkeypress: String? = null,
 		onkeyup: String? = null,
-		onload: String? = null,
 		onload: String? = null,
 		onloadeddata: String? = null,
 		onloadedmetadata: String? = null,
@@ -946,7 +942,6 @@ class HTML(
 		onratechange: String? = null,
 		onredo: String? = null,
 		onreset: String? = null,
-		onresize: String? = null,
 		onresize: String? = null,
 		onscroll: String? = null,
 		onseeked: String? = null,
@@ -993,7 +988,6 @@ class HTML(
 		this.onautocompleteerror = onautocompleteerror
 		this.onbeforeunload = onbeforeunload
 		this.onblur = onblur
-		this.onblur = onblur
 		this.oncancel = oncancel
 		this.oncanplay = oncanplay
 		this.oncanplaythrough = oncanplaythrough
@@ -1015,8 +1009,6 @@ class HTML(
 		this.onemptied = onemptied
 		this.onended = onended
 		this.onerror = onerror
-		this.onerror = onerror
-		this.onfocus = onfocus
 		this.onfocus = onfocus
 		this.onhashchange = onhashchange
 		this.oninput = oninput
@@ -1024,7 +1016,6 @@ class HTML(
 		this.onkeydown = onkeydown
 		this.onkeypress = onkeypress
 		this.onkeyup = onkeyup
-		this.onload = onload
 		this.onload = onload
 		this.onloadeddata = onloadeddata
 		this.onloadedmetadata = onloadedmetadata
@@ -1048,7 +1039,6 @@ class HTML(
 		this.onratechange = onratechange
 		this.onredo = onredo
 		this.onreset = onreset
-		this.onresize = onresize
 		this.onresize = onresize
 		this.onscroll = onscroll
 		this.onseeked = onseeked

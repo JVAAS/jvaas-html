@@ -2320,7 +2320,6 @@ class FIGCAPTION(
 		classes: String? = null,
 		contenteditable: String? = null,
 		dir: String? = null,
-		dir: String? = null,
 		draggable: String? = null,
 		hidden: String? = null,
 		id: String? = null,
@@ -2406,7 +2405,6 @@ class FIGCAPTION(
 		this.autocapitalize = autocapitalize
 		this.classes = classes
 		this.contenteditable = contenteditable
-		this.dir = dir
 		this.dir = dir
 		this.draggable = draggable
 		this.hidden = hidden
@@ -5655,7 +5653,6 @@ class FIGCAPTION(
 		acceptCharset: String? = null,
 		accesskey: String? = null,
 		action: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		classes: String? = null,
 		contenteditable: String? = null,
@@ -5749,7 +5746,6 @@ class FIGCAPTION(
 		this.acceptCharset = acceptCharset
 		this.accesskey = accesskey
 		this.action = action
-		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.classes = classes
 		this.contenteditable = contenteditable
@@ -7978,8 +7974,6 @@ class FIGCAPTION(
 		height: String? = null,
 		hidden: String? = null,
 		id: String? = null,
-		id: String? = null,
-		inputmode: String? = null,
 		inputmode: String? = null,
 		`is`: String? = null,
 		itemid: String? = null,
@@ -8069,8 +8063,6 @@ class FIGCAPTION(
 		step: String? = null,
 		style: String? = null,
 		tabindex: String? = null,
-		tabindex: String? = null,
-		title: String? = null,
 		title: String? = null,
 		type: String? = null,
 		value: String? = null,
@@ -8100,8 +8092,6 @@ class FIGCAPTION(
 		this.height = height
 		this.hidden = hidden
 		this.id = id
-		this.id = id
-		this.inputmode = inputmode
 		this.inputmode = inputmode
 		this.`is` = `is`
 		this.itemid = itemid
@@ -8191,8 +8181,6 @@ class FIGCAPTION(
 		this.step = step
 		this.style = style
 		this.tabindex = tabindex
-		this.tabindex = tabindex
-		this.title = title
 		this.title = title
 		this.type = type
 		this.value = value
@@ -10215,7 +10203,6 @@ class FIGCAPTION(
 		part: String? = null,
 		slot: String? = null,
 		style: String? = null,
-		tabindex: String? = null,
 		title: String? = null,
 		type: String? = null,
 		typemustmatch: String? = null,
@@ -10309,7 +10296,6 @@ class FIGCAPTION(
 		this.part = part
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.title = title
 		this.type = type
 		this.typemustmatch = typemustmatch
@@ -13832,7 +13818,6 @@ class FIGCAPTION(
 	fun textarea(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		autofocus: String? = null,
 		classes: String? = null,
@@ -13932,7 +13917,6 @@ class FIGCAPTION(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = initTag(TEXTAREA(), init).apply {
 		this.accesskey = accesskey
-		this.autocapitalize = autocapitalize
 		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.autofocus = autofocus

@@ -2320,7 +2320,6 @@ class HEADER(
 		classes: String? = null,
 		contenteditable: String? = null,
 		dir: String? = null,
-		dir: String? = null,
 		draggable: String? = null,
 		hidden: String? = null,
 		id: String? = null,
@@ -2406,7 +2405,6 @@ class HEADER(
 		this.autocapitalize = autocapitalize
 		this.classes = classes
 		this.contenteditable = contenteditable
-		this.dir = dir
 		this.dir = dir
 		this.draggable = draggable
 		this.hidden = hidden
@@ -5482,7 +5480,6 @@ class HEADER(
 		acceptCharset: String? = null,
 		accesskey: String? = null,
 		action: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		classes: String? = null,
 		contenteditable: String? = null,
@@ -5576,7 +5573,6 @@ class HEADER(
 		this.acceptCharset = acceptCharset
 		this.accesskey = accesskey
 		this.action = action
-		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.classes = classes
 		this.contenteditable = contenteditable
@@ -7632,8 +7628,6 @@ class HEADER(
 		height: String? = null,
 		hidden: String? = null,
 		id: String? = null,
-		id: String? = null,
-		inputmode: String? = null,
 		inputmode: String? = null,
 		`is`: String? = null,
 		itemid: String? = null,
@@ -7723,8 +7717,6 @@ class HEADER(
 		step: String? = null,
 		style: String? = null,
 		tabindex: String? = null,
-		tabindex: String? = null,
-		title: String? = null,
 		title: String? = null,
 		type: String? = null,
 		value: String? = null,
@@ -7754,8 +7746,6 @@ class HEADER(
 		this.height = height
 		this.hidden = hidden
 		this.id = id
-		this.id = id
-		this.inputmode = inputmode
 		this.inputmode = inputmode
 		this.`is` = `is`
 		this.itemid = itemid
@@ -7845,8 +7835,6 @@ class HEADER(
 		this.step = step
 		this.style = style
 		this.tabindex = tabindex
-		this.tabindex = tabindex
-		this.title = title
 		this.title = title
 		this.type = type
 		this.value = value
@@ -9869,7 +9857,6 @@ class HEADER(
 		part: String? = null,
 		slot: String? = null,
 		style: String? = null,
-		tabindex: String? = null,
 		title: String? = null,
 		type: String? = null,
 		typemustmatch: String? = null,
@@ -9963,7 +9950,6 @@ class HEADER(
 		this.part = part
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.title = title
 		this.type = type
 		this.typemustmatch = typemustmatch
@@ -13486,7 +13472,6 @@ class HEADER(
 	fun textarea(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		autofocus: String? = null,
 		classes: String? = null,
@@ -13586,7 +13571,6 @@ class HEADER(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = initTag(TEXTAREA(), init).apply {
 		this.accesskey = accesskey
-		this.autocapitalize = autocapitalize
 		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.autofocus = autofocus

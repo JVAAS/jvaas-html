@@ -99,7 +99,6 @@ class AREA(
 	shape: String? = null,
 	slot: String? = null,
 	style: String? = null,
-	tabindex: String? = null,
 	target: String? = null,
 	title: String? = null,
 	type: String? = null,
@@ -829,14 +828,6 @@ class AREA(
 			}
 		}
 
-	var tabindex: String?
-		get() = attributes.get("tabindex")
-		set(value) {
-			value?.let {
-				attributes["tabindex"] = it
-			}
-		}
-
 	var target: String?
 		get() = attributes.get("target")
 		set(value) {
@@ -952,7 +943,6 @@ class AREA(
 		this.shape = shape
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.target = target
 		this.title = title
 		this.type = type

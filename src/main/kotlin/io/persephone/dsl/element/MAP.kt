@@ -959,7 +959,6 @@ class MAP(
 		shape: String? = null,
 		slot: String? = null,
 		style: String? = null,
-		tabindex: String? = null,
 		target: String? = null,
 		title: String? = null,
 		type: String? = null,
@@ -1055,7 +1054,6 @@ class MAP(
 		this.shape = shape
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.target = target
 		this.title = title
 		this.type = type

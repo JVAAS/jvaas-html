@@ -32,8 +32,6 @@ class INPUT(
 	height: String? = null,
 	hidden: String? = null,
 	id: String? = null,
-	id: String? = null,
-	inputmode: String? = null,
 	inputmode: String? = null,
 	`is`: String? = null,
 	itemid: String? = null,
@@ -123,8 +121,6 @@ class INPUT(
 	step: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	tabindex: String? = null,
-	title: String? = null,
 	title: String? = null,
 	type: String? = null,
 	value: String? = null,
@@ -316,22 +312,6 @@ class INPUT(
 		set(value) {
 			value?.let {
 				attributes["id"] = it
-			}
-		}
-
-	var id: String?
-		get() = attributes.get("id")
-		set(value) {
-			value?.let {
-				attributes["id"] = it
-			}
-		}
-
-	var inputmode: String?
-		get() = attributes.get("inputmode")
-		set(value) {
-			value?.let {
-				attributes["inputmode"] = it
 			}
 		}
 
@@ -1047,22 +1027,6 @@ class INPUT(
 			}
 		}
 
-	var tabindex: String?
-		get() = attributes.get("tabindex")
-		set(value) {
-			value?.let {
-				attributes["tabindex"] = it
-			}
-		}
-
-	var title: String?
-		get() = attributes.get("title")
-		set(value) {
-			value?.let {
-				attributes["title"] = it
-			}
-		}
-
 	var title: String?
 		get() = attributes.get("title")
 		set(value) {
@@ -1119,8 +1083,6 @@ class INPUT(
 		this.height = height
 		this.hidden = hidden
 		this.id = id
-		this.id = id
-		this.inputmode = inputmode
 		this.inputmode = inputmode
 		this.`is` = `is`
 		this.itemid = itemid
@@ -1210,8 +1172,6 @@ class INPUT(
 		this.step = step
 		this.style = style
 		this.tabindex = tabindex
-		this.tabindex = tabindex
-		this.title = title
 		this.title = title
 		this.type = type
 		this.value = value

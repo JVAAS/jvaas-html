@@ -1720,7 +1720,7 @@ class HtmlDslGenerator {
 		fun main(args: Array<String>) {
 
 			HtmlDslGenerator().let {
-				val elements = extractElements(it.root)
+				val elements = extractElements(it.root).toSet().toList()
 				val path = getPath()
 
 
@@ -1738,6 +1738,7 @@ class HtmlDslGenerator {
 
 						// extract attributes and children
 						val attributes = el.attributes.
+							distinctBy { it.tag }.
 							filter { !it.deprecated }.
 							filter { it.standardized }.
 							filter { !it.experimental }.
@@ -1819,7 +1820,7 @@ class HtmlDslGenerator {
 
 								val childParams = mutableListOf<String>()
 								val childAttributes =
-									child.attributes.
+									child.attributes.distinctBy { it.tag }.
 									filter { !it.deprecated }.
 									filter{ it.standardized }.
 									filter{ !it.experimental }.

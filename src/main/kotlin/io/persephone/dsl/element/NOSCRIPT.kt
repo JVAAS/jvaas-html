@@ -1482,7 +1482,6 @@ class NOSCRIPT(
 		shape: String? = null,
 		slot: String? = null,
 		style: String? = null,
-		tabindex: String? = null,
 		target: String? = null,
 		title: String? = null,
 		type: String? = null,
@@ -1578,7 +1577,6 @@ class NOSCRIPT(
 		this.shape = shape
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.target = target
 		this.title = title
 		this.type = type
@@ -2513,7 +2511,6 @@ class NOSCRIPT(
 		classes: String? = null,
 		contenteditable: String? = null,
 		dir: String? = null,
-		dir: String? = null,
 		draggable: String? = null,
 		hidden: String? = null,
 		id: String? = null,
@@ -2599,7 +2596,6 @@ class NOSCRIPT(
 		this.autocapitalize = autocapitalize
 		this.classes = classes
 		this.contenteditable = contenteditable
-		this.dir = dir
 		this.dir = dir
 		this.draggable = draggable
 		this.hidden = hidden
@@ -5848,7 +5844,6 @@ class NOSCRIPT(
 		acceptCharset: String? = null,
 		accesskey: String? = null,
 		action: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		classes: String? = null,
 		contenteditable: String? = null,
@@ -5942,7 +5937,6 @@ class NOSCRIPT(
 		this.acceptCharset = acceptCharset
 		this.accesskey = accesskey
 		this.action = action
-		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.classes = classes
 		this.contenteditable = contenteditable
@@ -8171,8 +8165,6 @@ class NOSCRIPT(
 		height: String? = null,
 		hidden: String? = null,
 		id: String? = null,
-		id: String? = null,
-		inputmode: String? = null,
 		inputmode: String? = null,
 		`is`: String? = null,
 		itemid: String? = null,
@@ -8262,8 +8254,6 @@ class NOSCRIPT(
 		step: String? = null,
 		style: String? = null,
 		tabindex: String? = null,
-		tabindex: String? = null,
-		title: String? = null,
 		title: String? = null,
 		type: String? = null,
 		value: String? = null,
@@ -8293,8 +8283,6 @@ class NOSCRIPT(
 		this.height = height
 		this.hidden = hidden
 		this.id = id
-		this.id = id
-		this.inputmode = inputmode
 		this.inputmode = inputmode
 		this.`is` = `is`
 		this.itemid = itemid
@@ -8384,8 +8372,6 @@ class NOSCRIPT(
 		this.step = step
 		this.style = style
 		this.tabindex = tabindex
-		this.tabindex = tabindex
-		this.title = title
 		this.title = title
 		this.type = type
 		this.value = value
@@ -10275,7 +10261,6 @@ class NOSCRIPT(
 		part: String? = null,
 		slot: String? = null,
 		style: String? = null,
-		tabindex: String? = null,
 		title: String? = null,
 		type: String? = null,
 		typemustmatch: String? = null,
@@ -10369,7 +10354,6 @@ class NOSCRIPT(
 		this.part = part
 		this.slot = slot
 		this.style = style
-		this.tabindex = tabindex
 		this.title = title
 		this.type = type
 		this.typemustmatch = typemustmatch
@@ -13905,7 +13889,6 @@ class NOSCRIPT(
 	fun textarea(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
-		autocapitalize: String? = null,
 		autocomplete: String? = null,
 		autofocus: String? = null,
 		classes: String? = null,
@@ -14005,7 +13988,6 @@ class NOSCRIPT(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = initTag(TEXTAREA(), init).apply {
 		this.accesskey = accesskey
-		this.autocapitalize = autocapitalize
 		this.autocapitalize = autocapitalize
 		this.autocomplete = autocomplete
 		this.autofocus = autofocus

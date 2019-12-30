@@ -1284,8 +1284,6 @@ class CANVAS(
 		height: String? = null,
 		hidden: String? = null,
 		id: String? = null,
-		id: String? = null,
-		inputmode: String? = null,
 		inputmode: String? = null,
 		`is`: String? = null,
 		itemid: String? = null,
@@ -1375,8 +1373,6 @@ class CANVAS(
 		step: String? = null,
 		style: String? = null,
 		tabindex: String? = null,
-		tabindex: String? = null,
-		title: String? = null,
 		title: String? = null,
 		type: String? = null,
 		value: String? = null,
@@ -1406,8 +1402,6 @@ class CANVAS(
 		this.height = height
 		this.hidden = hidden
 		this.id = id
-		this.id = id
-		this.inputmode = inputmode
 		this.inputmode = inputmode
 		this.`is` = `is`
 		this.itemid = itemid
@@ -1497,8 +1491,6 @@ class CANVAS(
 		this.step = step
 		this.style = style
 		this.tabindex = tabindex
-		this.tabindex = tabindex
-		this.title = title
 		this.title = title
 		this.type = type
 		this.value = value

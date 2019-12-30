@@ -1,15 +1,6 @@
 package io.persephone.dsl
-//
-//import io.persephone.dsl.element.DIV
-
-//import io.persephone.dsl.element.SPAN
 
 //import io.persephone.dsl.element.DIV
-
-//import io.persephone.dsl.element.DIV
-//import io.persephone.dsl.element.SPAN
-
-//import io.persephone.dsl.helper.Document
 
 object ScratchPad {
 
@@ -19,10 +10,11 @@ object ScratchPad {
 
 
 //		DIV(classes = "testing") {
-//			val a = a {
+//			a {
 //				this.href = ""
 //				span {
 //					this.classes = ""
+//					this@a.href = ""
 //				}
 //			}
 //
