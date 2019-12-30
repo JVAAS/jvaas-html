@@ -15,19 +15,6 @@ abstract class Tag(val tagName: String, var selfClosing: Boolean = false): Eleme
 	val children = arrayListOf<Element>()
 	val attributes = hashMapOf<String, String>()
 
-	fun <T : Tag> initTag(tag: T): T {
-		children.add(tag)
-		return tag
-	}
-
-	fun <T : Tag> initTag(tag: T, init: (T.() -> Unit)? = null): T {
-		init?.let {
-			tag.init()
-		}
-		children.add(tag)
-		return tag
-	}
-
 	override fun render(builder: StringBuilder, indent: String) {
 		if (selfClosing) {
 			builder.append("$indent<$tagName${renderAttributes()} />\n")
