@@ -23,29 +23,44 @@ class HEAD(
 	fun base(
 		href: String? = null,
 		target: String? = null
-	) = initTag(BASE()).apply {
-		this.href = href
-		this.target = target
+	) = BASE().let {
+	
+		this.children.add(it)
+	
+		it.href = href
+		it.target = target
+	
+		it
 	}
 
 	fun link(
 		href: String? = null,
 		rel: String? = null,
 		type: String? = null
-	) = initTag(LINK()).apply {
-		this.href = href
-		this.rel = rel
-		this.type = type
+	) = LINK().let {
+	
+		this.children.add(it)
+	
+		it.href = href
+		it.rel = rel
+		it.type = type
+	
+		it
 	}
 
 	fun meta(
 		charset: String? = null,
 		content: String? = null,
 		name: String? = null
-	) = initTag(META()).apply {
-		this.charset = charset
-		this.content = content
-		this.name = name
+	) = META().let {
+	
+		this.children.add(it)
+	
+		it.charset = charset
+		it.content = content
+		it.name = name
+	
+		it
 	}
 
 	fun noscript(
@@ -134,91 +149,97 @@ class HEAD(
 		tabindex: String? = null,
 		title: String? = null,
 		init: (NOSCRIPT.() -> Unit)? = null
-	) = initTag(NOSCRIPT(), init).apply {
-		this.accesskey = accesskey
-		this.autocapitalize = autocapitalize
-		this.classes = classes
-		this.contenteditable = contenteditable
-		this.dir = dir
-		this.draggable = draggable
-		this.hidden = hidden
-		this.id = id
-		this.inputmode = inputmode
-		this.`is` = `is`
-		this.itemid = itemid
-		this.itemprop = itemprop
-		this.itemref = itemref
-		this.itemscope = itemscope
-		this.itemtype = itemtype
-		this.lang = lang
-		this.onabort = onabort
-		this.onautocomplete = onautocomplete
-		this.onautocompleteerror = onautocompleteerror
-		this.onblur = onblur
-		this.oncancel = oncancel
-		this.oncanplay = oncanplay
-		this.oncanplaythrough = oncanplaythrough
-		this.onchange = onchange
-		this.onclick = onclick
-		this.onclose = onclose
-		this.oncontextmenu = oncontextmenu
-		this.oncuechange = oncuechange
-		this.ondblclick = ondblclick
-		this.ondrag = ondrag
-		this.ondragend = ondragend
-		this.ondragenter = ondragenter
-		this.ondragexit = ondragexit
-		this.ondragleave = ondragleave
-		this.ondragover = ondragover
-		this.ondragstart = ondragstart
-		this.ondrop = ondrop
-		this.ondurationchange = ondurationchange
-		this.onemptied = onemptied
-		this.onended = onended
-		this.onerror = onerror
-		this.onfocus = onfocus
-		this.oninput = oninput
-		this.oninvalid = oninvalid
-		this.onkeydown = onkeydown
-		this.onkeypress = onkeypress
-		this.onkeyup = onkeyup
-		this.onload = onload
-		this.onloadeddata = onloadeddata
-		this.onloadedmetadata = onloadedmetadata
-		this.onloadstart = onloadstart
-		this.onmousedown = onmousedown
-		this.onmouseenter = onmouseenter
-		this.onmouseleave = onmouseleave
-		this.onmousemove = onmousemove
-		this.onmouseout = onmouseout
-		this.onmouseover = onmouseover
-		this.onmouseup = onmouseup
-		this.onmousewheel = onmousewheel
-		this.onpause = onpause
-		this.onplay = onplay
-		this.onplaying = onplaying
-		this.onprogress = onprogress
-		this.onratechange = onratechange
-		this.onreset = onreset
-		this.onresize = onresize
-		this.onscroll = onscroll
-		this.onseeked = onseeked
-		this.onseeking = onseeking
-		this.onselect = onselect
-		this.onshow = onshow
-		this.onsort = onsort
-		this.onstalled = onstalled
-		this.onsubmit = onsubmit
-		this.onsuspend = onsuspend
-		this.ontimeupdate = ontimeupdate
-		this.ontoggle = ontoggle
-		this.onvolumechange = onvolumechange
-		this.onwaiting = onwaiting
-		this.part = part
-		this.slot = slot
-		this.style = style
-		this.tabindex = tabindex
-		this.title = title
+	) = NOSCRIPT().let {
+	
+		this.children.add(it)
+	
+		it.accesskey = accesskey
+		it.autocapitalize = autocapitalize
+		it.classes = classes
+		it.contenteditable = contenteditable
+		it.dir = dir
+		it.draggable = draggable
+		it.hidden = hidden
+		it.id = id
+		it.inputmode = inputmode
+		it.`is` = `is`
+		it.itemid = itemid
+		it.itemprop = itemprop
+		it.itemref = itemref
+		it.itemscope = itemscope
+		it.itemtype = itemtype
+		it.lang = lang
+		it.onabort = onabort
+		it.onautocomplete = onautocomplete
+		it.onautocompleteerror = onautocompleteerror
+		it.onblur = onblur
+		it.oncancel = oncancel
+		it.oncanplay = oncanplay
+		it.oncanplaythrough = oncanplaythrough
+		it.onchange = onchange
+		it.onclick = onclick
+		it.onclose = onclose
+		it.oncontextmenu = oncontextmenu
+		it.oncuechange = oncuechange
+		it.ondblclick = ondblclick
+		it.ondrag = ondrag
+		it.ondragend = ondragend
+		it.ondragenter = ondragenter
+		it.ondragexit = ondragexit
+		it.ondragleave = ondragleave
+		it.ondragover = ondragover
+		it.ondragstart = ondragstart
+		it.ondrop = ondrop
+		it.ondurationchange = ondurationchange
+		it.onemptied = onemptied
+		it.onended = onended
+		it.onerror = onerror
+		it.onfocus = onfocus
+		it.oninput = oninput
+		it.oninvalid = oninvalid
+		it.onkeydown = onkeydown
+		it.onkeypress = onkeypress
+		it.onkeyup = onkeyup
+		it.onload = onload
+		it.onloadeddata = onloadeddata
+		it.onloadedmetadata = onloadedmetadata
+		it.onloadstart = onloadstart
+		it.onmousedown = onmousedown
+		it.onmouseenter = onmouseenter
+		it.onmouseleave = onmouseleave
+		it.onmousemove = onmousemove
+		it.onmouseout = onmouseout
+		it.onmouseover = onmouseover
+		it.onmouseup = onmouseup
+		it.onmousewheel = onmousewheel
+		it.onpause = onpause
+		it.onplay = onplay
+		it.onplaying = onplaying
+		it.onprogress = onprogress
+		it.onratechange = onratechange
+		it.onreset = onreset
+		it.onresize = onresize
+		it.onscroll = onscroll
+		it.onseeked = onseeked
+		it.onseeking = onseeking
+		it.onselect = onselect
+		it.onshow = onshow
+		it.onsort = onsort
+		it.onstalled = onstalled
+		it.onsubmit = onsubmit
+		it.onsuspend = onsuspend
+		it.ontimeupdate = ontimeupdate
+		it.ontoggle = ontoggle
+		it.onvolumechange = onvolumechange
+		it.onwaiting = onwaiting
+		it.part = part
+		it.slot = slot
+		it.style = style
+		it.tabindex = tabindex
+		it.title = title
+	
+		init?.invoke(it)
+		it
 	}
 
 	fun script(
@@ -316,100 +337,106 @@ class HEAD(
 		title: String? = null,
 		type: String? = null,
 		init: (SCRIPT.() -> Unit)? = null
-	) = initTag(SCRIPT(), init).apply {
-		this.accesskey = accesskey
-		this.async = async
-		this.autocapitalize = autocapitalize
-		this.classes = classes
-		this.contenteditable = contenteditable
-		this.crossorigin = crossorigin
-		this.defer = defer
-		this.dir = dir
-		this.draggable = draggable
-		this.hidden = hidden
-		this.id = id
-		this.inputmode = inputmode
-		this.integrity = integrity
-		this.`is` = `is`
-		this.itemid = itemid
-		this.itemprop = itemprop
-		this.itemref = itemref
-		this.itemscope = itemscope
-		this.itemtype = itemtype
-		this.lang = lang
-		this.nomodule = nomodule
-		this.nonce = nonce
-		this.onabort = onabort
-		this.onautocomplete = onautocomplete
-		this.onautocompleteerror = onautocompleteerror
-		this.onblur = onblur
-		this.oncancel = oncancel
-		this.oncanplay = oncanplay
-		this.oncanplaythrough = oncanplaythrough
-		this.onchange = onchange
-		this.onclick = onclick
-		this.onclose = onclose
-		this.oncontextmenu = oncontextmenu
-		this.oncuechange = oncuechange
-		this.ondblclick = ondblclick
-		this.ondrag = ondrag
-		this.ondragend = ondragend
-		this.ondragenter = ondragenter
-		this.ondragexit = ondragexit
-		this.ondragleave = ondragleave
-		this.ondragover = ondragover
-		this.ondragstart = ondragstart
-		this.ondrop = ondrop
-		this.ondurationchange = ondurationchange
-		this.onemptied = onemptied
-		this.onended = onended
-		this.onerror = onerror
-		this.onfocus = onfocus
-		this.oninput = oninput
-		this.oninvalid = oninvalid
-		this.onkeydown = onkeydown
-		this.onkeypress = onkeypress
-		this.onkeyup = onkeyup
-		this.onload = onload
-		this.onloadeddata = onloadeddata
-		this.onloadedmetadata = onloadedmetadata
-		this.onloadstart = onloadstart
-		this.onmousedown = onmousedown
-		this.onmouseenter = onmouseenter
-		this.onmouseleave = onmouseleave
-		this.onmousemove = onmousemove
-		this.onmouseout = onmouseout
-		this.onmouseover = onmouseover
-		this.onmouseup = onmouseup
-		this.onmousewheel = onmousewheel
-		this.onpause = onpause
-		this.onplay = onplay
-		this.onplaying = onplaying
-		this.onprogress = onprogress
-		this.onratechange = onratechange
-		this.onreset = onreset
-		this.onresize = onresize
-		this.onscroll = onscroll
-		this.onseeked = onseeked
-		this.onseeking = onseeking
-		this.onselect = onselect
-		this.onshow = onshow
-		this.onsort = onsort
-		this.onstalled = onstalled
-		this.onsubmit = onsubmit
-		this.onsuspend = onsuspend
-		this.ontimeupdate = ontimeupdate
-		this.ontoggle = ontoggle
-		this.onvolumechange = onvolumechange
-		this.onwaiting = onwaiting
-		this.part = part
-		this.referrerpolicy = referrerpolicy
-		this.slot = slot
-		this.src = src
-		this.style = style
-		this.tabindex = tabindex
-		this.title = title
-		this.type = type
+	) = SCRIPT().let {
+	
+		this.children.add(it)
+	
+		it.accesskey = accesskey
+		it.async = async
+		it.autocapitalize = autocapitalize
+		it.classes = classes
+		it.contenteditable = contenteditable
+		it.crossorigin = crossorigin
+		it.defer = defer
+		it.dir = dir
+		it.draggable = draggable
+		it.hidden = hidden
+		it.id = id
+		it.inputmode = inputmode
+		it.integrity = integrity
+		it.`is` = `is`
+		it.itemid = itemid
+		it.itemprop = itemprop
+		it.itemref = itemref
+		it.itemscope = itemscope
+		it.itemtype = itemtype
+		it.lang = lang
+		it.nomodule = nomodule
+		it.nonce = nonce
+		it.onabort = onabort
+		it.onautocomplete = onautocomplete
+		it.onautocompleteerror = onautocompleteerror
+		it.onblur = onblur
+		it.oncancel = oncancel
+		it.oncanplay = oncanplay
+		it.oncanplaythrough = oncanplaythrough
+		it.onchange = onchange
+		it.onclick = onclick
+		it.onclose = onclose
+		it.oncontextmenu = oncontextmenu
+		it.oncuechange = oncuechange
+		it.ondblclick = ondblclick
+		it.ondrag = ondrag
+		it.ondragend = ondragend
+		it.ondragenter = ondragenter
+		it.ondragexit = ondragexit
+		it.ondragleave = ondragleave
+		it.ondragover = ondragover
+		it.ondragstart = ondragstart
+		it.ondrop = ondrop
+		it.ondurationchange = ondurationchange
+		it.onemptied = onemptied
+		it.onended = onended
+		it.onerror = onerror
+		it.onfocus = onfocus
+		it.oninput = oninput
+		it.oninvalid = oninvalid
+		it.onkeydown = onkeydown
+		it.onkeypress = onkeypress
+		it.onkeyup = onkeyup
+		it.onload = onload
+		it.onloadeddata = onloadeddata
+		it.onloadedmetadata = onloadedmetadata
+		it.onloadstart = onloadstart
+		it.onmousedown = onmousedown
+		it.onmouseenter = onmouseenter
+		it.onmouseleave = onmouseleave
+		it.onmousemove = onmousemove
+		it.onmouseout = onmouseout
+		it.onmouseover = onmouseover
+		it.onmouseup = onmouseup
+		it.onmousewheel = onmousewheel
+		it.onpause = onpause
+		it.onplay = onplay
+		it.onplaying = onplaying
+		it.onprogress = onprogress
+		it.onratechange = onratechange
+		it.onreset = onreset
+		it.onresize = onresize
+		it.onscroll = onscroll
+		it.onseeked = onseeked
+		it.onseeking = onseeking
+		it.onselect = onselect
+		it.onshow = onshow
+		it.onsort = onsort
+		it.onstalled = onstalled
+		it.onsubmit = onsubmit
+		it.onsuspend = onsuspend
+		it.ontimeupdate = ontimeupdate
+		it.ontoggle = ontoggle
+		it.onvolumechange = onvolumechange
+		it.onwaiting = onwaiting
+		it.part = part
+		it.referrerpolicy = referrerpolicy
+		it.slot = slot
+		it.src = src
+		it.style = style
+		it.tabindex = tabindex
+		it.title = title
+		it.type = type
+	
+		init?.invoke(it)
+		it
 	}
 
 	fun style(
@@ -418,16 +445,28 @@ class HEAD(
 		title: String? = null,
 		type: String? = null,
 		init: (STYLE.() -> Unit)? = null
-	) = initTag(STYLE(), init).apply {
-		this.media = media
-		this.nonce = nonce
-		this.title = title
-		this.type = type
+	) = STYLE().let {
+	
+		this.children.add(it)
+	
+		it.media = media
+		it.nonce = nonce
+		it.title = title
+		it.type = type
+	
+		init?.invoke(it)
+		it
 	}
 
 	fun title(
 		init: (TITLE.() -> Unit)? = null
-	) = initTag(TITLE(), init).apply {
+	) = TITLE().let {
+	
+		this.children.add(it)
+	
+	
+		init?.invoke(it)
+		it
 	}
 
 	operator fun String.unaryPlus() {

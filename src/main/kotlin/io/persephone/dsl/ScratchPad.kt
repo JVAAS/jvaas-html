@@ -8,9 +8,9 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-		val div = DIV(classes = "testing") {
-			div(classes = "testing") {
-				span {
+		val div = DIV(classes = "test1") {
+			div(classes = "test2") {
+				span(classes = "test3") {
 					+"TEST"
 					span {
 						+"TEST"

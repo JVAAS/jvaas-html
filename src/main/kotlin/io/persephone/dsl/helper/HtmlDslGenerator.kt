@@ -1795,18 +1795,21 @@ class HtmlDslGenerator {
 									}
 								}
 
-								if (!child.selfClosing) {
-									out.println("""\t) = initTag(${child.tag.toUpperCase()}(), init).apply {""".makeTabs())
-								} else {
-									out.println("""\t) = initTag(${child.tag.toUpperCase()}()).apply {""".makeTabs())
-								}
+								out.println("""\t) = ${child.tag.toUpperCase()}().let {""".makeTabs())
+								out.println("""\t""".makeTabs())
+								out.println("""\t\tthis.children.add(it)""".makeTabs())
+								out.println("""\t""".makeTabs())
 
 								childAttributes.forEach { attribute ->
-									out.println("""\t\tthis.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}""".makeTabs())
+									out.println("""\t\tit.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}""".makeTabs())
 
 								}
 
-
+								out.println("""\t""".makeTabs())
+								if (!child.selfClosing) {
+									out.println("""\t\tinit?.invoke(it)""".makeTabs())
+								}
+								out.println("""\t\tit""".makeTabs())
 								out.println("""\t}""".makeTabs())
 								out.println("")
 
