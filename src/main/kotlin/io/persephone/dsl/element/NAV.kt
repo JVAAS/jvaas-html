@@ -88,7 +88,8 @@ class NAV(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (NAV.() -> Unit)? = null
 ) : Tag(tagName = "nav", selfClosing = false) {
 
 	var accesskey: String?

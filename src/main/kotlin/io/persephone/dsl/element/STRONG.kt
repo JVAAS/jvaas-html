@@ -88,7 +88,8 @@ class STRONG(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (STRONG.() -> Unit)? = null
 ) : Tag(tagName = "strong", selfClosing = false) {
 
 	var accesskey: String?

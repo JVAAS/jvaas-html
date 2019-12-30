@@ -88,7 +88,8 @@ class WBR(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (WBR.() -> Unit)? = null
 ) : Tag(tagName = "wbr", selfClosing = false) {
 
 	var accesskey: String?

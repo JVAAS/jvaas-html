@@ -95,7 +95,8 @@ class METER(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (METER.() -> Unit)? = null
 ) : Tag(tagName = "meter", selfClosing = false) {
 
 	var accesskey: String?

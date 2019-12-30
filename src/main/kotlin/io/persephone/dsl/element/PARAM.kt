@@ -90,7 +90,8 @@ class PARAM(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (PARAM.() -> Unit)? = null
 ) : Tag(tagName = "param", selfClosing = false) {
 
 	var accesskey: String?

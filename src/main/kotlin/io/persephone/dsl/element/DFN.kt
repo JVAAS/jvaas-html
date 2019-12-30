@@ -88,7 +88,8 @@ class DFN(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DFN.() -> Unit)? = null
 ) : Tag(tagName = "dfn", selfClosing = false) {
 
 	var accesskey: String?

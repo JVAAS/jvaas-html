@@ -89,7 +89,8 @@ class TIME(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TIME.() -> Unit)? = null
 ) : Tag(tagName = "time", selfClosing = false) {
 
 	var accesskey: String?

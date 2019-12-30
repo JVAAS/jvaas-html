@@ -88,7 +88,8 @@ class SPAN(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SPAN.() -> Unit)? = null
 ) : Tag(tagName = "span", selfClosing = false) {
 
 	var accesskey: String?

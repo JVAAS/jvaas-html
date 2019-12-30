@@ -88,7 +88,8 @@ class KBD(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (KBD.() -> Unit)? = null
 ) : Tag(tagName = "kbd", selfClosing = false) {
 
 	var accesskey: String?

@@ -88,7 +88,8 @@ class SUMMARY(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SUMMARY.() -> Unit)? = null
 ) : Tag(tagName = "summary", selfClosing = false) {
 
 	var accesskey: String?

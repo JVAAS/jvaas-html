@@ -103,7 +103,8 @@ class TEXTAREA(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	wrap: String? = null
+	wrap: String? = null,
+	init: (TEXTAREA.() -> Unit)? = null
 ) : Tag(tagName = "textarea", selfClosing = false) {
 
 	var accesskey: String?

@@ -88,7 +88,8 @@ class EM(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (EM.() -> Unit)? = null
 ) : Tag(tagName = "em", selfClosing = false) {
 
 	var accesskey: String?

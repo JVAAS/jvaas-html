@@ -90,7 +90,8 @@ class LABEL(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (LABEL.() -> Unit)? = null
 ) : Tag(tagName = "label", selfClosing = false) {
 
 	var accesskey: String?

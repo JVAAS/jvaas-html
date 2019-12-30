@@ -88,7 +88,8 @@ class PICTURE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (PICTURE.() -> Unit)? = null
 ) : Tag(tagName = "picture", selfClosing = false) {
 
 	var accesskey: String?

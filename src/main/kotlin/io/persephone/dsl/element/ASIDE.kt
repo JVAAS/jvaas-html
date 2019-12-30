@@ -88,7 +88,8 @@ class ASIDE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (ASIDE.() -> Unit)? = null
 ) : Tag(tagName = "aside", selfClosing = false) {
 
 	var accesskey: String?

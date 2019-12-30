@@ -89,7 +89,8 @@ class LI(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (LI.() -> Unit)? = null
 ) : Tag(tagName = "li", selfClosing = false) {
 
 	var accesskey: String?

@@ -91,7 +91,8 @@ class FIELDSET(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (FIELDSET.() -> Unit)? = null
 ) : Tag(tagName = "fieldset", selfClosing = false) {
 
 	var accesskey: String?

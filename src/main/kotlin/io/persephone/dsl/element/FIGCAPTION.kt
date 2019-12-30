@@ -88,7 +88,8 @@ class FIGCAPTION(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (FIGCAPTION.() -> Unit)? = null
 ) : Tag(tagName = "figcaption", selfClosing = false) {
 
 	var accesskey: String?

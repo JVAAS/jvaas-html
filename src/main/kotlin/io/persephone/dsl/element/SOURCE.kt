@@ -93,7 +93,8 @@ class SOURCE(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (SOURCE.() -> Unit)? = null
 ) : Tag(tagName = "source", selfClosing = false) {
 
 	var accesskey: String?

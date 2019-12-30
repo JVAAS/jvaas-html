@@ -88,7 +88,8 @@ class UL(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (UL.() -> Unit)? = null
 ) : Tag(tagName = "ul", selfClosing = false) {
 
 	var accesskey: String?

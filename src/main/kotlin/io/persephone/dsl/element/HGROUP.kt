@@ -88,7 +88,8 @@ class HGROUP(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (HGROUP.() -> Unit)? = null
 ) : Tag(tagName = "hgroup", selfClosing = false) {
 
 	var accesskey: String?

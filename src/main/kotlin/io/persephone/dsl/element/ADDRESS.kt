@@ -88,7 +88,8 @@ class ADDRESS(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (ADDRESS.() -> Unit)? = null
 ) : Tag(tagName = "address", selfClosing = false) {
 
 	var accesskey: String?

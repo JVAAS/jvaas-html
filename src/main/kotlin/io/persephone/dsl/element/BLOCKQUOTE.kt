@@ -89,7 +89,8 @@ class BLOCKQUOTE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (BLOCKQUOTE.() -> Unit)? = null
 ) : Tag(tagName = "blockquote", selfClosing = false) {
 
 	var accesskey: String?

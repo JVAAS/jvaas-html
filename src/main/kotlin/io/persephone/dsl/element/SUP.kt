@@ -88,7 +88,8 @@ class SUP(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SUP.() -> Unit)? = null
 ) : Tag(tagName = "sup", selfClosing = false) {
 
 	var accesskey: String?

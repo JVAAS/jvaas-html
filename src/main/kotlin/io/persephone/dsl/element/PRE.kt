@@ -88,7 +88,8 @@ class PRE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (PRE.() -> Unit)? = null
 ) : Tag(tagName = "pre", selfClosing = false) {
 
 	var accesskey: String?

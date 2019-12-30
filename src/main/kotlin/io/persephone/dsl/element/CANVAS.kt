@@ -90,7 +90,8 @@ class CANVAS(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	width: String? = null
+	width: String? = null,
+	init: (CANVAS.() -> Unit)? = null
 ) : Tag(tagName = "canvas", selfClosing = false) {
 
 	var accesskey: String?

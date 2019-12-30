@@ -91,7 +91,8 @@ class OUTPUT(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (OUTPUT.() -> Unit)? = null
 ) : Tag(tagName = "output", selfClosing = false) {
 
 	var accesskey: String?

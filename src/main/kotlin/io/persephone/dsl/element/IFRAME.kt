@@ -98,7 +98,8 @@ class IFRAME(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	width: String? = null
+	width: String? = null,
+	init: (IFRAME.() -> Unit)? = null
 ) : Tag(tagName = "iframe", selfClosing = false) {
 
 	var accesskey: String?

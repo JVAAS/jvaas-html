@@ -88,7 +88,8 @@ class CODE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (CODE.() -> Unit)? = null
 ) : Tag(tagName = "code", selfClosing = false) {
 
 	var accesskey: String?

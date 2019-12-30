@@ -88,7 +88,8 @@ class ARTICLE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (ARTICLE.() -> Unit)? = null
 ) : Tag(tagName = "article", selfClosing = false) {
 
 	var accesskey: String?

@@ -89,7 +89,8 @@ class DETAILS(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DETAILS.() -> Unit)? = null
 ) : Tag(tagName = "details", selfClosing = false) {
 
 	var accesskey: String?

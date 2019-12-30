@@ -96,7 +96,8 @@ class MENUITEM(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (MENUITEM.() -> Unit)? = null
 ) : Tag(tagName = "menuitem", selfClosing = false) {
 
 	var accesskey: String?

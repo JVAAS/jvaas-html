@@ -88,7 +88,8 @@ class HEADER(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (HEADER.() -> Unit)? = null
 ) : Tag(tagName = "header", selfClosing = false) {
 
 	var accesskey: String?

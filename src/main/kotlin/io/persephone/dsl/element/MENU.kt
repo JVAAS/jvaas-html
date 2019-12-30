@@ -89,7 +89,8 @@ class MENU(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (MENU.() -> Unit)? = null
 ) : Tag(tagName = "menu", selfClosing = false) {
 
 	var accesskey: String?

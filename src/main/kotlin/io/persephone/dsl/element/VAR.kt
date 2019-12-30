@@ -88,7 +88,8 @@ class VAR(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (VAR.() -> Unit)? = null
 ) : Tag(tagName = "var", selfClosing = false) {
 
 	var accesskey: String?

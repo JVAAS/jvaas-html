@@ -88,7 +88,8 @@ class DATALIST(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DATALIST.() -> Unit)? = null
 ) : Tag(tagName = "datalist", selfClosing = false) {
 
 	var accesskey: String?

@@ -88,7 +88,8 @@ class SAMP(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SAMP.() -> Unit)? = null
 ) : Tag(tagName = "samp", selfClosing = false) {
 
 	var accesskey: String?

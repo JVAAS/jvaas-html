@@ -88,7 +88,8 @@ class CAPTION(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (CAPTION.() -> Unit)? = null
 ) : Tag(tagName = "caption", selfClosing = false) {
 
 	var accesskey: String?

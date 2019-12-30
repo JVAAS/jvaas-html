@@ -88,7 +88,8 @@ class I(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (I.() -> Unit)? = null
 ) : Tag(tagName = "i", selfClosing = false) {
 
 	var accesskey: String?

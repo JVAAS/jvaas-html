@@ -98,7 +98,8 @@ class AREA(
 	tabindex: String? = null,
 	target: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (AREA.() -> Unit)? = null
 ) : Tag(tagName = "area", selfClosing = false) {
 
 	var accesskey: String?

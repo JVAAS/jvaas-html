@@ -88,7 +88,8 @@ class DT(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DT.() -> Unit)? = null
 ) : Tag(tagName = "dt", selfClosing = false) {
 
 	var accesskey: String?

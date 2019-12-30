@@ -97,7 +97,8 @@ class SCRIPT(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (SCRIPT.() -> Unit)? = null
 ) : Tag(tagName = "script", selfClosing = false) {
 
 	var accesskey: String?

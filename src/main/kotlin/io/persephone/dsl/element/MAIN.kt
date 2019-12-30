@@ -88,7 +88,8 @@ class MAIN(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (MAIN.() -> Unit)? = null
 ) : Tag(tagName = "main", selfClosing = false) {
 
 	var accesskey: String?

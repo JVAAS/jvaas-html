@@ -91,7 +91,8 @@ class OL(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (OL.() -> Unit)? = null
 ) : Tag(tagName = "ol", selfClosing = false) {
 
 	var accesskey: String?

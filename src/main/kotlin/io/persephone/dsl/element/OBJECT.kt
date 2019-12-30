@@ -96,7 +96,8 @@ class OBJECT(
 	type: String? = null,
 	typemustmatch: String? = null,
 	usemap: String? = null,
-	width: String? = null
+	width: String? = null,
+	init: (OBJECT.() -> Unit)? = null
 ) : Tag(tagName = "object", selfClosing = false) {
 
 	var accesskey: String?

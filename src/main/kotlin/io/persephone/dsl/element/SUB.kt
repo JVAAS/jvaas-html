@@ -88,7 +88,8 @@ class SUB(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SUB.() -> Unit)? = null
 ) : Tag(tagName = "sub", selfClosing = false) {
 
 	var accesskey: String?

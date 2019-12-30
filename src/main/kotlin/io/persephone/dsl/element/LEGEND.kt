@@ -88,7 +88,8 @@ class LEGEND(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (LEGEND.() -> Unit)? = null
 ) : Tag(tagName = "legend", selfClosing = false) {
 
 	var accesskey: String?

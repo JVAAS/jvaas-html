@@ -88,7 +88,8 @@ class SMALL(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (SMALL.() -> Unit)? = null
 ) : Tag(tagName = "small", selfClosing = false) {
 
 	var accesskey: String?

@@ -8,7 +8,8 @@ class STYLE(
 	media: String? = null,
 	nonce: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (STYLE.() -> Unit)? = null
 ) : Tag(tagName = "style", selfClosing = false) {
 
 	var media: String?

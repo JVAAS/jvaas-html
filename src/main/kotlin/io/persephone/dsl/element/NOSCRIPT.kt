@@ -88,7 +88,8 @@ class NOSCRIPT(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (NOSCRIPT.() -> Unit)? = null
 ) : Tag(tagName = "noscript", selfClosing = false) {
 
 	var accesskey: String?

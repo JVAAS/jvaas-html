@@ -124,7 +124,8 @@ class INPUT(
 	title: String? = null,
 	type: String? = null,
 	value: String? = null,
-	width: String? = null
+	width: String? = null,
+	init: (INPUT.() -> Unit)? = null
 ) : Tag(tagName = "input", selfClosing = false) {
 
 	var accept: String?

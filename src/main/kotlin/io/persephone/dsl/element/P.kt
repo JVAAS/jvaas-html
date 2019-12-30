@@ -88,7 +88,8 @@ class P(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (P.() -> Unit)? = null
 ) : Tag(tagName = "p", selfClosing = false) {
 
 	var accesskey: String?

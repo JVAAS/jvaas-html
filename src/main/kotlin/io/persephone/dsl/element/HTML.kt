@@ -89,7 +89,8 @@ class HTML(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	xmlns: String? = null
+	xmlns: String? = null,
+	init: (HTML.() -> Unit)? = null
 ) : Tag(tagName = "html", selfClosing = false) {
 
 	var accesskey: String?

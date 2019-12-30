@@ -117,7 +117,8 @@ class AUDIO(
 	timeupdate: String? = null,
 	title: String? = null,
 	volumechange: String? = null,
-	waiting: String? = null
+	waiting: String? = null,
+	init: (AUDIO.() -> Unit)? = null
 ) : Tag(tagName = "audio", selfClosing = false) {
 
 	var accesskey: String?

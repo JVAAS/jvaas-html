@@ -88,7 +88,8 @@ class H2(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (H2.() -> Unit)? = null
 ) : Tag(tagName = "h2", selfClosing = false) {
 
 	var accesskey: String?

@@ -90,7 +90,8 @@ class PROGRESS(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (PROGRESS.() -> Unit)? = null
 ) : Tag(tagName = "progress", selfClosing = false) {
 
 	var accesskey: String?

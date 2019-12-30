@@ -88,7 +88,8 @@ class DL(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DL.() -> Unit)? = null
 ) : Tag(tagName = "dl", selfClosing = false) {
 
 	var accesskey: String?

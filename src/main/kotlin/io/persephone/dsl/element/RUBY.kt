@@ -88,7 +88,8 @@ class RUBY(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (RUBY.() -> Unit)? = null
 ) : Tag(tagName = "ruby", selfClosing = false) {
 
 	var accesskey: String?

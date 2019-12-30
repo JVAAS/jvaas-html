@@ -88,7 +88,8 @@ class H5(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (H5.() -> Unit)? = null
 ) : Tag(tagName = "h5", selfClosing = false) {
 
 	var accesskey: String?

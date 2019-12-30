@@ -89,7 +89,8 @@ class COLGROUP(
 	span: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (COLGROUP.() -> Unit)? = null
 ) : Tag(tagName = "colgroup", selfClosing = false) {
 
 	var accesskey: String?

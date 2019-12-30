@@ -92,7 +92,8 @@ class OPTION(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (OPTION.() -> Unit)? = null
 ) : Tag(tagName = "option", selfClosing = false) {
 
 	var accesskey: String?

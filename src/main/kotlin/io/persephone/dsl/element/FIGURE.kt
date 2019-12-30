@@ -88,7 +88,8 @@ class FIGURE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (FIGURE.() -> Unit)? = null
 ) : Tag(tagName = "figure", selfClosing = false) {
 
 	var accesskey: String?

@@ -88,7 +88,8 @@ class THEAD(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (THEAD.() -> Unit)? = null
 ) : Tag(tagName = "thead", selfClosing = false) {
 
 	var accesskey: String?

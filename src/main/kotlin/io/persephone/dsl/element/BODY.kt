@@ -104,7 +104,8 @@ class BODY(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (BODY.() -> Unit)? = null
 ) : Tag(tagName = "body", selfClosing = false) {
 
 	var accesskey: String?

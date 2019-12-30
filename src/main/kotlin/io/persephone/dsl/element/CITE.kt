@@ -88,7 +88,8 @@ class CITE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (CITE.() -> Unit)? = null
 ) : Tag(tagName = "cite", selfClosing = false) {
 
 	var accesskey: String?

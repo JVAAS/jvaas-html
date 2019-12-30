@@ -99,7 +99,8 @@ class BUTTON(
 	tabindex: String? = null,
 	title: String? = null,
 	type: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (BUTTON.() -> Unit)? = null
 ) : Tag(tagName = "button", selfClosing = false) {
 
 	var accesskey: String?

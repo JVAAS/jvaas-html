@@ -122,7 +122,8 @@ class VIDEO(
 	title: String? = null,
 	volumechanged: String? = null,
 	waiting: String? = null,
-	width: String? = null
+	width: String? = null,
+	init: (VIDEO.() -> Unit)? = null
 ) : Tag(tagName = "video", selfClosing = false) {
 
 	var accesskey: String?

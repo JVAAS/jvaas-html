@@ -96,7 +96,8 @@ class FORM(
 	style: String? = null,
 	tabindex: String? = null,
 	target: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (FORM.() -> Unit)? = null
 ) : Tag(tagName = "form", selfClosing = false) {
 
 	var acceptCharset: String?

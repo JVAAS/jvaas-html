@@ -95,7 +95,8 @@ class A(
 	tabindex: String? = null,
 	target: String? = null,
 	title: String? = null,
-	type: String? = null
+	type: String? = null,
+	init: (A.() -> Unit)? = null
 ) : Tag(tagName = "a", selfClosing = false) {
 
 	var accesskey: String?

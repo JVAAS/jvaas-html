@@ -88,7 +88,8 @@ class BDI(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (BDI.() -> Unit)? = null
 ) : Tag(tagName = "bdi", selfClosing = false) {
 
 	var accesskey: String?

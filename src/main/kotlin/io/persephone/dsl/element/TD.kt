@@ -91,7 +91,8 @@ class TD(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TD.() -> Unit)? = null
 ) : Tag(tagName = "td", selfClosing = false) {
 
 	var accesskey: String?

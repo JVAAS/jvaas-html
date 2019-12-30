@@ -89,7 +89,8 @@ class COL(
 	span: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (COL.() -> Unit)? = null
 ) : Tag(tagName = "col", selfClosing = false) {
 
 	var accesskey: String?

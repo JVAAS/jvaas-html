@@ -88,7 +88,8 @@ class B(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (B.() -> Unit)? = null
 ) : Tag(tagName = "b", selfClosing = false) {
 
 	var accesskey: String?

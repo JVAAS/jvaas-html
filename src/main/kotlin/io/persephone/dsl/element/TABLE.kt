@@ -88,7 +88,8 @@ class TABLE(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TABLE.() -> Unit)? = null
 ) : Tag(tagName = "table", selfClosing = false) {
 
 	var accesskey: String?

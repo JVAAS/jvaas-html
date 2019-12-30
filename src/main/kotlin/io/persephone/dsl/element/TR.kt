@@ -88,7 +88,8 @@ class TR(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TR.() -> Unit)? = null
 ) : Tag(tagName = "tr", selfClosing = false) {
 
 	var accesskey: String?

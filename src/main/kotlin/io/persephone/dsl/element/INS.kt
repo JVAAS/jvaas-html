@@ -90,7 +90,8 @@ class INS(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (INS.() -> Unit)? = null
 ) : Tag(tagName = "ins", selfClosing = false) {
 
 	var accesskey: String?

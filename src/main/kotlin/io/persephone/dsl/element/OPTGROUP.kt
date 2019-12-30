@@ -90,7 +90,8 @@ class OPTGROUP(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (OPTGROUP.() -> Unit)? = null
 ) : Tag(tagName = "optgroup", selfClosing = false) {
 
 	var accesskey: String?

@@ -89,7 +89,8 @@ class DATA(
 	style: String? = null,
 	tabindex: String? = null,
 	title: String? = null,
-	value: String? = null
+	value: String? = null,
+	init: (DATA.() -> Unit)? = null
 ) : Tag(tagName = "data", selfClosing = false) {
 
 	var accesskey: String?

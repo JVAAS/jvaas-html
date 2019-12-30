@@ -93,7 +93,8 @@ class TH(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TH.() -> Unit)? = null
 ) : Tag(tagName = "th", selfClosing = false) {
 
 	var abbr: String?

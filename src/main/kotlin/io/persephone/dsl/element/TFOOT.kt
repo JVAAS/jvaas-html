@@ -88,7 +88,8 @@ class TFOOT(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TFOOT.() -> Unit)? = null
 ) : Tag(tagName = "tfoot", selfClosing = false) {
 
 	var accesskey: String?

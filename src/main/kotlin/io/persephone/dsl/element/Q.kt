@@ -89,7 +89,8 @@ class Q(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (Q.() -> Unit)? = null
 ) : Tag(tagName = "q", selfClosing = false) {
 
 	var accesskey: String?

@@ -90,7 +90,8 @@ class DEL(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (DEL.() -> Unit)? = null
 ) : Tag(tagName = "del", selfClosing = false) {
 
 	var accesskey: String?

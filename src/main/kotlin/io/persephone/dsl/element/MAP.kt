@@ -89,7 +89,8 @@ class MAP(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (MAP.() -> Unit)? = null
 ) : Tag(tagName = "map", selfClosing = false) {
 
 	var accesskey: String?

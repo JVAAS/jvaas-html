@@ -88,7 +88,8 @@ class TBODY(
 	slot: String? = null,
 	style: String? = null,
 	tabindex: String? = null,
-	title: String? = null
+	title: String? = null,
+	init: (TBODY.() -> Unit)? = null
 ) : Tag(tagName = "tbody", selfClosing = false) {
 
 	var accesskey: String?
