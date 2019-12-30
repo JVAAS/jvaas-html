@@ -1,6 +1,7 @@
 package io.persephone.dsl
 
 import io.persephone.dsl.element.DIV
+import kotlin.concurrent.thread
 
 object ScratchPad {
 
@@ -8,27 +9,31 @@ object ScratchPad {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-		val div = DIV(classes = "test1") {
-			div(classes = "test2") {
-				span(classes = "test3") {
-					+"TEST"
-					span {
-						+"TEST"
-					}
-					hr()
-					span()
-				}
-			}
-			a {
-				this.href = ""
-				span {
-					this.classes = ""
-					this@a.href = ""
-				}
-			}
-		}
 
-		println(div)
+		println(
+
+			DIV(classes = "div1") {
+				+"text1"
+				a(href = "#") {
+					+"text2"
+					div(classes = "div2") {
+						+"text3"
+						href = ""
+					}
+					div(classes = "div3") {
+						+"text4"
+						href
+					}
+				}
+				hr(classes = "hr1")
+				span(classes = "span1") {
+					+"text5"
+				}
+			}
+
+
+		)
+
 
 	}
 }
