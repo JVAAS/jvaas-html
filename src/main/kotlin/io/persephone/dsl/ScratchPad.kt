@@ -15,6 +15,8 @@ object ScratchPad {
 					span {
 						+"TEST"
 					}
+					hr()
+					span()
 				}
 			}
 			a {
