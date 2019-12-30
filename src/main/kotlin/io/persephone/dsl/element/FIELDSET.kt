@@ -8917,7 +8917,7 @@ class FIELDSET(
 		this.title = title
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
@@ -9090,7 +9090,7 @@ class FIELDSET(
 		this.title = title
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,

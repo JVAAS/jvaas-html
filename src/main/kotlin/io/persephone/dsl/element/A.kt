@@ -8810,7 +8810,7 @@ class A(
 		this.type = type
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
@@ -8983,7 +8983,7 @@ class A(
 		this.title = title
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,

@@ -6811,7 +6811,7 @@ class DT(
 		this.title = title
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
@@ -6984,7 +6984,7 @@ class DT(
 		this.title = title
 	}
 
-	fun main(
+	fun `main`(
 		accesskey: String? = null,
 		autocapitalize: String? = null,
 		classes: String? = null,
