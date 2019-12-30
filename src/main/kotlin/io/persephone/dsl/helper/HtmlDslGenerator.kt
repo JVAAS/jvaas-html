@@ -1850,7 +1850,7 @@ class HtmlDslGenerator {
 								if (!child.selfClosing) {
 									out.println("""\t) = initTag(${child.tag.toUpperCase()}(), init).apply {""".makeTabs())
 								} else {
-									out.println("""\t) = initTag(${child.tag.toUpperCase()}.()).apply {""".makeTabs())
+									out.println("""\t) = initTag(${child.tag.toUpperCase()}()).apply {""".makeTabs())
 								}
 
 								childAttributes.forEach { attribute ->

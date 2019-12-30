@@ -2451,7 +2451,7 @@ class TH(
 		style: String? = null,
 		tabindex: String? = null,
 		title: String? = null
-	) = initTag(BR.()).apply {
+	) = initTag(BR()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes
@@ -4737,7 +4737,7 @@ class TH(
 		title: String? = null,
 		type: String? = null,
 		width: String? = null
-	) = initTag(EMBED.()).apply {
+	) = initTag(EMBED()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes
@@ -5452,7 +5452,7 @@ class TH(
 		style: String? = null,
 		tabindex: String? = null,
 		title: String? = null
-	) = initTag(HR.()).apply {
+	) = initTag(HR()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes
@@ -6000,7 +6000,7 @@ class TH(
 		title: String? = null,
 		usemap: String? = null,
 		width: String? = null
-	) = initTag(IMG.()).apply {
+	) = initTag(IMG()).apply {
 		this.accesskey = accesskey
 		this.alt = alt
 		this.autocapitalize = autocapitalize

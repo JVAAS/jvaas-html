@@ -953,7 +953,7 @@ class PICTURE(
 		title: String? = null,
 		usemap: String? = null,
 		width: String? = null
-	) = initTag(IMG.()).apply {
+	) = initTag(IMG()).apply {
 		this.accesskey = accesskey
 		this.alt = alt
 		this.autocapitalize = autocapitalize

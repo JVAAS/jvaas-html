@@ -21,7 +21,7 @@ class HEAD(
 	fun base(
 		href: String? = null,
 		target: String? = null
-	) = initTag(BASE.()).apply {
+	) = initTag(BASE()).apply {
 		this.href = href
 		this.target = target
 	}
@@ -30,7 +30,7 @@ class HEAD(
 		href: String? = null,
 		rel: String? = null,
 		type: String? = null
-	) = initTag(LINK.()).apply {
+	) = initTag(LINK()).apply {
 		this.href = href
 		this.rel = rel
 		this.type = type
@@ -40,7 +40,7 @@ class HEAD(
 		charset: String? = null,
 		content: String? = null,
 		name: String? = null
-	) = initTag(META.()).apply {
+	) = initTag(META()).apply {
 		this.charset = charset
 		this.content = content
 		this.name = name

@@ -1471,7 +1471,7 @@ class VIDEO(
 		style: String? = null,
 		tabindex: String? = null,
 		title: String? = null
-	) = initTag(TRACK.()).apply {
+	) = initTag(TRACK()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes

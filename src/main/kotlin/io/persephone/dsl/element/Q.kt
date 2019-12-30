@@ -2081,7 +2081,7 @@ class Q(
 		style: String? = null,
 		tabindex: String? = null,
 		title: String? = null
-	) = initTag(BR.()).apply {
+	) = initTag(BR()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes
@@ -3846,7 +3846,7 @@ class Q(
 		title: String? = null,
 		type: String? = null,
 		width: String? = null
-	) = initTag(EMBED.()).apply {
+	) = initTag(EMBED()).apply {
 		this.accesskey = accesskey
 		this.autocapitalize = autocapitalize
 		this.classes = classes
@@ -4398,7 +4398,7 @@ class Q(
 		title: String? = null,
 		usemap: String? = null,
 		width: String? = null
-	) = initTag(IMG.()).apply {
+	) = initTag(IMG()).apply {
 		this.accesskey = accesskey
 		this.alt = alt
 		this.autocapitalize = autocapitalize
@@ -5263,7 +5263,7 @@ class Q(
 		href: String? = null,
 		rel: String? = null,
 		type: String? = null
-	) = initTag(LINK.()).apply {
+	) = initTag(LINK()).apply {
 		this.href = href
 		this.rel = rel
 		this.type = type
@@ -5621,7 +5621,7 @@ class Q(
 		charset: String? = null,
 		content: String? = null,
 		name: String? = null
-	) = initTag(META.()).apply {
+	) = initTag(META()).apply {
 		this.charset = charset
 		this.content = content
 		this.name = name
