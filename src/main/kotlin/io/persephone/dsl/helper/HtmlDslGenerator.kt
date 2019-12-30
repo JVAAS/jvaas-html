@@ -1745,7 +1745,7 @@ class HtmlDslGenerator {
 
 						// generate init block
 						out.println("""\tinit {""".trimIndent().makeTabs())
-						attributes.forEachIndexed { index, attribute ->
+						attributes.forEach { attribute ->
 							out.println("""
 								\t\tthis.${attribute.generates ?: attribute.tag} = ${attribute.generates ?: attribute.tag}
 							""".trimIndent().makeTabs())
