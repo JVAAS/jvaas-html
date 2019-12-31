@@ -12,6 +12,7 @@ class StandaloneTest {
 	fun divTest() {
 
 		Assertions.assertEquals(
+			// language=HTML
 			"""
 				<div class="basic">
 				</div>
@@ -25,6 +26,7 @@ class StandaloneTest {
 	fun spanTest() {
 
 		Assertions.assertEquals(
+			// language=HTML
 			"""
 				<span class="basic">
 				</span>
@@ -38,6 +40,7 @@ class StandaloneTest {
 	fun hrTest() {
 
 		Assertions.assertEquals(
+			// language=HTML
 			"""
 				<hr />
 			""".trimIndent(),

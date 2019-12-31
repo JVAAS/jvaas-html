@@ -115,10 +115,10 @@ class OUTPUT(
 		}
 
 	var classes: String?
-		get() = attributes.get("classes")
+		get() = attributes.get("class")
 		set(value) {
 			value?.let {
-				attributes["classes"] = it
+				attributes["class"] = it
 			}
 		}
 
@@ -147,10 +147,10 @@ class OUTPUT(
 		}
 
 	var `for`: String?
-		get() = attributes.get("`for`")
+		get() = attributes.get("for")
 		set(value) {
 			value?.let {
-				attributes["`for`"] = it
+				attributes["for"] = it
 			}
 		}
 
@@ -187,10 +187,10 @@ class OUTPUT(
 		}
 
 	var `is`: String?
-		get() = attributes.get("`is`")
+		get() = attributes.get("is")
 		set(value) {
 			value?.let {
-				attributes["`is`"] = it
+				attributes["is"] = it
 			}
 		}
 

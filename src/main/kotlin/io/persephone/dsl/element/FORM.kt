@@ -103,10 +103,10 @@ class FORM(
 ) {
 
 	var acceptCharset: String?
-		get() = attributes.get("acceptCharset")
+		get() = attributes.get("accept-charset")
 		set(value) {
 			value?.let {
-				attributes["acceptCharset"] = it
+				attributes["accept-charset"] = it
 			}
 		}
 
@@ -135,10 +135,10 @@ class FORM(
 		}
 
 	var classes: String?
-		get() = attributes.get("classes")
+		get() = attributes.get("class")
 		set(value) {
 			value?.let {
-				attributes["classes"] = it
+				attributes["class"] = it
 			}
 		}
 
@@ -199,10 +199,10 @@ class FORM(
 		}
 
 	var `is`: String?
-		get() = attributes.get("`is`")
+		get() = attributes.get("is")
 		set(value) {
 			value?.let {
-				attributes["`is`"] = it
+				attributes["is"] = it
 			}
 		}
 

@@ -1726,10 +1726,10 @@ class HtmlDslGenerator {
 							attributes.forEach { attribute ->
 								out.println("""
 									\tvar ${attribute.generates ?: attribute.tag}: String?
-									\t\tget() = attributes.get("${attribute.generates ?: attribute.tag}")
+									\t\tget() = attributes.get("${attribute.tag}")
 									\t\tset(value) {
 									\t\t\tvalue?.let {
-									\t\t\t\tattributes["${attribute.generates ?: attribute.tag}"] = it
+									\t\t\t\tattributes["${attribute.tag}"] = it
 									\t\t\t}
 									\t\t}
 								""".trimIndent().makeTabs())

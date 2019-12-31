@@ -33,14 +33,8 @@ abstract class Tag(val tagName: String, var selfClosing: Boolean = false): Eleme
 
 	private fun renderAttributes(): String {
 		val builder = StringBuilder()
-		for ((attr, value) in attributes) {
-			if (attr == "classes") {
-				builder.append(" class=\"$value\"")
-			} else if (attr == "styles") {
-				builder.append(" style=\"$value\"")
-			} else {
-				builder.append(" $attr=\"$value\"")
-			}
+		for ((attr, value) in attributes.toList().sortedBy { it.first }) {
+			builder.append(" $attr=\"$value\"")
 		}
 		return builder.toString()
 	}

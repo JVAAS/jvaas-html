@@ -119,10 +119,10 @@ class METER(
 		}
 
 	var classes: String?
-		get() = attributes.get("classes")
+		get() = attributes.get("class")
 		set(value) {
 			value?.let {
-				attributes["classes"] = it
+				attributes["class"] = it
 			}
 		}
 
@@ -191,10 +191,10 @@ class METER(
 		}
 
 	var `is`: String?
-		get() = attributes.get("`is`")
+		get() = attributes.get("is")
 		set(value) {
 			value?.let {
-				attributes["`is`"] = it
+				attributes["is"] = it
 			}
 		}
 
