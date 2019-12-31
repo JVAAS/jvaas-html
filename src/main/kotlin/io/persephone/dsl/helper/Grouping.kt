@@ -67,15 +67,4 @@ class Grouping(
 		return newElement
 	}
 
-	fun generate(): Grouping {
-
-		println(tag)
-		children.forEach {
-			println("    ${it.tag}")
-		}
-
-		return this
-
-	}
-
 }
