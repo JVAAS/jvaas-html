@@ -5,8 +5,8 @@
 See [HtmlDslGenerator.kt](https://github.com/persephone-unframework/dsl/blob/master/src/main/kotlin/io/persephone/dsl/helper/HtmlDslGenerator.kt) which can be used to keep the DSL up to date with the latest HTML specification.
 The DSL aims to follow https://developer.mozilla.org/en-US/docs/Web/HTML/Element as closely as possible
 
-Adding Bootstrap, Foundation, Angular or other framework related attributes / elements now becomes easy, just add them 
-to the specification and generate an updated DSL that supports your use-case.
+Adding Bootstrap, Foundation, Angular or other framework related attributes / elements can be done by adding them 
+to the specification and generating an updated DSL that supports your use-case.
 
 ## Flexible HTML DSL
 
