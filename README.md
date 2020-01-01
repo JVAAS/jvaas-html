@@ -27,10 +27,10 @@ to generate
             <title>
                 Persephone
             </title>
-            </head>
-            <body>
-                Hello World
-            </body>
+        </head>
+        <body>
+            Hello World
+        </body>
     </html>	
     
 or create snippets that can be reused in multiple places
