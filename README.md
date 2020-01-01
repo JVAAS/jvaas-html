@@ -182,16 +182,14 @@ Unlike HTML which will allow you to write broken templates like this
         </table>
     </html>
 
-this DSL will not compile when doing something like this
+the DSL will not compile when doing something something similar
 
     HTML {
-        table {
-            div()
+        table { <<-- error
+            div() <<-- error
         }
     }
-    
-due to HTML only allowing a head and body elements.    
-    
+        
 Although further work is needed here for example to prevent a user from adding multiple
 elements where only zero or one elements are expected and more work is needed to either
 force the order in which elements can be created or to render them in the correct order.
