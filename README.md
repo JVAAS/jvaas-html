@@ -2,7 +2,7 @@
 
 ## Flexible HTML DSL Generator
 
-See HtmlDslGenerator.kt which can be used to keep the DSL up to date with the latest HTML specification.
+See [HtmlDslGenerator.kt](https://github.com/persephone-unframework/dsl/blob/master/src/main/kotlin/io/persephone/dsl/helper/HtmlDslGenerator.kt) which can be used to keep the DSL up to date with the latest HTML specification.
 The DSL aims to follow https://developer.mozilla.org/en-US/docs/Web/HTML/Element as closely as possible
 
 Adding Bootstrap, Foundation, Angular or other framework related attributes / elements now becomes easy, just add them 
@@ -112,4 +112,99 @@ should output
         </ul>
     </div>
     
+## Custom Components
+
+Create custom components either by using the Tag base-class
+
+    class BLAH1(
+        init: (BLAH1.() -> Unit)? = null
+    ) : Tag(
+        tagName = "blah",
+        selfClosing = false
+    ) {
+        operator fun String.unaryPlus() {
+            children.add(Text(this))
+        }
+    }
+
+or by extending an existing element
+
+    class BLAH3(
+        init: (BLAH3.() -> Unit)? = null
+    ) : DIV(tagName = "blah")
+
+This new element can now be added as an option to existing elements by using an extension function
+
+    fun DIV.blah1(
+        classes: String? = null,
+        init: (BLAH1.() -> Unit)? = null
+    ) {
+        this.children.add(BLAH1().apply {
+            init?.invoke(this)
+        })
+    }
+
+which will allow us to do
+
+    DIV(classes = "test") {
+        blah1 {
+            +"TEST1"
+        }
+    }
     
+and outputs
+
+    <div class="test">
+        <blah>
+            TEST1
+        </blah>
+    </div>
+    
+If you don't override the tagName when extending a `DIV` or set it as 
+`"div"` when extending `Tag`, then using this pattern will allow you 
+to re-use DSL snippets and still output perfectly valid HTML5
+
+    <div class="test">
+        <div>
+            TEST1
+        </div>
+    </div>
+
+## PEBKAC-proof your HTML
+
+Unlike HTML which will allow you to write broken templates like this
+
+    <html>
+        <table>
+            <div>
+            
+            </div>
+        </table>
+    </html>
+
+this DSL will not compile when doing something like 
+
+    HTML {
+        table {
+            div()
+        }
+    }
+    
+due to HTML only allow head and body elements.    
+    
+Although further work is needed here for example to prevent a user from adding multiple
+elements where only zero or one elements are expected and more work is needed to either
+force the order in which elements can be created or to render them in the correct order.
+
+    html {
+        body() {
+            table {
+                tbody()
+                tbody()
+                thead()
+            }
+        }
+        head()
+        head()
+        body()
+    }
