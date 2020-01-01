@@ -2,55 +2,68 @@ package io.persephone.dsl
 
 import io.persephone.dsl.element.DIV
 import io.persephone.dsl.element.HTML
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
 class CustomComponents {
 
 	@Test
 	fun testCustomComponentViaClassExtension() {
+		Assertions.assertEquals(
 
-		println(BLAH3())
+			"""
+				<blah>
+					<div>
+					</div>
+				</blah>
+			""".trimIndent().trim(),
 
+			BLAH3() {
+				div {
 
+				}
+			}.toString()
+
+		)
 	}
 
 	@Test
 	fun testCustomComponentViaExtensionMethods() {
+		Assertions.assertEquals(
 
-		println(
-			DIV(classes = "test") {
-				blah1() {
-					+"TEST1"
+			"""
+				<div class="test1">
+					<blah class="test2">
+						TEST
+					</blah>
+				</div>
+			""".trimIndent().trim(),
+
+			DIV(classes = "test1") {
+				blah1(classes = "test2") {
+					+"TEST"
 				}
-			}
+			}.toString()
+
 		)
 
 	}
 
 	@Test
 	fun testCustomSelfClosingComponentViaExtensionMethods() {
+		Assertions.assertEquals(
 
-		println(DIV(classes = "test") {
-			blah2()
-		})
+			"""
+				<div class="test1">
+					<blah class="test2" />
+				</div>
+			""".trimIndent().trim(),
 
-	}
+			DIV(classes = "test1") {
+				blah2(classes = "test2")
+			}.toString()
 
-	@Test
-	fun testCustomComponentInsideDiv() {
-
-		println("===")
-
-
-	}
-
-	@Test
-	fun testDivInsideCustomComponent() {
-
-
-		println("===")
-
-
+		)
 	}
 
 
@@ -78,25 +91,30 @@ class CustomComponents {
 
 	class BLAH3(
 		init: (BLAH3.() -> Unit)? = null
-	) : DIV(tagName = "blah")
-
-	class BLAH4 : DIV()
+	) : DIV(tagName = "blah") {
+		init {
+			init?.invoke(this)
+		}
+	}
 
 	fun DIV.blah1(
 		classes: String? = null,
 		init: (BLAH1.() -> Unit)? = null
 	) {
 		this.children.add(BLAH1().apply {
+			classes?.let {
+				this.attributes.put("class", it)
+			}
 			init?.invoke(this)
 		})
 	}
 
 	fun DIV.blah2(classes: String? = null) {
-
 		this.children.add(BLAH2().apply {
-
+			classes?.let {
+				this.attributes.put("class", it)
+			}
 		})
-
 	}
 
 

@@ -31,8 +31,6 @@ class AttributeSortingTest {
 			}.toString()
 		)
 
-
-
 	}
 
 
