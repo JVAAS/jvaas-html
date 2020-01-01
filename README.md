@@ -52,7 +52,7 @@ or create snippets that can be reused in multiple places
         }
     }
     
-calling `.toString()` on any snippet will give you the relevant HTML, 
+Calling `.toString()` on any snippet will give you the relevant HTML, 
 in other words or DSL-speak, every HTML element can be a builder.
 
 Standard Kotlin is supported throughout
