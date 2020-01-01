@@ -208,3 +208,24 @@ force the order in which elements can be created or to render them in the correc
         head()
         body()
     }
+    
+## CSS / JS / IMG Dependencies
+
+A problem in large projects with many components is usually managing static dependencies.
+Component Blah1 might need `blah1.css` and `blah1.js` to render correctly and 
+have 20 SVG icons and a large background PNG image.
+
+Persephone Unframework DSL will allow you to either automatically include that CSS / JS / IMG files as 
+normal HTML elements `<link rel="stylesheet" href="...">` or give you the option to 
+automatically inline it directly in the HTML output.
+
+This gives you the option to optimise for speed or html size. 
+Embedding all the CSS and JS directly in a landing page means your page renders instantly 
+and JavaScript can execute instantly at the cost of having to download that CSS/JS/IMG 
+again when going to another page and losing out on browser caching.
+When embedded CSS, JS and images are small, this is an acceptable trade-off and the user 
+experience will be that of instant page renders which is typically what you'd want for 
+ecommerce pages or blogs.
+
+TODO: insert examples
+
