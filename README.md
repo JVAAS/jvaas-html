@@ -212,7 +212,7 @@ force the order in which elements can be created or to render them in the correc
 ## CSS / JS / IMG Dependencies
 
 A problem in large projects with many components is usually managing static dependencies.
-Component Blah1 might need `blah1.css` and `blah1.js` to render correctly and 
+Component `Blah1` might need `blah1.css` and `blah1.js` to render correctly and 
 have 20 SVG icons and a large background PNG image.
 
 Persephone Unframework DSL will allow you to either automatically include that CSS / JS / IMG files as 
