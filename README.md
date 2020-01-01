@@ -217,7 +217,7 @@ have 20 SVG icons and a large background PNG image.
 
 Persephone Unframework DSL will allow you to either automatically include that CSS / JS / IMG files as 
 normal HTML elements `<link rel="stylesheet" href="...">` or give you the option to 
-automatically inline it directly in the HTML output.
+automatically inline embed it directly in the HTML output.
 
 This gives you the option to optimise for speed or html size. 
 Embedding all the CSS and JS directly in a landing page means your page renders instantly 
