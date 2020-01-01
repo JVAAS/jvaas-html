@@ -182,7 +182,7 @@ Unlike HTML which will allow you to write broken templates like this
         </table>
     </html>
 
-this DSL will not compile when doing something like 
+this DSL will not compile when doing something like this
 
     HTML {
         table {
@@ -190,7 +190,7 @@ this DSL will not compile when doing something like
         }
     }
     
-due to HTML only allow head and body elements.    
+due to HTML only allowing a head and body elements.    
     
 Although further work is needed here for example to prevent a user from adding multiple
 elements where only zero or one elements are expected and more work is needed to either
