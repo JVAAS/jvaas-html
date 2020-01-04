@@ -5,11 +5,13 @@ version = "1.0.0"
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 	jcenter()
 }
 
 plugins {
 	kotlin("jvm") version ("1.3.61")
+	`maven-publish`
 }
 
 java {
@@ -39,4 +41,14 @@ dependencies {
 	// logging
 	compile("org.slf4j:slf4j-api:1.7.28")
 
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("maven") {
+			groupId = "io.persephone"
+			artifactId = "dsl"
+			version = "1.0.0"
+		}
+	}
 }
