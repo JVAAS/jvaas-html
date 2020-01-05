@@ -4,8 +4,8 @@ group = "io.persephone"
 version = "1.0.0"
 
 repositories {
-	mavenCentral()
 	mavenLocal()
+	mavenCentral()
 	jcenter()
 }
 
