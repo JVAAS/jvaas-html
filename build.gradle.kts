@@ -32,6 +32,8 @@ publishing {
 			groupId = "io.jvaas"
 			artifactId = "jvaas-html"
 			version = projectVersion
+
+			from(components["java"])
 		}
 	}
 }
