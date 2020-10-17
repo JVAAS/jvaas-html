@@ -1,23 +1,24 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "io.jvaas"
-version = "1.0.0"
+val projectVersion = "1.0.1"
 
-repositories {
-	mavenLocal()
-	mavenCentral()
-	jcenter()
-}
+group = "io.jvaas"
+version = projectVersion
+description = "Type-Safe HTML Generator"
+
+java.sourceCompatibility = JavaVersion.VERSION_11
+java.targetCompatibility = JavaVersion.VERSION_11
 
 plugins {
 	kotlin("jvm") version ("1.4.10")
 	`maven-publish`
 }
 
-java {
-	sourceCompatibility = JavaVersion.VERSION_11
-	targetCompatibility = JavaVersion.VERSION_11
+repositories {
+	mavenLocal()
+	jcenter()
 }
+
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
@@ -25,22 +26,8 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
-tasks.named<Test>("test") {
-	useJUnitPlatform()
-}
-
 dependencies {
-
-	// build
-	compile(kotlin("stdlib-jdk8"))
-
-	// test
-	testImplementation("org.junit.jupiter:junit-jupiter-api:5.1.0")
-	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.1.0")
-
-	// logging
-	compile("org.slf4j:slf4j-api:1.7.28")
-
+	testImplementation(group = "junit", name = "junit", version = "4.12")
 }
 
 publishing {
@@ -48,7 +35,9 @@ publishing {
 		create<MavenPublication>("maven") {
 			groupId = "io.jvaas"
 			artifactId = "jvaas-html"
-			version = "1.0.1"
+			version = projectVersion
+
+			from(components["java"])
 		}
 	}
 }
