@@ -1,1 +1,1 @@
-rootProject.name = "persephone-unframework-dsl"
+rootProject.name = "jvaas-html"

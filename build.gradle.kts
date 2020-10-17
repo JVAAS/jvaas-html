@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "io.persephone"
+group = "io.jvaas"
 version = "1.0.0"
 
 repositories {
@@ -46,8 +46,8 @@ dependencies {
 publishing {
 	publications {
 		create<MavenPublication>("maven") {
-			groupId = "io.persephone"
-			artifactId = "dsl"
+			groupId = "io.jvaas"
+			artifactId = "jvaas-html"
 			version = "1.0.1"
 		}
 	}
