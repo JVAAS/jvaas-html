@@ -10,7 +10,7 @@ repositories {
 }
 
 plugins {
-	kotlin("jvm") version ("1.3.61")
+	kotlin("jvm") version ("1.4.10")
 	`maven-publish`
 }
 
@@ -21,7 +21,7 @@ java {
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		jvmTarget = "1.8"
+		jvmTarget = "11"
 	}
 }
 
@@ -48,7 +48,7 @@ publishing {
 		create<MavenPublication>("maven") {
 			groupId = "io.persephone"
 			artifactId = "dsl"
-			version = "1.0.0"
+			version = "1.0.1"
 		}
 	}
 }
