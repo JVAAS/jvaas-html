@@ -2,7 +2,7 @@
 
 ## Flexible HTML DSL Generator
 
-See [HtmlDslGenerator.kt](https://github.com/persephone-unframework/dsl/blob/master/src/main/kotlin/io/persephone/dsl/helper/HtmlDslGenerator.kt) which can be used to keep the DSL up to date with the latest HTML specification.
+See [HtmlDslGenerator.kt](https://github.com/JVAAS/jvaas-html/blob/master/src/jvmMain/kotlin/io/jvaas/dsl/html/helper/HtmlDslGenerator.kt) which can be used to keep the DSL up to date with the latest HTML specification.
 The DSL aims to follow https://developer.mozilla.org/en-US/docs/Web/HTML/Element as closely as possible
 
 Adding Bootstrap, Foundation, Angular or other framework related attributes / elements can be done by adding them 
