@@ -11,29 +11,19 @@ repositories {
 }
 
 plugins {
-	kotlin("multiplatform").version("1.4.10")
+	kotlin("jvm").version("1.4.10")
 	maven
 	`maven-publish`
 }
 
-kotlin {
-	jvm {
-		compilations.all {
-			kotlinOptions.jvmTarget = "11"
-		}
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+	kotlinOptions {
+		jvmTarget = "11"
 	}
-	sourceSets {
-		val jvmMain by getting {
-			dependencies {
+}
 
-			}
-		}
-		val jvmTest by getting {
-			dependencies {
-				implementation(kotlin("test-junit"))
-			}
-		}
-	}
+dependencies {
+	testImplementation(kotlin("test-junit"))
 }
 
 publishing {
