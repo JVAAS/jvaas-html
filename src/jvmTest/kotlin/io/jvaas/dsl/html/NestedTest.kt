@@ -1,15 +1,15 @@
 package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.element.DIV
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.junit.Test
+import kotlin.test.assertEquals
 
 class NestedTest {
 
 	@Test
 	fun nestedDivSpanAnchorHr() {
 
-		Assertions.assertEquals(
+		assertEquals(
 
 			// language=HTML
 			"""

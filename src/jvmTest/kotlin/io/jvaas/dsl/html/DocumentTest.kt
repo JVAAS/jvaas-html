@@ -1,14 +1,14 @@
 package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.helper.DOCUMENT
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.junit.Test
+import kotlin.test.assertEquals
 
 class DocumentTest {
 
 	@Test
 	fun testFullDocumentDSL() {
-		Assertions.assertEquals(
+		assertEquals(
 
 			"""
 				<!DOCTYPE html>
@@ -39,7 +39,7 @@ class DocumentTest {
 	@Test
 	fun testFullDocumentClass() {
 
-		Assertions.assertEquals(
+		assertEquals(
 
 			"""
 				<!DOCTYPE html>

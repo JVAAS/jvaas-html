@@ -3,15 +3,15 @@ package io.jvaas.dsl.html
 import io.jvaas.dsl.html.element.DIV
 import io.jvaas.dsl.html.element.HR
 import io.jvaas.dsl.html.element.SPAN
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.junit.Test
+import kotlin.test.assertEquals
 
 class StandaloneTest {
 
 	@Test
 	fun divTest() {
 
-		Assertions.assertEquals(
+		assertEquals(
 			// language=HTML
 			"""
 				<div class="basic">
@@ -25,7 +25,7 @@ class StandaloneTest {
 	@Test
 	fun spanTest() {
 
-		Assertions.assertEquals(
+		assertEquals(
 			// language=HTML
 			"""
 				<span class="basic">
@@ -39,7 +39,7 @@ class StandaloneTest {
 	@Test
 	fun hrTest() {
 
-		Assertions.assertEquals(
+		assertEquals(
 			// language=HTML
 			"""
 				<hr />

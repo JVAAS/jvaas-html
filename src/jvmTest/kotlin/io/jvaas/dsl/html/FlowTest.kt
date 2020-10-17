@@ -1,7 +1,7 @@
 package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.element.DIV
-import org.junit.jupiter.api.Test
+import org.junit.Test
 import kotlin.random.Random
 
 class FlowTest {

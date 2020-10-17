@@ -1,15 +1,14 @@
 package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.element.DIV
-import io.jvaas.dsl.html.element.HTML
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.junit.Test
+import kotlin.test.assertEquals
 
 class CustomComponents {
 
 	@Test
 	fun testCustomComponentViaClassExtension() {
-		Assertions.assertEquals(
+		assertEquals(
 
 			"""
 				<blah>
@@ -29,7 +28,7 @@ class CustomComponents {
 
 	@Test
 	fun testCustomComponentViaExtensionMethods() {
-		Assertions.assertEquals(
+		assertEquals(
 
 			"""
 				<div class="test1">
@@ -51,7 +50,7 @@ class CustomComponents {
 
 	@Test
 	fun testCustomSelfClosingComponentViaExtensionMethods() {
-		Assertions.assertEquals(
+		assertEquals(
 
 			"""
 				<div class="test1">
