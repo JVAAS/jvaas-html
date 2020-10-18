@@ -1672,7 +1672,7 @@ class HtmlDslGenerator {
 
 
 					File(
-						"$path/src/main/kotlin/io/persephone/dsl/element/${el.tag.toUpperCase()}.kt"
+						"$path/src/main/kotlin/io/jvaas/dsl/html/element/${el.tag.toUpperCase()}.kt"
 					).printWriter().use { out ->
 						out.println("""package io.jvaas.dsl.html.element""")
 						out.println("")
@@ -1705,6 +1705,7 @@ class HtmlDslGenerator {
 						}
 
 						initParams.add("""\ttagName: String = "${el.tag}"""")
+						initParams.add("""\tresources: MutableList<Resource> = mutableListOf()""")
 						initParams.add("""\tselfClosing: Boolean = ${el.selfClosing}""")
 
 						if (!el.selfClosing) {
