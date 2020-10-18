@@ -1721,6 +1721,7 @@ class HtmlDslGenerator {
 
 						out.println(""") : Tag(""".trimMargin().makeTabs())
 						out.println("""\ttagName = tagName,""".trimMargin().makeTabs())
+						out.println("""\tresources = resources,""".trimMargin().makeTabs())
 						out.println("""\tselfClosing = selfClosing""".trimMargin().makeTabs())
 						out.println(""") {""".trimMargin().makeTabs())
 
