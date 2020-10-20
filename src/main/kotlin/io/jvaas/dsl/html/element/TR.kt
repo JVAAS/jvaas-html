@@ -949,6 +949,7 @@ open class TR(
 		init: (TD.() -> Unit)? = null
 	) = TD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1136,6 +1137,7 @@ open class TR(
 		init: (TH.() -> Unit)? = null
 	) = TH().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.abbr = abbr

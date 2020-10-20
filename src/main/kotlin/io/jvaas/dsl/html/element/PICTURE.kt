@@ -955,6 +955,7 @@ open class PICTURE(
 		width: String? = null
 	) = IMG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1148,6 +1149,7 @@ open class PICTURE(
 		init: (SOURCE.() -> Unit)? = null
 	) = SOURCE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

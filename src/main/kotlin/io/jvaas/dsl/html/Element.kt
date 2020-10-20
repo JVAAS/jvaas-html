@@ -4,6 +4,10 @@ interface Element {
 	fun render(builder: StringBuilder, indent: String)
 }
 
+interface Resource {
+
+}
+
 class Text(val text: String): Element {
 	override fun render(builder: StringBuilder, indent: String) {
 		builder.append("$indent$text\n")
@@ -14,7 +18,11 @@ class Text(val text: String): Element {
 annotation class TagMarker
 
 @TagMarker
-abstract class Tag(val tagName: String, var selfClosing: Boolean = false): Element {
+abstract class Tag(
+	val tagName: String,
+	val selfClosing: Boolean = false,
+	var resources: MutableList<Resource>? = null
+): Element {
 
 	val children = arrayListOf<Element>()
 	val attributes = hashMapOf<String, String>()

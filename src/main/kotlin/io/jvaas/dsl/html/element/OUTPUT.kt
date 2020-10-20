@@ -983,6 +983,7 @@ open class OUTPUT(
 		init: (A.() -> Unit)? = null
 	) = A().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1169,6 +1170,7 @@ open class OUTPUT(
 		init: (ABBR.() -> Unit)? = null
 	) = ABBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1357,6 +1359,7 @@ open class OUTPUT(
 		init: (AREA.() -> Unit)? = null
 	) = AREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1574,6 +1577,7 @@ open class OUTPUT(
 		init: (AUDIO.() -> Unit)? = null
 	) = AUDIO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1782,6 +1786,7 @@ open class OUTPUT(
 		init: (B.() -> Unit)? = null
 	) = B().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1961,6 +1966,7 @@ open class OUTPUT(
 		init: (BDO.() -> Unit)? = null
 	) = BDO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2139,6 +2145,7 @@ open class OUTPUT(
 		title: String? = null
 	) = BR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2328,6 +2335,7 @@ open class OUTPUT(
 		init: (BUTTON.() -> Unit)? = null
 	) = BUTTON().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2520,6 +2528,7 @@ open class OUTPUT(
 		init: (CANVAS.() -> Unit)? = null
 	) = CANVAS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2701,6 +2710,7 @@ open class OUTPUT(
 		init: (CITE.() -> Unit)? = null
 	) = CITE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2880,6 +2890,7 @@ open class OUTPUT(
 		init: (CODE.() -> Unit)? = null
 	) = CODE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3060,6 +3071,7 @@ open class OUTPUT(
 		init: (DATA.() -> Unit)? = null
 	) = DATA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3240,6 +3252,7 @@ open class OUTPUT(
 		init: (DATALIST.() -> Unit)? = null
 	) = DATALIST().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3421,6 +3434,7 @@ open class OUTPUT(
 		init: (DEL.() -> Unit)? = null
 	) = DEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3602,6 +3616,7 @@ open class OUTPUT(
 		init: (DFN.() -> Unit)? = null
 	) = DFN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3781,6 +3796,7 @@ open class OUTPUT(
 		init: (EM.() -> Unit)? = null
 	) = EM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3963,6 +3979,7 @@ open class OUTPUT(
 		width: String? = null
 	) = EMBED().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4145,6 +4162,7 @@ open class OUTPUT(
 		init: (I.() -> Unit)? = null
 	) = I().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4334,6 +4352,7 @@ open class OUTPUT(
 		init: (IFRAME.() -> Unit)? = null
 	) = IFRAME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4532,6 +4551,7 @@ open class OUTPUT(
 		width: String? = null
 	) = IMG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4752,6 +4772,7 @@ open class OUTPUT(
 		init: (INPUT.() -> Unit)? = null
 	) = INPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accept = accept
@@ -4965,6 +4986,7 @@ open class OUTPUT(
 		init: (INS.() -> Unit)? = null
 	) = INS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5146,6 +5168,7 @@ open class OUTPUT(
 		init: (KBD.() -> Unit)? = null
 	) = KBD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5327,6 +5350,7 @@ open class OUTPUT(
 		init: (LABEL.() -> Unit)? = null
 	) = LABEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5426,6 +5450,7 @@ open class OUTPUT(
 		type: String? = null
 	) = LINK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.href = href
@@ -5524,6 +5549,7 @@ open class OUTPUT(
 		init: (MAP.() -> Unit)? = null
 	) = MAP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5704,6 +5730,7 @@ open class OUTPUT(
 		init: (MARK.() -> Unit)? = null
 	) = MARK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5801,6 +5828,7 @@ open class OUTPUT(
 		name: String? = null
 	) = META().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.charset = charset
@@ -5905,6 +5933,7 @@ open class OUTPUT(
 		init: (METER.() -> Unit)? = null
 	) = METER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6091,6 +6120,7 @@ open class OUTPUT(
 		init: (NOSCRIPT.() -> Unit)? = null
 	) = NOSCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6277,6 +6307,7 @@ open class OUTPUT(
 		init: (OBJECT.() -> Unit)? = null
 	) = OBJECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6466,6 +6497,7 @@ open class OUTPUT(
 		init: (OUTPUT.() -> Unit)? = null
 	) = OUTPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6648,6 +6680,7 @@ open class OUTPUT(
 		init: (PICTURE.() -> Unit)? = null
 	) = PICTURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6829,6 +6862,7 @@ open class OUTPUT(
 		init: (PROGRESS.() -> Unit)? = null
 	) = PROGRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7011,6 +7045,7 @@ open class OUTPUT(
 		init: (Q.() -> Unit)? = null
 	) = Q().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7191,6 +7226,7 @@ open class OUTPUT(
 		init: (RUBY.() -> Unit)? = null
 	) = RUBY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7370,6 +7406,7 @@ open class OUTPUT(
 		init: (SAMP.() -> Unit)? = null
 	) = SAMP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7558,6 +7595,7 @@ open class OUTPUT(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7754,6 +7792,7 @@ open class OUTPUT(
 		init: (SELECT.() -> Unit)? = null
 	) = SELECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7941,6 +7980,7 @@ open class OUTPUT(
 		init: (SMALL.() -> Unit)? = null
 	) = SMALL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8120,6 +8160,7 @@ open class OUTPUT(
 		init: (SPAN.() -> Unit)? = null
 	) = SPAN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8299,6 +8340,7 @@ open class OUTPUT(
 		init: (STRONG.() -> Unit)? = null
 	) = STRONG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8478,6 +8520,7 @@ open class OUTPUT(
 		init: (SUB.() -> Unit)? = null
 	) = SUB().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8657,6 +8700,7 @@ open class OUTPUT(
 		init: (SUP.() -> Unit)? = null
 	) = SUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8850,6 +8894,7 @@ open class OUTPUT(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = TEXTAREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9044,6 +9089,7 @@ open class OUTPUT(
 		init: (TIME.() -> Unit)? = null
 	) = TIME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9224,6 +9270,7 @@ open class OUTPUT(
 		init: (VAR.() -> Unit)? = null
 	) = VAR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9437,6 +9484,7 @@ open class OUTPUT(
 		init: (VIDEO.() -> Unit)? = null
 	) = VIDEO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9650,6 +9698,7 @@ open class OUTPUT(
 		init: (WBR.() -> Unit)? = null
 	) = WBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

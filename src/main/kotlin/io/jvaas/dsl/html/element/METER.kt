@@ -1023,6 +1023,7 @@ open class METER(
 		init: (A.() -> Unit)? = null
 	) = A().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1209,6 +1210,7 @@ open class METER(
 		init: (ABBR.() -> Unit)? = null
 	) = ABBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1397,6 +1399,7 @@ open class METER(
 		init: (AREA.() -> Unit)? = null
 	) = AREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1614,6 +1617,7 @@ open class METER(
 		init: (AUDIO.() -> Unit)? = null
 	) = AUDIO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1822,6 +1826,7 @@ open class METER(
 		init: (B.() -> Unit)? = null
 	) = B().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2001,6 +2006,7 @@ open class METER(
 		init: (BDO.() -> Unit)? = null
 	) = BDO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2179,6 +2185,7 @@ open class METER(
 		title: String? = null
 	) = BR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2368,6 +2375,7 @@ open class METER(
 		init: (BUTTON.() -> Unit)? = null
 	) = BUTTON().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2560,6 +2568,7 @@ open class METER(
 		init: (CANVAS.() -> Unit)? = null
 	) = CANVAS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2741,6 +2750,7 @@ open class METER(
 		init: (CITE.() -> Unit)? = null
 	) = CITE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2920,6 +2930,7 @@ open class METER(
 		init: (CODE.() -> Unit)? = null
 	) = CODE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3100,6 +3111,7 @@ open class METER(
 		init: (DATA.() -> Unit)? = null
 	) = DATA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3280,6 +3292,7 @@ open class METER(
 		init: (DATALIST.() -> Unit)? = null
 	) = DATALIST().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3461,6 +3474,7 @@ open class METER(
 		init: (DEL.() -> Unit)? = null
 	) = DEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3642,6 +3656,7 @@ open class METER(
 		init: (DFN.() -> Unit)? = null
 	) = DFN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3821,6 +3836,7 @@ open class METER(
 		init: (EM.() -> Unit)? = null
 	) = EM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4003,6 +4019,7 @@ open class METER(
 		width: String? = null
 	) = EMBED().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4185,6 +4202,7 @@ open class METER(
 		init: (I.() -> Unit)? = null
 	) = I().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4374,6 +4392,7 @@ open class METER(
 		init: (IFRAME.() -> Unit)? = null
 	) = IFRAME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4572,6 +4591,7 @@ open class METER(
 		width: String? = null
 	) = IMG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4792,6 +4812,7 @@ open class METER(
 		init: (INPUT.() -> Unit)? = null
 	) = INPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accept = accept
@@ -5005,6 +5026,7 @@ open class METER(
 		init: (INS.() -> Unit)? = null
 	) = INS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5186,6 +5208,7 @@ open class METER(
 		init: (KBD.() -> Unit)? = null
 	) = KBD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5367,6 +5390,7 @@ open class METER(
 		init: (LABEL.() -> Unit)? = null
 	) = LABEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5466,6 +5490,7 @@ open class METER(
 		type: String? = null
 	) = LINK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.href = href
@@ -5564,6 +5589,7 @@ open class METER(
 		init: (MAP.() -> Unit)? = null
 	) = MAP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5744,6 +5770,7 @@ open class METER(
 		init: (MARK.() -> Unit)? = null
 	) = MARK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5841,6 +5868,7 @@ open class METER(
 		name: String? = null
 	) = META().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.charset = charset
@@ -5938,6 +5966,7 @@ open class METER(
 		init: (NOSCRIPT.() -> Unit)? = null
 	) = NOSCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6124,6 +6153,7 @@ open class METER(
 		init: (OBJECT.() -> Unit)? = null
 	) = OBJECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6313,6 +6343,7 @@ open class METER(
 		init: (OUTPUT.() -> Unit)? = null
 	) = OUTPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6495,6 +6526,7 @@ open class METER(
 		init: (PICTURE.() -> Unit)? = null
 	) = PICTURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6676,6 +6708,7 @@ open class METER(
 		init: (PROGRESS.() -> Unit)? = null
 	) = PROGRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6858,6 +6891,7 @@ open class METER(
 		init: (Q.() -> Unit)? = null
 	) = Q().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7038,6 +7072,7 @@ open class METER(
 		init: (RUBY.() -> Unit)? = null
 	) = RUBY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7217,6 +7252,7 @@ open class METER(
 		init: (SAMP.() -> Unit)? = null
 	) = SAMP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7405,6 +7441,7 @@ open class METER(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7601,6 +7638,7 @@ open class METER(
 		init: (SELECT.() -> Unit)? = null
 	) = SELECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7788,6 +7826,7 @@ open class METER(
 		init: (SMALL.() -> Unit)? = null
 	) = SMALL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7967,6 +8006,7 @@ open class METER(
 		init: (SPAN.() -> Unit)? = null
 	) = SPAN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8146,6 +8186,7 @@ open class METER(
 		init: (STRONG.() -> Unit)? = null
 	) = STRONG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8325,6 +8366,7 @@ open class METER(
 		init: (SUB.() -> Unit)? = null
 	) = SUB().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8504,6 +8546,7 @@ open class METER(
 		init: (SUP.() -> Unit)? = null
 	) = SUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8697,6 +8740,7 @@ open class METER(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = TEXTAREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8891,6 +8935,7 @@ open class METER(
 		init: (TIME.() -> Unit)? = null
 	) = TIME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9071,6 +9116,7 @@ open class METER(
 		init: (VAR.() -> Unit)? = null
 	) = VAR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9284,6 +9330,7 @@ open class METER(
 		init: (VIDEO.() -> Unit)? = null
 	) = VIDEO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9497,6 +9544,7 @@ open class METER(
 		init: (WBR.() -> Unit)? = null
 	) = WBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

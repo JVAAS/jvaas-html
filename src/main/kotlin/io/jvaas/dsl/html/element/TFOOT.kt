@@ -946,6 +946,7 @@ open class TFOOT(
 		init: (TR.() -> Unit)? = null
 	) = TR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

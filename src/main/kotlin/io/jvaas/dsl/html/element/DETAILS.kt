@@ -963,6 +963,7 @@ open class DETAILS(
 		init: (A.() -> Unit)? = null
 	) = A().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1149,6 +1150,7 @@ open class DETAILS(
 		init: (ABBR.() -> Unit)? = null
 	) = ABBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1328,6 +1330,7 @@ open class DETAILS(
 		init: (ADDRESS.() -> Unit)? = null
 	) = ADDRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1507,6 +1510,7 @@ open class DETAILS(
 		init: (ARTICLE.() -> Unit)? = null
 	) = ARTICLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1686,6 +1690,7 @@ open class DETAILS(
 		init: (ASIDE.() -> Unit)? = null
 	) = ASIDE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1894,6 +1899,7 @@ open class DETAILS(
 		init: (AUDIO.() -> Unit)? = null
 	) = AUDIO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2102,6 +2108,7 @@ open class DETAILS(
 		init: (B.() -> Unit)? = null
 	) = B().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2281,6 +2288,7 @@ open class DETAILS(
 		init: (BDI.() -> Unit)? = null
 	) = BDI().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2460,6 +2468,7 @@ open class DETAILS(
 		init: (BDO.() -> Unit)? = null
 	) = BDO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2640,6 +2649,7 @@ open class DETAILS(
 		init: (BLOCKQUOTE.() -> Unit)? = null
 	) = BLOCKQUOTE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2819,6 +2829,7 @@ open class DETAILS(
 		title: String? = null
 	) = BR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3008,6 +3019,7 @@ open class DETAILS(
 		init: (BUTTON.() -> Unit)? = null
 	) = BUTTON().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3200,6 +3212,7 @@ open class DETAILS(
 		init: (CANVAS.() -> Unit)? = null
 	) = CANVAS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3381,6 +3394,7 @@ open class DETAILS(
 		init: (CITE.() -> Unit)? = null
 	) = CITE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3560,6 +3574,7 @@ open class DETAILS(
 		init: (CODE.() -> Unit)? = null
 	) = CODE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3740,6 +3755,7 @@ open class DETAILS(
 		init: (DATA.() -> Unit)? = null
 	) = DATA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3920,6 +3936,7 @@ open class DETAILS(
 		init: (DATALIST.() -> Unit)? = null
 	) = DATALIST().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4101,6 +4118,7 @@ open class DETAILS(
 		init: (DEL.() -> Unit)? = null
 	) = DEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4283,6 +4301,7 @@ open class DETAILS(
 		init: (DETAILS.() -> Unit)? = null
 	) = DETAILS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4463,6 +4482,7 @@ open class DETAILS(
 		init: (DFN.() -> Unit)? = null
 	) = DFN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4642,6 +4662,7 @@ open class DETAILS(
 		init: (DIV.() -> Unit)? = null
 	) = DIV().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4821,6 +4842,7 @@ open class DETAILS(
 		init: (DL.() -> Unit)? = null
 	) = DL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5000,6 +5022,7 @@ open class DETAILS(
 		init: (EM.() -> Unit)? = null
 	) = EM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5182,6 +5205,7 @@ open class DETAILS(
 		width: String? = null
 	) = EMBED().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5367,6 +5391,7 @@ open class DETAILS(
 		init: (FIELDSET.() -> Unit)? = null
 	) = FIELDSET().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5549,6 +5574,7 @@ open class DETAILS(
 		init: (FIGURE.() -> Unit)? = null
 	) = FIGURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5728,6 +5754,7 @@ open class DETAILS(
 		init: (FOOTER.() -> Unit)? = null
 	) = FOOTER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5914,6 +5941,7 @@ open class DETAILS(
 		init: (FORM.() -> Unit)? = null
 	) = FORM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.acceptCharset = acceptCharset
@@ -6100,6 +6128,7 @@ open class DETAILS(
 		init: (H1.() -> Unit)? = null
 	) = H1().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6279,6 +6308,7 @@ open class DETAILS(
 		init: (H2.() -> Unit)? = null
 	) = H2().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6458,6 +6488,7 @@ open class DETAILS(
 		init: (H3.() -> Unit)? = null
 	) = H3().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6637,6 +6668,7 @@ open class DETAILS(
 		init: (H4.() -> Unit)? = null
 	) = H4().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6816,6 +6848,7 @@ open class DETAILS(
 		init: (H5.() -> Unit)? = null
 	) = H5().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6995,6 +7028,7 @@ open class DETAILS(
 		init: (H6.() -> Unit)? = null
 	) = H6().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7174,6 +7208,7 @@ open class DETAILS(
 		init: (HEADER.() -> Unit)? = null
 	) = HEADER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7353,6 +7388,7 @@ open class DETAILS(
 		init: (HGROUP.() -> Unit)? = null
 	) = HGROUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7531,6 +7567,7 @@ open class DETAILS(
 		title: String? = null
 	) = HR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7709,6 +7746,7 @@ open class DETAILS(
 		init: (I.() -> Unit)? = null
 	) = I().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7898,6 +7936,7 @@ open class DETAILS(
 		init: (IFRAME.() -> Unit)? = null
 	) = IFRAME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8096,6 +8135,7 @@ open class DETAILS(
 		width: String? = null
 	) = IMG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8316,6 +8356,7 @@ open class DETAILS(
 		init: (INPUT.() -> Unit)? = null
 	) = INPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accept = accept
@@ -8529,6 +8570,7 @@ open class DETAILS(
 		init: (INS.() -> Unit)? = null
 	) = INS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8710,6 +8752,7 @@ open class DETAILS(
 		init: (KBD.() -> Unit)? = null
 	) = KBD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8891,6 +8934,7 @@ open class DETAILS(
 		init: (LABEL.() -> Unit)? = null
 	) = LABEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9072,6 +9116,7 @@ open class DETAILS(
 		init: (MAIN.() -> Unit)? = null
 	) = MAIN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9252,6 +9297,7 @@ open class DETAILS(
 		init: (MAP.() -> Unit)? = null
 	) = MAP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9432,6 +9478,7 @@ open class DETAILS(
 		init: (MARK.() -> Unit)? = null
 	) = MARK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9612,6 +9659,7 @@ open class DETAILS(
 		init: (MENU.() -> Unit)? = null
 	) = MENU().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9799,6 +9847,7 @@ open class DETAILS(
 		init: (METER.() -> Unit)? = null
 	) = METER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9985,6 +10034,7 @@ open class DETAILS(
 		init: (NAV.() -> Unit)? = null
 	) = NAV().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10164,6 +10214,7 @@ open class DETAILS(
 		init: (NOSCRIPT.() -> Unit)? = null
 	) = NOSCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10350,6 +10401,7 @@ open class DETAILS(
 		init: (OBJECT.() -> Unit)? = null
 	) = OBJECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10539,6 +10591,7 @@ open class DETAILS(
 		init: (OL.() -> Unit)? = null
 	) = OL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10724,6 +10777,7 @@ open class DETAILS(
 		init: (OUTPUT.() -> Unit)? = null
 	) = OUTPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10906,6 +10960,7 @@ open class DETAILS(
 		init: (P.() -> Unit)? = null
 	) = P().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11085,6 +11140,7 @@ open class DETAILS(
 		init: (PICTURE.() -> Unit)? = null
 	) = PICTURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11264,6 +11320,7 @@ open class DETAILS(
 		init: (PRE.() -> Unit)? = null
 	) = PRE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11445,6 +11502,7 @@ open class DETAILS(
 		init: (PROGRESS.() -> Unit)? = null
 	) = PROGRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11627,6 +11685,7 @@ open class DETAILS(
 		init: (Q.() -> Unit)? = null
 	) = Q().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11807,6 +11866,7 @@ open class DETAILS(
 		init: (RUBY.() -> Unit)? = null
 	) = RUBY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11986,6 +12046,7 @@ open class DETAILS(
 		init: (S.() -> Unit)? = null
 	) = S().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12165,6 +12226,7 @@ open class DETAILS(
 		init: (SAMP.() -> Unit)? = null
 	) = SAMP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12353,6 +12415,7 @@ open class DETAILS(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12541,6 +12604,7 @@ open class DETAILS(
 		init: (SECTION.() -> Unit)? = null
 	) = SECTION().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12728,6 +12792,7 @@ open class DETAILS(
 		init: (SELECT.() -> Unit)? = null
 	) = SELECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12915,6 +12980,7 @@ open class DETAILS(
 		init: (SMALL.() -> Unit)? = null
 	) = SMALL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13094,6 +13160,7 @@ open class DETAILS(
 		init: (SPAN.() -> Unit)? = null
 	) = SPAN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13273,6 +13340,7 @@ open class DETAILS(
 		init: (STRONG.() -> Unit)? = null
 	) = STRONG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13452,6 +13520,7 @@ open class DETAILS(
 		init: (SUB.() -> Unit)? = null
 	) = SUB().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13631,6 +13700,7 @@ open class DETAILS(
 		init: (SUMMARY.() -> Unit)? = null
 	) = SUMMARY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13810,6 +13880,7 @@ open class DETAILS(
 		init: (SUP.() -> Unit)? = null
 	) = SUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13989,6 +14060,7 @@ open class DETAILS(
 		init: (TABLE.() -> Unit)? = null
 	) = TABLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14168,6 +14240,7 @@ open class DETAILS(
 		init: (TEMPLATE.() -> Unit)? = null
 	) = TEMPLATE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14361,6 +14434,7 @@ open class DETAILS(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = TEXTAREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14555,6 +14629,7 @@ open class DETAILS(
 		init: (TIME.() -> Unit)? = null
 	) = TIME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14735,6 +14810,7 @@ open class DETAILS(
 		init: (UL.() -> Unit)? = null
 	) = UL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14914,6 +14990,7 @@ open class DETAILS(
 		init: (VAR.() -> Unit)? = null
 	) = VAR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -15127,6 +15204,7 @@ open class DETAILS(
 		init: (VIDEO.() -> Unit)? = null
 	) = VIDEO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -15340,6 +15418,7 @@ open class DETAILS(
 		init: (WBR.() -> Unit)? = null
 	) = WBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

@@ -946,6 +946,7 @@ open class HGROUP(
 		init: (H1.() -> Unit)? = null
 	) = H1().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1125,6 +1126,7 @@ open class HGROUP(
 		init: (H2.() -> Unit)? = null
 	) = H2().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1304,6 +1306,7 @@ open class HGROUP(
 		init: (H3.() -> Unit)? = null
 	) = H3().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1483,6 +1486,7 @@ open class HGROUP(
 		init: (H4.() -> Unit)? = null
 	) = H4().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1662,6 +1666,7 @@ open class HGROUP(
 		init: (H5.() -> Unit)? = null
 	) = H5().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1841,6 +1846,7 @@ open class HGROUP(
 		init: (H6.() -> Unit)? = null
 	) = H6().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

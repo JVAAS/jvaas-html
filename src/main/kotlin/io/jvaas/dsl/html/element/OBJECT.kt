@@ -1018,6 +1018,7 @@ open class OBJECT(
 		init: (PARAM.() -> Unit)? = null
 	) = PARAM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

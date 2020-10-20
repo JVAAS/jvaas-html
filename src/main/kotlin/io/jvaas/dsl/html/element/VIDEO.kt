@@ -1291,6 +1291,7 @@ open class VIDEO(
 		init: (SOURCE.() -> Unit)? = null
 	) = SOURCE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1479,6 +1480,7 @@ open class VIDEO(
 		title: String? = null
 	) = TRACK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

@@ -983,6 +983,7 @@ open class FIELDSET(
 		init: (A.() -> Unit)? = null
 	) = A().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1169,6 +1170,7 @@ open class FIELDSET(
 		init: (ABBR.() -> Unit)? = null
 	) = ABBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1348,6 +1350,7 @@ open class FIELDSET(
 		init: (ADDRESS.() -> Unit)? = null
 	) = ADDRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1527,6 +1530,7 @@ open class FIELDSET(
 		init: (ARTICLE.() -> Unit)? = null
 	) = ARTICLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1706,6 +1710,7 @@ open class FIELDSET(
 		init: (ASIDE.() -> Unit)? = null
 	) = ASIDE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1914,6 +1919,7 @@ open class FIELDSET(
 		init: (AUDIO.() -> Unit)? = null
 	) = AUDIO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2122,6 +2128,7 @@ open class FIELDSET(
 		init: (B.() -> Unit)? = null
 	) = B().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2301,6 +2308,7 @@ open class FIELDSET(
 		init: (BDI.() -> Unit)? = null
 	) = BDI().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2480,6 +2488,7 @@ open class FIELDSET(
 		init: (BDO.() -> Unit)? = null
 	) = BDO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2660,6 +2669,7 @@ open class FIELDSET(
 		init: (BLOCKQUOTE.() -> Unit)? = null
 	) = BLOCKQUOTE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -2839,6 +2849,7 @@ open class FIELDSET(
 		title: String? = null
 	) = BR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3028,6 +3039,7 @@ open class FIELDSET(
 		init: (BUTTON.() -> Unit)? = null
 	) = BUTTON().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3220,6 +3232,7 @@ open class FIELDSET(
 		init: (CANVAS.() -> Unit)? = null
 	) = CANVAS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3401,6 +3414,7 @@ open class FIELDSET(
 		init: (CITE.() -> Unit)? = null
 	) = CITE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3580,6 +3594,7 @@ open class FIELDSET(
 		init: (CODE.() -> Unit)? = null
 	) = CODE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3760,6 +3775,7 @@ open class FIELDSET(
 		init: (DATA.() -> Unit)? = null
 	) = DATA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -3940,6 +3956,7 @@ open class FIELDSET(
 		init: (DATALIST.() -> Unit)? = null
 	) = DATALIST().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4121,6 +4138,7 @@ open class FIELDSET(
 		init: (DEL.() -> Unit)? = null
 	) = DEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4303,6 +4321,7 @@ open class FIELDSET(
 		init: (DETAILS.() -> Unit)? = null
 	) = DETAILS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4483,6 +4502,7 @@ open class FIELDSET(
 		init: (DFN.() -> Unit)? = null
 	) = DFN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4662,6 +4682,7 @@ open class FIELDSET(
 		init: (DIV.() -> Unit)? = null
 	) = DIV().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -4841,6 +4862,7 @@ open class FIELDSET(
 		init: (DL.() -> Unit)? = null
 	) = DL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5020,6 +5042,7 @@ open class FIELDSET(
 		init: (EM.() -> Unit)? = null
 	) = EM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5202,6 +5225,7 @@ open class FIELDSET(
 		width: String? = null
 	) = EMBED().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5387,6 +5411,7 @@ open class FIELDSET(
 		init: (FIELDSET.() -> Unit)? = null
 	) = FIELDSET().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5569,6 +5594,7 @@ open class FIELDSET(
 		init: (FIGURE.() -> Unit)? = null
 	) = FIGURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5748,6 +5774,7 @@ open class FIELDSET(
 		init: (FOOTER.() -> Unit)? = null
 	) = FOOTER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -5934,6 +5961,7 @@ open class FIELDSET(
 		init: (FORM.() -> Unit)? = null
 	) = FORM().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.acceptCharset = acceptCharset
@@ -6120,6 +6148,7 @@ open class FIELDSET(
 		init: (H1.() -> Unit)? = null
 	) = H1().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6299,6 +6328,7 @@ open class FIELDSET(
 		init: (H2.() -> Unit)? = null
 	) = H2().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6478,6 +6508,7 @@ open class FIELDSET(
 		init: (H3.() -> Unit)? = null
 	) = H3().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6657,6 +6688,7 @@ open class FIELDSET(
 		init: (H4.() -> Unit)? = null
 	) = H4().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -6836,6 +6868,7 @@ open class FIELDSET(
 		init: (H5.() -> Unit)? = null
 	) = H5().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7015,6 +7048,7 @@ open class FIELDSET(
 		init: (H6.() -> Unit)? = null
 	) = H6().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7194,6 +7228,7 @@ open class FIELDSET(
 		init: (HEADER.() -> Unit)? = null
 	) = HEADER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7373,6 +7408,7 @@ open class FIELDSET(
 		init: (HGROUP.() -> Unit)? = null
 	) = HGROUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7551,6 +7587,7 @@ open class FIELDSET(
 		title: String? = null
 	) = HR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7729,6 +7766,7 @@ open class FIELDSET(
 		init: (I.() -> Unit)? = null
 	) = I().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -7918,6 +7956,7 @@ open class FIELDSET(
 		init: (IFRAME.() -> Unit)? = null
 	) = IFRAME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8116,6 +8155,7 @@ open class FIELDSET(
 		width: String? = null
 	) = IMG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8336,6 +8376,7 @@ open class FIELDSET(
 		init: (INPUT.() -> Unit)? = null
 	) = INPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accept = accept
@@ -8549,6 +8590,7 @@ open class FIELDSET(
 		init: (INS.() -> Unit)? = null
 	) = INS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8730,6 +8772,7 @@ open class FIELDSET(
 		init: (KBD.() -> Unit)? = null
 	) = KBD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -8911,6 +8954,7 @@ open class FIELDSET(
 		init: (LABEL.() -> Unit)? = null
 	) = LABEL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9092,6 +9136,7 @@ open class FIELDSET(
 		init: (LEGEND.() -> Unit)? = null
 	) = LEGEND().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9271,6 +9316,7 @@ open class FIELDSET(
 		init: (MAIN.() -> Unit)? = null
 	) = MAIN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9451,6 +9497,7 @@ open class FIELDSET(
 		init: (MAP.() -> Unit)? = null
 	) = MAP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9631,6 +9678,7 @@ open class FIELDSET(
 		init: (MARK.() -> Unit)? = null
 	) = MARK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9811,6 +9859,7 @@ open class FIELDSET(
 		init: (MENU.() -> Unit)? = null
 	) = MENU().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -9998,6 +10047,7 @@ open class FIELDSET(
 		init: (METER.() -> Unit)? = null
 	) = METER().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10184,6 +10234,7 @@ open class FIELDSET(
 		init: (NAV.() -> Unit)? = null
 	) = NAV().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10363,6 +10414,7 @@ open class FIELDSET(
 		init: (NOSCRIPT.() -> Unit)? = null
 	) = NOSCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10549,6 +10601,7 @@ open class FIELDSET(
 		init: (OBJECT.() -> Unit)? = null
 	) = OBJECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10738,6 +10791,7 @@ open class FIELDSET(
 		init: (OL.() -> Unit)? = null
 	) = OL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -10923,6 +10977,7 @@ open class FIELDSET(
 		init: (OUTPUT.() -> Unit)? = null
 	) = OUTPUT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11105,6 +11160,7 @@ open class FIELDSET(
 		init: (P.() -> Unit)? = null
 	) = P().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11284,6 +11340,7 @@ open class FIELDSET(
 		init: (PICTURE.() -> Unit)? = null
 	) = PICTURE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11463,6 +11520,7 @@ open class FIELDSET(
 		init: (PRE.() -> Unit)? = null
 	) = PRE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11644,6 +11702,7 @@ open class FIELDSET(
 		init: (PROGRESS.() -> Unit)? = null
 	) = PROGRESS().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -11826,6 +11885,7 @@ open class FIELDSET(
 		init: (Q.() -> Unit)? = null
 	) = Q().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12006,6 +12066,7 @@ open class FIELDSET(
 		init: (RUBY.() -> Unit)? = null
 	) = RUBY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12185,6 +12246,7 @@ open class FIELDSET(
 		init: (S.() -> Unit)? = null
 	) = S().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12364,6 +12426,7 @@ open class FIELDSET(
 		init: (SAMP.() -> Unit)? = null
 	) = SAMP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12552,6 +12615,7 @@ open class FIELDSET(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12740,6 +12804,7 @@ open class FIELDSET(
 		init: (SECTION.() -> Unit)? = null
 	) = SECTION().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -12927,6 +12992,7 @@ open class FIELDSET(
 		init: (SELECT.() -> Unit)? = null
 	) = SELECT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13114,6 +13180,7 @@ open class FIELDSET(
 		init: (SMALL.() -> Unit)? = null
 	) = SMALL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13293,6 +13360,7 @@ open class FIELDSET(
 		init: (SPAN.() -> Unit)? = null
 	) = SPAN().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13472,6 +13540,7 @@ open class FIELDSET(
 		init: (STRONG.() -> Unit)? = null
 	) = STRONG().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13651,6 +13720,7 @@ open class FIELDSET(
 		init: (SUB.() -> Unit)? = null
 	) = SUB().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -13830,6 +13900,7 @@ open class FIELDSET(
 		init: (SUP.() -> Unit)? = null
 	) = SUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14009,6 +14080,7 @@ open class FIELDSET(
 		init: (TABLE.() -> Unit)? = null
 	) = TABLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14188,6 +14260,7 @@ open class FIELDSET(
 		init: (TEMPLATE.() -> Unit)? = null
 	) = TEMPLATE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14381,6 +14454,7 @@ open class FIELDSET(
 		init: (TEXTAREA.() -> Unit)? = null
 	) = TEXTAREA().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14575,6 +14649,7 @@ open class FIELDSET(
 		init: (TIME.() -> Unit)? = null
 	) = TIME().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14755,6 +14830,7 @@ open class FIELDSET(
 		init: (UL.() -> Unit)? = null
 	) = UL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -14934,6 +15010,7 @@ open class FIELDSET(
 		init: (VAR.() -> Unit)? = null
 	) = VAR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -15147,6 +15224,7 @@ open class FIELDSET(
 		init: (VIDEO.() -> Unit)? = null
 	) = VIDEO().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -15360,6 +15438,7 @@ open class FIELDSET(
 		init: (WBR.() -> Unit)? = null
 	) = WBR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

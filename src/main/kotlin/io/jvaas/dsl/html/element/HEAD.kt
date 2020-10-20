@@ -23,6 +23,7 @@ open class HEAD(
 		target: String? = null
 	) = BASE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.href = href
@@ -37,6 +38,7 @@ open class HEAD(
 		type: String? = null
 	) = LINK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.href = href
@@ -52,6 +54,7 @@ open class HEAD(
 		name: String? = null
 	) = META().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.charset = charset
@@ -149,6 +152,7 @@ open class HEAD(
 		init: (NOSCRIPT.() -> Unit)? = null
 	) = NOSCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -337,6 +341,7 @@ open class HEAD(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -445,6 +450,7 @@ open class HEAD(
 		init: (STYLE.() -> Unit)? = null
 	) = STYLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.media = media
@@ -460,6 +466,7 @@ open class HEAD(
 		init: (TITLE.() -> Unit)? = null
 	) = TITLE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 	

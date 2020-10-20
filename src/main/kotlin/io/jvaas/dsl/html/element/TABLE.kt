@@ -946,6 +946,7 @@ open class TABLE(
 		init: (CAPTION.() -> Unit)? = null
 	) = CAPTION().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1126,6 +1127,7 @@ open class TABLE(
 		init: (COLGROUP.() -> Unit)? = null
 	) = COLGROUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1306,6 +1308,7 @@ open class TABLE(
 		init: (TBODY.() -> Unit)? = null
 	) = TBODY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1485,6 +1488,7 @@ open class TABLE(
 		init: (TFOOT.() -> Unit)? = null
 	) = TFOOT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1664,6 +1668,7 @@ open class TABLE(
 		init: (THEAD.() -> Unit)? = null
 	) = THEAD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1843,6 +1848,7 @@ open class TABLE(
 		init: (TR.() -> Unit)? = null
 	) = TR().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

@@ -1705,7 +1705,6 @@ class HtmlDslGenerator {
 						}
 
 						initParams.add("""\ttagName: String = "${el.tag}"""")
-						initParams.add("""\tresources: MutableList<Resource> = mutableListOf()""")
 						initParams.add("""\tselfClosing: Boolean = ${el.selfClosing}""")
 
 						if (!el.selfClosing) {
@@ -1721,7 +1720,6 @@ class HtmlDslGenerator {
 
 						out.println(""") : Tag(""".trimMargin().makeTabs())
 						out.println("""\ttagName = tagName,""".trimMargin().makeTabs())
-						out.println("""\tresources = resources,""".trimMargin().makeTabs())
 						out.println("""\tselfClosing = selfClosing""".trimMargin().makeTabs())
 						out.println(""") {""".trimMargin().makeTabs())
 
@@ -1798,6 +1796,7 @@ class HtmlDslGenerator {
 
 								out.println("""\t) = ${child.tag.toUpperCase()}().let {""".makeTabs())
 								out.println("""\t""".makeTabs())
+								out.println("""\t\tit.resources = this.resources""".makeTabs())
 								out.println("""\t\tthis.children.add(it)""".makeTabs())
 								out.println("""\t""".makeTabs())
 

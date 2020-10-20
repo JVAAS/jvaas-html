@@ -957,6 +957,7 @@ open class COLGROUP(
 		init: (COL.() -> Unit)? = null
 	) = COL().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

@@ -977,6 +977,7 @@ open class OL(
 		init: (LI.() -> Unit)? = null
 	) = LI().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1166,6 +1167,7 @@ open class OL(
 		init: (SCRIPT.() -> Unit)? = null
 	) = SCRIPT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1354,6 +1356,7 @@ open class OL(
 		init: (TEMPLATE.() -> Unit)? = null
 	) = TEMPLATE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

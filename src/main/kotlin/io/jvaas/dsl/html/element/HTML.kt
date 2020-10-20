@@ -967,6 +967,7 @@ open class HTML(
 		init: (BODY.() -> Unit)? = null
 	) = BODY().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1073,6 +1074,7 @@ open class HTML(
 		init: (HEAD.() -> Unit)? = null
 	) = HEAD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 	

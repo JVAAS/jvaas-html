@@ -946,6 +946,7 @@ open class DL(
 		init: (DD.() -> Unit)? = null
 	) = DD().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1125,6 +1126,7 @@ open class DL(
 		init: (DIV.() -> Unit)? = null
 	) = DIV().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1304,6 +1306,7 @@ open class DL(
 		init: (DT.() -> Unit)? = null
 	) = DT().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

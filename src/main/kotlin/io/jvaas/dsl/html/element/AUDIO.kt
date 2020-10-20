@@ -1241,6 +1241,7 @@ open class AUDIO(
 		init: (SOURCE.() -> Unit)? = null
 	) = SOURCE().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1429,6 +1430,7 @@ open class AUDIO(
 		title: String? = null
 	) = TRACK().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

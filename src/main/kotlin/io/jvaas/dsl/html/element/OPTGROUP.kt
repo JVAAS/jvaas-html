@@ -970,6 +970,7 @@ open class OPTGROUP(
 		init: (OPTION.() -> Unit)? = null
 	) = OPTION().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey

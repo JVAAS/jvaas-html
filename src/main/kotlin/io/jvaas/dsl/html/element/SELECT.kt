@@ -1028,6 +1028,7 @@ open class SELECT(
 		init: (OPTGROUP.() -> Unit)? = null
 	) = OPTGROUP().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
@@ -1213,6 +1214,7 @@ open class SELECT(
 		init: (OPTION.() -> Unit)? = null
 	) = OPTION().let {
 	
+		it.resources = this.resources
 		this.children.add(it)
 	
 		it.accesskey = accesskey
