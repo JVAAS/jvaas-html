@@ -2,7 +2,9 @@ package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.element.DIV
 import io.jvaas.dsl.html.helper.DOCUMENT
+import junit.framework.Assert
 import org.junit.Test
+import kotlin.test.assertEquals
 
 class ResourcesTest {
 
@@ -27,6 +29,8 @@ class ResourcesTest {
 				}
 			}
 		})
+
+		assertEquals(3, doc.resources.size)
 
 		println("===========")
 		println(doc.resources)
