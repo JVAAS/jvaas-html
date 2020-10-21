@@ -19,9 +19,9 @@ class CustomComponents {
 			""".trimIndent().trim(),
 
 			BLAH3() {
-				//div {
+				div {
 
-				//}
+				}
 			}.toString()
 
 		)
