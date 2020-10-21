@@ -2,9 +2,7 @@ package io.jvaas.dsl.html
 
 import io.jvaas.dsl.html.element.DIV
 import io.jvaas.dsl.html.helper.DOCUMENT
-import junit.framework.Assert
 import org.junit.Test
-import kotlin.test.assertEquals
 
 class ResourcesTest {
 
@@ -17,11 +15,11 @@ class ResourcesTest {
 		}, {
 			div {
 				blah1 {
+					blah1 {
 
+					}
 				}
-				blah1 {
 
-				}
 			}
 			div {
 				blah1 {
@@ -30,24 +28,23 @@ class ResourcesTest {
 			}
 		})
 
-		assertEquals(3, doc.resources.size)
+		//assertEquals(3, doc.resources.size)
 
 		println("===========")
+		println(doc.toString())
 		println(doc.resources)
 		println("===========")
 
 
 	}
 
-	fun DIV.blah1(
+	fun Tag.blah1(
 		classes: String? = null,
-		init: (CustomComponents.BLAH1.() -> Unit)? = null,
+		init: (DIV.() -> Unit)? = null,
 	) {
-		this.resources?.add(CustomComponents.CSS(path = "style1.css"))
-		this.children.add(CustomComponents.BLAH1().apply {
-			classes?.let {
-				this.attributes.put("class", it)
-			}
+		this.resources?.add(CustomComponents.CSS("blah1.css"))
+		this.children.add(DIV(classes = classes).apply {
+			this.resources = this@blah1.resources
 			init?.invoke(this)
 		})
 	}
