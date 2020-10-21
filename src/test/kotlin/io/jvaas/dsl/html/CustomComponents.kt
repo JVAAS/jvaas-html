@@ -78,12 +78,10 @@ class CustomComponents {
 			}
 		}
 
-		println("==================")
-		println(div.resources?.size)
 		div.resources?.forEach {
 			println(it)
 		}
-		println("==================")
+		assertEquals(3, div.resources?.size)
 
 	}
 
