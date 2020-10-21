@@ -11,9 +11,9 @@ open class DOCUMENT(
 ) {
 
 	val resources = mutableListOf<Resource>()
-	val html: HTML = HTML()
-	var head: HEAD = HEAD()
-	var body: BODY = BODY()
+	val html: HTML = HTML().apply { this.resources = this@DOCUMENT.resources }
+	var head: HEAD = HEAD().apply { this.resources = this@DOCUMENT.resources }
+	var body: BODY = BODY().apply { this.resources = this@DOCUMENT.resources }
 
 	var title: String? = null
 		get() = field
@@ -27,12 +27,12 @@ open class DOCUMENT(
 		head?.let {
 			this.head = html.head(
 				init = it
-			).apply { resources = this@DOCUMENT.resources }
+			)
 		}
 		body?.let {
 			this.body = html.body(
 				init = it
-			).apply { resources = this@DOCUMENT.resources }
+			)
 		}
 	}
 
