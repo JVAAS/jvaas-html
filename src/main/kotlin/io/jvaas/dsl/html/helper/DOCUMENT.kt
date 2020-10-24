@@ -16,8 +16,8 @@ open class DOCUMENT(
 	var body: BODY = BODY().apply { this.resources = this@DOCUMENT.resources }
 
 	var title: String? = null
-		get() = field
 		set(value) {
+			field = value
 			this.head.title {
 				+"$value"
 			}
