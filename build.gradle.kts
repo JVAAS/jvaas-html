@@ -1,5 +1,5 @@
 
-val projectVersion = "1.0.4"
+val projectVersion = "1.0.5"
 
 group = "io.jvaas"
 version = projectVersion
@@ -11,7 +11,7 @@ repositories {
 }
 
 plugins {
-	kotlin("jvm")
+	kotlin("jvm").version("1.4.30")
 	maven
 	`maven-publish`
 }

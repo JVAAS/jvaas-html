@@ -94,22 +94,12 @@ class CustomComponents {
 	) : Tag(
 		tagName = "blah",
 		selfClosing = false
-	) {
-		operator fun String.unaryPlus() {
-			children.add(Text(this))
-		}
-	}
+	)
 
 	class BLAH2 : Tag(
 		tagName = "blah",
 		selfClosing = true
-	) {
-
-		operator fun String.unaryPlus() {
-			children.add(Text(this))
-		}
-
-	}
+	)
 
 	class BLAH3(
 		init: (BLAH3.() -> Unit)? = null

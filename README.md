@@ -121,11 +121,7 @@ Create custom components either by using the Tag base-class
     ) : Tag(
         tagName = "blah",
         selfClosing = false
-    ) {
-        operator fun String.unaryPlus() {
-            children.add(Text(this))
-        }
-    }
+    ) 
 
 or by extending an existing element
 

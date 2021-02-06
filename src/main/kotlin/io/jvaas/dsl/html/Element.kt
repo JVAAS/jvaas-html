@@ -52,6 +52,11 @@ abstract class Tag(
 		render(builder, "")
 		return builder.toString().trimEnd()
 	}
+
+	operator fun Any.unaryPlus() {
+		children.add(Text(this.toString()))
+	}
+
 }
 
 

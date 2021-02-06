@@ -23,6 +23,12 @@ open class DOCUMENT(
 			}
 		}
 
+	var description: String? = null
+		set(value) {
+			field = value
+			this.head.meta(name = "description", content = value)
+		}
+
 	init {
 		head?.let {
 			this.head = html.head(
