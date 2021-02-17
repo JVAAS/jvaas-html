@@ -1,6 +1,6 @@
 # JVAAS HTML 
 
-## Flexible HTML DSL Generator
+## Flexible Kotlin HTML DSL Generator
 
 See [HtmlDslGenerator.kt](https://github.com/JVAAS/jvaas-html/blob/master/src/main/kotlin/io/jvaas/dsl/html/helper/HtmlDslGenerator.kt) which can be used to keep the DSL up to date with the latest HTML specification.
 The DSL aims to follow https://developer.mozilla.org/en-US/docs/Web/HTML/Element as closely as possible
